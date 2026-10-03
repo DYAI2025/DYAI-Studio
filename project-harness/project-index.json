@@ -1,0 +1,17 @@
+{
+  "project": "DYAI Studio",
+  "domain": "studio.dyai.cloud",
+  "harness_level": "L3",
+  "owner": "Ben",
+  "systems": {
+    "confluence_space": "DYAIStudio",
+    "jira_project": "DYAI",
+    "jira_board": 733,
+    "github_repository": "DYAI2025/DYAI-Studio"
+  },
+  "primary_paths": ["Organisations / AI Practice", "Individuals / Personal Augmentation"],
+  "asset_engine": "DYAI Lab",
+  "languages": ["de", "en"],
+  "release_gate": "G4_BLOCKED",
+  "system_prompt_limit_chars": 8000
+}
