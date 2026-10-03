@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DYAI Evidence Entry",
+  "type": "object",
+  "required": ["evidence_id","claim","evidence_class","source","observed_at"],
+  "properties": {
+    "evidence_id": {"type":"string"},
+    "claim": {"type":"string"},
+    "scope": {"type":"string"},
+    "evidence_class": {"enum":["fake-only","unit-only","integration","real-boundary-smoke","production-observed","user-confirmed"]},
+    "source": {"type":"string"},
+    "observed_at": {"type":"string"},
+    "observer": {"type":"string"},
+    "supports": {"type":"array","items":{"type":"string"}},
+    "does_not_prove": {"type":"array","items":{"type":"string"}},
+    "notes": {"type":"string"}
+  },
+  "additionalProperties": false
+}
