@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DYAI Studio | AI Strategy, Workflows & Agentic Systems</title>
+<meta name="description" content="DYAI Studio helps organisations, founders and independent professionals turn AI into reliable ways of working — from AI literacy and LLM integration to human–AI workflows and agentic systems.">
+<link rel="canonical" href="https://studio.dyai.cloud/en">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#FCFBF8">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://studio.dyai.cloud/en">
+<meta property="og:title" content="DYAI Studio — Design Your Augmented Intelligence">
+<meta property="og:description" content="We design how humans and AI work together — around real problems, real workflows and evidence that matters.">
+<meta property="og:site_name" content="DYAI Studio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DYAI Studio — Design Your Augmented Intelligence">
+<meta name="twitter:description" content="We design how humans and AI work together — around real problems, real workflows and evidence that matters.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "DYAI Studio",
+  "url": "https://studio.dyai.cloud/en",
+  "slogan": "Design Your Augmented Intelligence",
+  "description": "DYAI Studio helps organisations, founders and independent professionals turn AI into reliable ways of working — from AI literacy and LLM integration to human–AI workflows and agentic systems.",
+  "areaServed": "Global",
+  "serviceType": ["AI Strategy", "Workflows", "Agentic Systems", "Human-AI work design"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Augmented Intelligence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At DYAI, Augmented Intelligence means designing systems in which artificial intelligence extends human capability without making human judgement, responsibility or context invisible. The focus is not AI replacing people. It is designing better ways for people and AI to work together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an AI Practice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI Practice is DYAI's term for the repeatable way an organisation works with AI. It can include AI literacy, workflow design, model and tool selection, human review, agents, governance, evaluation and organisational learning. The objective is to move beyond isolated experiments toward a capability the organisation can actually use and improve."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is DYAI different from traditional AI consulting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DYAI does include advisory work when it is useful. But advice alone is not the intended outcome. We connect understanding, design, implementation, real-world use, verification and learning around a concrete work problem."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does DYAI build AI agents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — when an agent is the right solution to a validated problem. An agent can be useful when work requires multiple steps, access to tools or data, or coordinated capabilities. We do not begin by assuming that every workflow needs an agent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can DYAI help teams work with ChatGPT, Claude and other LLMs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. That may start with practical AI literacy: understanding how LLMs work, how to communicate with them, how context and instructions affect results, and where their limitations matter. The aim is to connect that knowledge to real work rather than teach prompting in isolation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does DYAI train AI models?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "“Training AI” can mean very different things. Many useful business systems do not need a newly trained model. Depending on the problem, the right approach may involve prompting, context design, retrieval, tools, integrations, evaluation, fine-tuning decisions or another architecture. We choose that after understanding the requirement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Personal Augmentation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Personal Augmentation is DYAI's high-context approach for founders, independent professionals and creators. It connects strategic thinking, AI capability, technical systems and everyday work around the individual's real goals and working environment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does a DYAI engagement start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With a real problem. You do not need to know which model, tool or agent you need. The first useful question is: What should become meaningfully better?"
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --warm-white:#F5F3EE;
+  --paper-white:#FCFBF8;
+  --graphite:#181A1B;
+  --slate:#4C5356;
+  --hairline:#DAD8D1;
+  --signal-orange:#FF5A36;
+  --deep-teal:#126A67;
+  --soft-teal:#8DD7CF;
+  --max-width:1440px;
+  --grid-margin:clamp(20px,4vw,48px);
+  --sans:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-in-out:cubic-bezier(.65,0,.35,1);
+  --header-h:72px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; background:var(--paper-white)}
+body{
+  margin:0;
+  background:var(--paper-white);
+  color:var(--graphite);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img,svg{display:block; max-width:100%}
+a{color:inherit; text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--signal-orange); outline-offset:3px}
+button{font:inherit}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+.mono{font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--slate)}
+.container{max-width:var(--max-width); margin:0 auto; padding-left:var(--grid-margin); padding-right:var(--grid-margin)}
+.skip-link{
+  position:absolute; left:-9999px; top:0; z-index:9999;
+  background:var(--graphite); color:var(--paper-white);
+  padding:12px 18px; font-family:var(--mono); font-size:12px;
+}
+.skip-link:focus{left:12px; top:12px}
+.header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(1.2) blur(12px);
+  background:color-mix(in srgb, var(--paper-white) 82%, transparent);
+  border-bottom:1px solid transparent;
+  transition:background .4s var(--ease-out), border-color .4s var(--ease-out);
+}
+.header.scrolled{
+  background:color-mix(in srgb, var(--paper-white) 94%, transparent);
+  border-bottom-color:var(--hairline);
+}
+.header-inner{
+  height:var(--header-h);
+  display:flex; align-items:center; justify-content:space-between;
+  gap:24px;
+}
+.wordmark{
+  font-weight:700; letter-spacing:-.02em; font-size:22px; line-height:1;
+}
+.wordmark span{font-weight:400; opacity:.7}
+.nav{
+  display:flex; align-items:center; gap:28px;
+  font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+}
+.nav a{position:relative; padding:6px 0}
+.nav a::after{
+  content:""; position:absolute; left:0; bottom:0; width:100%; height:1px;
+  background:var(--graphite); transform:scaleX(0); transform-origin:left;
+  transition:transform .35s var(--ease-out);
+}
+.nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
+.nav .lang{border:1px solid var(--hairline); padding:6px 10px; border-radius:999px}
+.mobile-toggle{display:none; border:1px solid var(--hairline); background:var(--paper-white); width:44px; height:44px; border-radius:999px; align-items:center; justify-content:center}
+.mobile-toggle span{width:18px; height:1px; background:var(--graphite); display:block; position:relative}
+.mobile-toggle span::before,.mobile-toggle span::after{content:""; position:absolute; left:0; width:100%; height:1px; background:var(--graphite)}
+.mobile-toggle span::before{top:-5px}
+.mobile-toggle span::after{top:5px}
+.progress{
+  position:fixed; top:0; left:0; height:2px; width:0%;
+  background:var(--signal-orange); z-index:100; transition:width .1s linear;
+}
+/* Hero */
+.hero{
+  min-height:92vh;
+  display:grid; align-items:center;
+  padding-top:32px; padding-bottom:48px;
+  position:relative; overflow:hidden;
+}
+.hero-grid{
+  display:grid; grid-template-columns:repeat(12,1fr); gap:24px; align-items:center;
+}
+.hero-copy{grid-column:1 / span 6; padding-top:24px}
+.hero-visual{grid-column:7 / span 6; position:relative; min-height:560px}
+.eyebrow{margin-bottom:20px; display:inline-flex; align-items:center; gap:10px}
+.eyebrow::before{content:""; width:24px; height:1px; background:var(--hairline); display:inline-block}
+.h1{
+  font-size:clamp(48px,6.8vw,88px);
+  line-height:.9; letter-spacing:-.04em; font-weight:600;
+  margin:0 0 28px; max-width:9ch;
+}
+.hero-lead{font-size:clamp(18px,1.6vw,21px); line-height:1.45; max-width:52ch; color:var(--slate)}
+.hero-lead + .hero-lead{margin-top:14px}
+.hero-ctas{display:flex; gap:12px; flex-wrap:wrap; margin-top:32px}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  min-height:44px; padding:0 22px; border-radius:999px;
+  font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase;
+  border:1px solid transparent; cursor:pointer; transition:all .3s var(--ease-out);
+  white-space:nowrap;
+}
+.btn-primary{background:var(--graphite); color:var(--paper-white); border-color:var(--graphite)}
+.btn-primary:hover{background:#000; transform:translateY(-1px)}
+.btn-secondary{background:transparent; color:var(--graphite); border-color:var(--hairline)}
+.btn-secondary:hover{border-color:var(--graphite)}
+.microcopy{margin-top:18px; font-family:var(--mono); font-size:11px; color:var(--slate)}
+/* Hero Diagram */
+.hero-svg-wrap{
+  position:relative; width:100%; height:100%; min-height:560px;
+  border:1px solid var(--hairline); background:var(--warm-white);
+  overflow:hidden;
+}
+.hero-svg{width:100%; height:100%; min-height:560px}
+.hero-node{opacity:0; transform:translateY(8px); transition:opacity .6s var(--ease-out), transform .6s var(--ease-out)}
+.hero-node.visible{opacity:1; transform:none}
+.hero-line{stroke-dasharray:600; stroke-dashoffset:600; opacity:0; transition:stroke-dashoffset .9s var(--ease-out), opacity .4s var(--ease-out)}
+.hero-line.visible{stroke-dashoffset:0; opacity:1}
+.hero-node-circle{stroke-width:1}
+.hero-node-text{font-family:var(--mono); font-size:10px; letter-spacing:.08em; dominant-baseline:middle; text-anchor:middle; font-weight:600}
+.hero-legend{
+  position:absolute; left:14px; bottom:14px; display:flex; gap:12px; flex-wrap:wrap;
+  font-family:var(--mono); font-size:9px; letter-spacing:.08em; text-transform:uppercase; color:var(--slate)
+}
+.hero-legend span{display:inline-flex; align-items:center; gap:6px}
+.hero-legend i{width:10px; height:1px; display:inline-block}
+.hero-legend i.dot{width:6px; height:6px; border-radius:50%}
+/* Sections base */
+.section{padding:clamp(72px,9vw,144px) 0; border-top:1px solid var(--hairline); position:relative}
+.section-noborder{border-top:none}
+.h2{
+  font-size:clamp(32px,4.2vw,56px); line-height:.95; letter-spacing:-.03em; font-weight:600;
+  margin:0 0 28px; max-width:14ch;
+}
+.h2-large{font-size:clamp(36px,5vw,68px)}
+.lead{font-size:clamp(18px,1.8vw,22px); line-height:1.45; max-width:48ch; color:var(--slate)}
+.eyebrow-title{margin-bottom:18px}
+.grid-12{display:grid; grid-template-columns:repeat(12,1fr); gap:24px}
+/* Problem */
+.problem-grid{display:grid; grid-template-columns:repeat(12,1fr); gap:0; border-top:1px solid var(--hairline); border-left:1px solid var(--hairline); margin-top:48px}
+.problem-item{
+  grid-column:span 4; border-right:1px solid var(--hairline); border-bottom:1px solid var(--hairline);
+  padding:28px 24px; display:flex; flex-direction:column; gap:18px; min-height:148px;
+}
+.problem-num{font-family:var(--mono); font-size:11px; color:var(--slate)}
+.problem-q{font-size:18px; line-height:1.35; max-width:22ch}
+.problem-emphasis{
+  margin-top:56px; font-size:clamp(28px,3.6vw,48px); line-height:.95; letter-spacing:-.03em; font-weight:600;
+  display:flex; flex-wrap:wrap; gap:.2em;
+}
+.problem-emphasis .orange{color:var(--signal-orange)}
+/* What AI means */
+.meaning-layout{display:grid; grid-template-columns:1.15fr .85fr; gap:64px; align-items:start; margin-top:48px}
+.meaning-text{max-width:52ch}
+.meaning-list{margin-top:32px; border-left:1px solid var(--hairline); padding-left:24px}
+.meaning-item{padding:14px 0; border-bottom:1px solid var(--hairline); display:flex; gap:16px; align-items:baseline}
+.meaning-item:last-child{border-bottom:none}
+.meaning-item strong{font-size:18px; font-weight:600; letter-spacing:-.01em}
+.meaning-item.human strong{font-size:22px}
+.meaning-arch{
+  position:sticky; top:calc(var(--header-h) + 24px);
+  border:1px solid var(--hairline); background:var(--warm-white); padding:20px;
+}
+.arch-line{position:absolute; left:32px; top:24px; bottom:24px; width:1px; background:var(--hairline)}
+.arch-stack{position:relative; padding-left:32px}
+.arch-node{position:relative; padding:18px 0 18px 24px; border-bottom:1px solid var(--hairline)}
+.arch-node::before{
+  content:""; position:absolute; left:-28px; top:26px; width:9px; height:9px; border-radius:50%;
+  background:var(--paper-white); border:1px solid var(--graphite);
+}
+.arch-node.human::before{background:var(--graphite); width:13px; height:13px; left:-30px; top:24px}
+.arch-node.teal::before{border-color:var(--deep-teal); background:var(--soft-teal)}
+.arch-node.orange::before{border-color:var(--signal-orange); background:var(--signal-orange)}
+.arch-node-label{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--slate); margin-bottom:4px}
+.arch-node-title{font-weight:600; font-size:16px}
+/* Augmentation Map */
+.map-section{background:var(--warm-white)}
+.map-intro{max-width:56ch}
+.map-controls{margin:28px 0 20px; display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+.toggle{
+  display:inline-flex; border:1px solid var(--hairline); border-radius:999px; padding:4px; background:var(--paper-white)
+}
+.toggle button{
+  border:none; background:transparent; padding:8px 16px; border-radius:999px;
+  font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+  cursor:pointer; transition:all .3s var(--ease-out); min-height:36px;
+}
+.toggle button.active,.toggle button[aria-pressed="true"]{background:var(--graphite); color:var(--paper-white)}
+.map-layout{display:grid; grid-template-columns:7fr 5fr; gap:32px; align-items:start; margin-top:12px}
+.map-visual{
+  position:relative; aspect-ratio:4/3.2; border:1px solid var(--hairline); background:var(--paper-white);
+  overflow:hidden; min-height:520px;
+}
+.map-visual svg{position:absolute; inset:0; width:100%; height:100%; pointer-events:none}
+.map-line{stroke-width:1; opacity:.22; transition:opacity .35s var(--ease-out), stroke-width .35s var(--ease-out)}
+.map-line.active{opacity:1; stroke-width:1.6}
+.map-line.dim{opacity:.08}
+.map-line.orange{stroke:var(--signal-orange)}
+.map-line.teal{stroke:var(--deep-teal)}
+.map-line.graphite{stroke:var(--graphite)}
+.map-line.dashed{stroke-dasharray:6 6}
+.map-nodes{position:absolute; inset:0}
+.map-node{
+  position:absolute; transform:translate(-50%,-50%);
+  width:76px; height:76px; border-radius:50%;
+  border:1px solid var(--hairline); background:var(--paper-white);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  cursor:pointer; transition:all .5s var(--ease-out), left .6s var(--ease-out), top .6s var(--ease-out);
+  font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; font-weight:600;
+  color:var(--graphite); text-align:center; line-height:1.1;
+}
+.map-node:hover{border-color:var(--graphite); transform:translate(-50%,-50%) scale(1.04)}
+.map-node.active{border-color:var(--graphite); border-width:1.5px; box-shadow:0 4px 20px rgba(0,0,0,.08); z-index:2}
+.map-node.human{width:88px; height:88px; background:var(--graphite); color:var(--paper-white); border-color:var(--graphite)}
+.map-node.human.active{box-shadow:0 8px 28px rgba(0,0,0,.18)}
+.map-node.teal{border-color:var(--deep-teal); color:var(--deep-teal)}
+.map-node.teal.active{background:var(--deep-teal); color:var(--paper-white)}
+.map-node.value{background:var(--signal-orange); border-color:var(--signal-orange); color:var(--graphite)}
+.map-node.value.active{transform:translate(-50%,-50%) scale(1.08)}
+.map-node small{display:block; font-size:9px; opacity:.7; margin-top:2px; font-weight:400; text-transform:none; letter-spacing:0}
+.map-explainer{
+  position:sticky; top:calc(var(--header-h) + 24px);
+  border:1px solid var(--hairline); background:var(--paper-white); padding:28px;
+  min-height:420px; display:flex; flex-direction:column;
+}
+.map-detail-title{font-size:22px; font-weight:600; letter-spacing:-.02em; margin-bottom:8px}
+.map-detail-q{font-family:var(--mono); font-size:12px; line-height:1.5; color:var(--slate); margin-bottom:16px}
+.map-detail-desc{font-size:15px; line-height:1.5; color:var(--slate)}
+.map-supporting{margin-top:auto; padding-top:24px; border-top:1px solid var(--hairline); font-family:var(--mono); font-size:11px; color:var(--slate)}
+.map-cta{margin-top:16px}
+/* Organisations / Individuals */
+.path-section{padding-bottom:0}
+.path-grid{display:grid; grid-template-columns:repeat(12,1fr); gap:24px}
+.path-intro{grid-column:1 / span 5}
+.path-content{grid-column:7 / span 6}
+.intervention{
+  border-top:1px solid var(--hairline); padding:28px 0;
+  display:grid; grid-template-columns:200px 1fr; gap:24px;
+}
+.intervention-title{font-weight:600; font-size:18px; letter-spacing:-.01em; line-height:1.25}
+.intervention-purpose{font-size:17px; line-height:1.45; margin-bottom:8px}
+.intervention-desc{font-size:15px; color:var(--slate); line-height:1.5}
+.individuals-section{background:var(--warm-white)}
+.individuals-layout{display:grid; grid-template-columns:repeat(12,1fr); gap:24px; margin-top:48px}
+.individuals-intro{grid-column:1 / span 5}
+.individuals-cards{grid-column:6 / span 7; display:flex; flex-direction:column; gap:18px}
+.personal-card{
+  border:1px solid var(--hairline); background:var(--paper-white); padding:28px;
+  display:grid; grid-template-columns:1fr 1.2fr; gap:20px; position:relative;
+}
+.personal-card:nth-child(2){margin-left:32px}
+.personal-card:nth-child(3){margin-left:12px; margin-right:20px}
+.personal-card-title{font-weight:600; font-size:18px}
+.personal-card-purpose{font-size:15px; line-height:1.5; margin-top:8px}
+.personal-card-desc{font-size:14px; color:var(--slate); line-height:1.5; margin-top:10px}
+/* How it works */
+.process{position:relative}
+.process-path{position:relative; padding-left:96px; margin-top:64px}
+.process-line{
+  position:absolute; left:40px; top:0; bottom:0; width:1px; background:var(--hairline);
+}
+.process-line-fill{
+  position:absolute; left:0; top:0; width:100%; height:0%; background:var(--graphite); transition:height .2s linear;
+}
+.process-step{position:relative; margin-bottom:96px; display:grid; grid-template-columns:88px 1fr; gap:24px}
+.process-step:last-child{margin-bottom:0}
+.process-marker{
+  position:absolute; left:-68px; top:4px; width:12px; height:12px; border-radius:50%;
+  background:var(--paper-white); border:1px solid var(--graphite);
+}
+.process-step.active .process-marker{background:var(--graphite)}
+.process-step.verify .process-marker{border-color:var(--deep-teal); background:var(--soft-teal)}
+.process-step.reuse .process-marker{border-color:var(--signal-orange); background:var(--signal-orange)}
+.process-num{font-family:var(--mono); font-size:12px; letter-spacing:.08em}
+.process-title{font-size:24px; font-weight:600; letter-spacing:-.02em; margin-bottom:10px}
+.process-desc{max-width:52ch; font-size:16px; line-height:1.5; color:var(--slate)}
+.process-evidence{
+  margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;
+}
+.process-evidence span{
+  font-family:var(--mono); font-size:10px; padding:4px 8px; border:1px solid var(--hairline); border-radius:999px;
+}
+.process-branch{
+  position:absolute; left:46px; top:18px; width:40px; height:60px; pointer-events:none;
+}
+.process-branch path{fill:none; stroke:var(--hairline); stroke-width:1}
+/* Technology */
+.tech-matrix{margin-top:48px; display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid var(--hairline); border-left:1px solid var(--hairline)}
+.tech-item{
+  border-right:1px solid var(--hairline); border-bottom:1px solid var(--hairline);
+  padding:28px 24px; position:relative; background:var(--paper-white);
+  transition:background .3s var(--ease-out);
+}
+.tech-item:hover{background:var(--warm-white)}
+.tech-item-title{font-weight:600; font-size:16px; line-height:1.3; margin-bottom:10px}
+.tech-item-desc{font-size:14px; line-height:1.5; color:var(--slate)}
+.tech-emphasis{
+  margin-top:56px; max-width:52ch; font-size:20px; line-height:1.4;
+}
+.tech-emphasis strong{font-weight:600}
+/* Evidence */
+.evidence-scale{
+  margin-top:48px; border-top:1px solid var(--hairline); border-left:1px solid var(--hairline);
+  display:grid; grid-template-columns:repeat(5,1fr);
+}
+.evidence-level{
+  border-right:1px solid var(--hairline); border-bottom:1px solid var(--hairline);
+  padding:24px; position:relative; min-height:200px; display:flex; flex-direction:column;
+}
+.evidence-level::before{
+  content:""; position:absolute; left:0; top:0; width:100%; height:3px; background:var(--graphite);
+  opacity:var(--solid, .15);
+}
+.evidence-level:nth-child(1){--solid:.15}
+.evidence-level:nth-child(2){--solid:.35}
+.evidence-level:nth-child(3){--solid:.6}
+.evidence-level:nth-child(4){--solid:.85}
+.evidence-level:nth-child(5){--solid:1}
+.evidence-level:nth-child(5)::before{background:var(--signal-orange)}
+.evidence-label{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; font-weight:600}
+.evidence-desc{margin-top:12px; font-size:14px; line-height:1.5; color:var(--slate)}
+.evidence-notes{margin-top:32px; max-width:56ch; font-size:15px; color:var(--slate)}
+/* Lab */
+.lab-grid{display:grid; grid-template-columns:repeat(12,1fr); gap:24px; margin-top:48px}
+.lab-intro{grid-column:1 / span 5}
+.lab-visual{grid-column:7 / span 6}
+.lab-maturity{
+  display:flex; align-items:center; gap:12px; font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+  margin:24px 0; flex-wrap:wrap;
+}
+.lab-maturity span{display:inline-flex; align-items:center; gap:8px}
+.lab-maturity i{width:24px; height:1px; background:var(--hairline); display:inline-block}
+.patterns{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+.pattern-card{
+  border:1px solid var(--hairline); background:var(--paper-white); padding:18px;
+}
+.pattern-visual{
+  height:72px; border:1px solid var(--hairline); background:var(--warm-white); margin-bottom:14px;
+  position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center;
+}
+.pattern-line{width:60%; height:1px; background:var(--graphite); position:relative}
+.pattern-line::after{content:""; position:absolute; width:8px; height:8px; border-radius:50%; background:var(--graphite); top:50%; left:30%; transform:translate(-50%,-50%)}
+.pattern-card:nth-child(2) .pattern-line{width:70%}
+.pattern-card:nth-child(2) .pattern-line::after{left:50%; background:var(--deep-teal)}
+.pattern-card:nth-child(3) .pattern-visual{background:repeating-linear-gradient(90deg, var(--hairline) 0 1px, transparent 1px 12px)}
+.pattern-card:nth-child(4) .pattern-visual{background:var(--graphite)}
+.pattern-meta{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+.pattern-meta span{font-family:var(--mono); font-size:9px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--hairline); padding:3px 6px; border-radius:999px; color:var(--slate)}
+.pattern-title{font-weight:600; font-size:14px}
+/* Principles */
+.principles-grid{
+  margin-top:48px; display:grid; grid-template-columns:repeat(12,1fr); gap:0;
+  border-top:1px solid var(--hairline); border-left:1px solid var(--hairline);
+}
+.principle{
+  border-right:1px solid var(--hairline); border-bottom:1px solid var(--hairline);
+  padding:32px 28px; display:flex; flex-direction:column; gap:14px;
+}
+.principle:nth-child(1){grid-column:span 7}
+.principle:nth-child(2){grid-column:span 5}
+.principle:nth-child(3){grid-column:span 5}
+.principle:nth-child(4){grid-column:span 7}
+.principle:nth-child(5){grid-column:span 4}
+.principle:nth-child(6){grid-column:span 4}
+.principle:nth-child(7){grid-column:span 4}
+.principle:nth-child(8){grid-column:span 12; display:grid; grid-template-columns:1fr 1fr; gap:24px}
+.principle-title{font-size:20px; font-weight:600; letter-spacing:-.02em; line-height:1.2}
+.principle-desc{font-size:15px; line-height:1.5; color:var(--slate); max-width:40ch}
+/* Why DYAI */
+.why-layout{display:grid; grid-template-columns:repeat(12,1fr); gap:24px; margin-top:48px; align-items:center}
+.why-text{grid-column:1 / span 5}
+.why-visual{
+  grid-column:7 / span 6; border:1px solid var(--hairline); background:var(--warm-white);
+  padding:28px; position:relative; min-height:320px; display:flex; align-items:center; justify-content:center;
+}
+.why-flow{display:flex; align-items:center; gap:12px; flex-wrap:wrap; font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase}
+.why-flow span{
+  border:1px solid var(--hairline); background:var(--paper-white); padding:10px 14px; border-radius:999px;
+  display:inline-flex; align-items:center; gap:8px;
+}
+.why-flow i{width:20px; height:1px; background:var(--graphite); display:inline-block}
+.why-cycle{
+  position:absolute; inset:0; pointer-events:none;
+}
+.why-cycle svg{width:100%; height:100%}
+/* FAQ */
+.faq-list{margin-top:48px; border-top:1px solid var(--hairline)}
+.faq-item{border-bottom:1px solid var(--hairline)}
+.faq-question{
+  width:100%; text-align:left; background:transparent; border:none;
+  padding:24px 0; display:flex; justify-content:space-between; gap:24px; align-items:flex-start;
+  cursor:pointer; font-size:19px; font-weight:600; letter-spacing:-.01em; line-height:1.3;
+}
+.faq-question::after{
+  content:"+"; font-family:var(--mono); font-weight:400; font-size:20px; line-height:1;
+  width:32px; height:32px; border:1px solid var(--hairline); border-radius:50%;
+  display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;
+  transition:transform .3s var(--ease-out), background .3s var(--ease-out);
+}
+.faq-question[aria-expanded="true"]::after{content:"–"; background:var(--graphite); color:var(--paper-white); border-color:var(--graphite)}
+.faq-answer{padding:0 0 28px; max-width:68ch; font-size:16px; line-height:1.6; color:var(--slate)}
+.faq-answer p{margin-bottom:12px}
+/* Final CTA */
+.final{padding:clamp(96px,12vw,180px) 0; border-top:1px solid var(--hairline); background:var(--paper-white)}
+.final-grid{display:grid; grid-template-columns:repeat(12,1fr); gap:24px}
+.final-copy{grid-column:1 / span 7}
+.final-h2{font-size:clamp(48px,7vw,92px); line-height:.9; letter-spacing:-.04em; font-weight:600; margin:0 0 32px}
+.final-lead{font-size:18px; line-height:1.5; max-width:48ch; color:var(--slate)}
+.change-list{margin:32px 0; padding:0; list-style:none; border-left:1px solid var(--hairline)}
+.change-list li{
+  padding:10px 0 10px 20px; font-size:clamp(22px,2.6vw,32px); line-height:1.1; letter-spacing:-.02em; font-weight:500;
+  position:relative; transition:transform .4s var(--ease-out), color .3s var(--ease-out);
+}
+.change-list li::before{
+  content:""; position:absolute; left:-1px; top:0; bottom:0; width:1px; background:var(--signal-orange);
+  transform:scaleY(0); transform-origin:top; transition:transform .4s var(--ease-out);
+}
+.change-list li:hover::before,.change-list li:focus-visible::before{transform:scaleY(1)}
+.change-list li:hover{transform:translateX(6px); color:var(--graphite)}
+.change-list li.or{font-family:var(--mono); font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--slate); font-weight:400}
+.final-ctas{display:flex; gap:12px; flex-wrap:wrap; margin-top:36px}
+.footer{
+  border-top:1px solid var(--hairline); padding:48px 0; background:var(--warm-white);
+}
+.footer-grid{display:grid; grid-template-columns:repeat(12,1fr); gap:24px}
+.footer-brand{grid-column:1 / span 5}
+.footer-word{font-weight:700; font-size:18px; letter-spacing:-.02em}
+.footer-tag{font-size:14px; color:var(--slate); margin-top:8px; line-height:1.5}
+.footer-meta{grid-column:8 / span 5; font-family:var(--mono); font-size:11px; color:var(--slate); line-height:1.6}
+/* Reveal */
+.reveal{opacity:0; transform:translateY(16px); transition:opacity .7s var(--ease-out), transform .7s var(--ease-out)}
+.reveal.in{opacity:1; transform:none}
+/* Responsive */
+@media (max-width:1100px){
+  .hero-grid{grid-template-columns:1fr; gap:32px}
+  .hero-copy{grid-column:1}
+  .hero-visual{grid-column:1; min-height:480px}
+  .map-layout{grid-template-columns:1fr; gap:24px}
+  .map-visual{aspect-ratio:4/3; min-height:460px}
+  .map-explainer{position:static; min-height:auto}
+  .meaning-layout{grid-template-columns:1fr; gap:32px}
+  .meaning-arch{position:static}
+  .path-intro,.path-content{grid-column:1 / span 12}
+  .individuals-intro,.individuals-cards{grid-column:1 / span 12}
+  .personal-card:nth-child(2),.personal-card:nth-child(3){margin-left:0; margin-right:0}
+  .tech-matrix{grid-template-columns:repeat(2,1fr)}
+  .evidence-scale{grid-template-columns:1fr 1fr}
+  .lab-intro,.lab-visual{grid-column:1 / span 12}
+  .why-text,.why-visual{grid-column:1 / span 12}
+  .principles-grid .principle{grid-column:span 6 !important}
+  .principles-grid .principle:nth-child(8){grid-column:span 12 !important; display:flex; flex-direction:column}
+  .final-copy{grid-column:1 / span 12}
+}
+@media (max-width:720px){
+  .header-inner{height:64px}
+  .nav{position:fixed; inset:64px 0 auto 0; background:var(--paper-white); border-bottom:1px solid var(--hairline);
+    flex-direction:column; align-items:flex-start; padding:20px var(--grid-margin) 28px; gap:18px;
+    transform:translateY(-120%); opacity:0; pointer-events:none; transition:transform .4s var(--ease-out), opacity .3s var(--ease-out);
+  }
+  .nav.open{transform:none; opacity:1; pointer-events:auto}
+  .mobile-toggle{display:inline-flex}
+  .problem-item{grid-column:span 12}
+  .problem-item:nth-child(4),.problem-item:nth-child(5),.problem-item:nth-child(6){grid-column:span 12}
+  .intervention{grid-template-columns:1fr; gap:12px}
+  .personal-card{grid-template-columns:1fr}
+  .tech-matrix{grid-template-columns:1fr}
+  .evidence-scale{grid-template-columns:1fr}
+  .patterns{grid-template-columns:1fr}
+  .principles-grid .principle{grid-column:span 12 !important}
+  .map-node{width:64px; height:64px; font-size:9px}
+  .map-node.human{width:72px; height:72px}
+  .process-path{padding-left:48px}
+  .process-line{left:18px}
+  .process-step{grid-template-columns:1fr; gap:8px}
+  .process-marker{left:-38px}
+  .why-flow{flex-direction:column; align-items:flex-start}
+  .why-flow i{transform:rotate(90deg)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1; transform:none; transition:none}
+  .hero-node,.hero-line{opacity:1; transform:none; stroke-dasharray:none; stroke-dashoffset:0; transition:none}
+  .map-node{transition:none}
+  .map-line{transition:none}
+  .btn{transition:none}
+  .progress{transition:none}
+}
+</style>
+<noscript>
+<style>
+.reveal{opacity:1; transform:none}
+.hero-node,.hero-line{opacity:1; transform:none; stroke-dasharray:none; stroke-dashoffset:0}
+.map-visual .map-nodes noscript{display:block}
+</style>
+</noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#top" class="wordmark" aria-label="DYAI Studio home">DYAI</a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#organisations">Organisations</a>
+      <a href="#individuals">Individuals</a>
+      <a href="#how-it-works">Work</a>
+      <a href="#lab">Lab</a>
+      <a href="#principles">Principles</a>
+      <a href="#top" class="lang" aria-label="English language selected">EN</a>
+    </nav>
+    <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation"><span></span></button>
+  </div>
+</header>
+<main id="main">
+  <!-- HERO -->
+  <section class="hero section-noborder" id="top" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="mono eyebrow">AUGMENTED INTELLIGENCE STUDIO</div>
+        <h1 class="h1" id="hero-title">Design how humans and AI work together.</h1>
+        <p class="hero-lead">AI tools are easy to add. Useful ways of working are harder to design.</p>
+        <p class="hero-lead">DYAI Studio helps organisations, founders and independent professionals turn scattered AI tools and experiments into reliable ways of working.</p>
+        <p class="hero-lead">We connect human judgement, context, LLMs, tools, workflows and agentic systems around real problems — and define how we will know whether the result is actually better.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contact">Start with a real problem</a>
+          <a class="btn btn-secondary" href="#how-it-works">Explore how DYAI works</a>
+        </div>
+        <div class="microcopy">For organisations · founders · independent professionals · creators</div>
+      </div>
+      <div class="hero-visual" aria-hidden="false">
+        <div class="hero-svg-wrap" id="heroWrap">
+          <svg class="hero-svg" viewBox="0 0 600 500" role="img" aria-labelledby="heroDiagramTitle heroDiagramDesc">
+            <title id="heroDiagramTitle">Human–AI system diagram</title>
+            <desc id="heroDiagramDesc">Diagram showing Human at centre, Context, AI, Tools, Workflow, Evidence and Value connected in a designed workflow.</desc>
+            <!-- lines -->
+            <g id="heroLines" fill="none">
+              <line id="hl-h-c" class="hero-line" x1="90" y1="250" x2="220" y2="90" stroke="#181A1B" stroke-width="1"/>
+              <line id="hl-c-ai" class="hero-line" x1="220" y1="90" x2="300" y2="220" stroke="#126A67" stroke-width="1"/>
+              <line id="hl-h-ai" class="hero-line" x1="90" y1="250" x2="300" y2="220" stroke="#181A1B" stroke-width="1" opacity="0.6"/>
+              <line id="hl-ai-t" class="hero-line" x1="300" y1="220" x2="470" y2="90" stroke="#126A67" stroke-width="1"/>
+              <line id="hl-ai-w" class="hero-line" x1="300" y1="220" x2="470" y2="360" stroke="#4C5356" stroke-width="1"/>
+              <line id="hl-t-w" class="hero-line" x1="470" y1="90" x2="470" y2="360" stroke="#DAD8D1" stroke-width="1"/>
+              <line id="hl-w-e" class="hero-line" x1="470" y1="360" x2="220" y2="410" stroke="#181A1B" stroke-width="1"/>
+              <line id="hl-e-h" class="hero-line" x1="220" y1="410" x2="90" y2="250" stroke="#181A1B" stroke-width="1" stroke-dasharray="6 6"/>
+              <line id="hl-w-v" class="hero-line" x1="470" y1="360" x2="540" y2="250" stroke="#FF5A36" stroke-width="1.2"/>
+              <line id="hl-e-v" class="hero-line" x1="220" y1="410" x2="540" y2="250" stroke="#FF5A36" stroke-width="1" opacity="0.7"/>
+            </g>
+            <!-- nodes -->
+            <g id="heroNodes">
+              <g id="hn-human" class="hero-node" transform="translate(90 250)">
+                <circle class="hero-node-circle" r="32" fill="#181A1B" stroke="#181A1B"/>
+                <text class="hero-node-text" fill="#FCFBF8" y="1">HUMAN</text>
+              </g>
+              <g id="hn-context" class="hero-node" transform="translate(220 90)">
+                <circle r="26" fill="#FCFBF8" stroke="#126A67" stroke-width="1.2"/>
+                <text class="hero-node-text" fill="#126A67" y="1">CONTEXT</text>
+              </g>
+              <g id="hn-ai" class="hero-node" transform="translate(300 220)">
+                <circle r="26" fill="#126A67" stroke="#126A67"/>
+                <text class="hero-node-text" fill="#FCFBF8" y="1">AI</text>
+              </g>
+              <g id="hn-tools" class="hero-node" transform="translate(470 90)">
+                <circle r="24" fill="#FCFBF8" stroke="#181A1B" stroke-width="1"/>
+                <text class="hero-node-text" fill="#181A1B" y="1">TOOLS</text>
+              </g>
+              <g id="hn-workflow" class="hero-node" transform="translate(470 360)">
+                <circle r="30" fill="#FCFBF8" stroke="#181A1B" stroke-width="1"/>
+                <text class="hero-node-text" fill="#181A1B" y="1">WORKFLOW</text>
+              </g>
+              <g id="hn-evidence" class="hero-node" transform="translate(220 410)">
+                <circle r="28" fill="#FCFBF8" stroke="#181A1B" stroke-width="1"/>
+                <text class="hero-node-text" fill="#181A1B" y="1">EVIDENCE</text>
+              </g>
+              <g id="hn-value" class="hero-node" transform="translate(540 250)">
+                <circle r="28" fill="#FF5A36" stroke="#FF5A36"/>
+                <text class="hero-node-text" fill="#181A1B" y="1">VALUE</text>
+              </g>
+            </g>
+          </svg>
+          <div class="hero-legend" aria-hidden="true">
+            <span><i class="dot" style="background:#181A1B"></i> Human / responsibility</span>
+            <span><i style="background:#126A67"></i> AI / context</span>
+            <span><i class="dot" style="background:#FF5A36"></i> Value / active</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="section" id="problem" aria-labelledby="problem-title">
+    <div class="container">
+      <div class="grid-12">
+        <div style="grid-column:1 / span 8">
+          <h2 class="h2" id="problem-title">More AI does not automatically create better work.</h2>
+          <p class="lead">A new model, copilot or agent can help.</p>
+          <p class="lead">It can also become another tool, another workflow and another layer of uncertainty.</p>
+          <p class="lead">That is why we do not start with technology.</p>
+          <p class="lead">We start with the work itself.</p>
+        </div>
+      </div>
+      <div class="problem-grid" role="list" aria-label="Diagnostic questions">
+        <div class="problem-item reveal" role="listitem"><div class="problem-num">01</div><div class="problem-q">What should change?</div></div>
+        <div class="problem-item reveal" role="listitem"><div class="problem-num">02</div><div class="problem-q">What should remain human?</div></div>
+        <div class="problem-item reveal" role="listitem"><div class="problem-num">03</div><div class="problem-q">What context does AI need?</div></div>
+        <div class="problem-item reveal" role="listitem"><div class="problem-num">04</div><div class="problem-q">What can be automated safely?</div></div>
+        <div class="problem-item reveal" role="listitem"><div class="problem-num">05</div><div class="problem-q">Where does human review matter?</div></div>
+        <div class="problem-item reveal" role="listitem"><div class="problem-num">06</div><div class="problem-q">How will we recognise real improvement?</div></div>
+      </div>
+      <div class="problem-emphasis reveal">
+        <span>Not more AI.</span> <span class="orange">Better work with AI.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT AUGMENTED INTELLIGENCE MEANS -->
+  <section class="section" id="meaning" aria-labelledby="meaning-title">
+    <div class="container">
+      <h2 class="h2" id="meaning-title">AI is one part of the system.</h2>
+      <div class="meaning-layout">
+        <div class="meaning-text">
+          <p>At DYAI, Augmented Intelligence means deliberately designing how human judgement and artificial intelligence work together.</p>
+          <p>The useful system usually involves more than a model.</p>
+          <p>It may include:</p>
+          <div class="meaning-list" aria-label="System components">
+            <div class="meaning-item human"><strong>Human judgement</strong></div>
+            <div class="meaning-item"><strong>Context and knowledge</strong></div>
+            <div class="meaning-item"><strong>LLMs and AI models</strong></div>
+            <div class="meaning-item"><strong>Tools and APIs</strong></div>
+            <div class="meaning-item"><strong>Workflows and automation</strong></div>
+            <div class="meaning-item"><strong>Agents</strong></div>
+            <div class="meaning-item"><strong>Feedback and evaluation</strong></div>
+            <div class="meaning-item"><strong>Evidence of value</strong></div>
+          </div>
+          <p style="margin-top:32px">The goal is not maximum automation.</p>
+          <p>The goal is a better working system.</p>
+        </div>
+        <div class="meaning-arch" aria-hidden="true">
+          <div class="arch-line"></div>
+          <div class="arch-stack">
+            <div class="arch-node human"><div class="arch-node-label">Centre</div><div class="arch-node-title">Human judgement</div></div>
+            <div class="arch-node teal"><div class="arch-node-label">Context flow</div><div class="arch-node-title">Context and knowledge</div></div>
+            <div class="arch-node teal"><div class="arch-node-label">Capability</div><div class="arch-node-title">LLMs and AI models</div></div>
+            <div class="arch-node"><div class="arch-node-label">Extension</div><div class="arch-node-title">Tools and APIs</div></div>
+            <div class="arch-node"><div class="arch-node-label">Orchestration</div><div class="arch-node-title">Workflows and automation</div></div>
+            <div class="arch-node"><div class="arch-node-label">Execution</div><div class="arch-node-title">Agents</div></div>
+            <div class="arch-node"><div class="arch-node-label">Learning</div><div class="arch-node-title">Feedback and evaluation</div></div>
+            <div class="arch-node orange"><div class="arch-node-label">Outcome</div><div class="arch-node-title">Evidence of value</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUGMENTATION MAP -->
+  <section class="section map-section" id="augmentation-map" aria-labelledby="map-title">
+    <div class="container">
+      <h2 class="h2" id="map-title">See the system, not just the tool.</h2>
+      <div class="map-intro">
+        <p>Start with a real situation.</p>
+        <p>Then make the invisible parts of AI-enabled work visible.</p>
+      </div>
+      <div class="map-controls">
+        <div class="toggle" role="group" aria-label="System state">
+          <button data-state="fragmented" aria-pressed="false" id="btnFragmented">Fragmented</button>
+          <button data-state="designed" aria-pressed="true" id="btnDesigned" class="active">Designed</button>
+        </div>
+        <span class="mono" style="margin-left:8px">Human → Context → AI → Tools → Workflow → Evidence → Value</span>
+      </div>
+      <div class="map-layout">
+        <div class="map-visual" id="mapVisual" aria-label="Augmentation Map interactive diagram">
+          <svg id="mapSvg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <g id="mapLinesGroup">
+              <!-- Static fallback for no-JS: designed state lines -->
+              <line x1="12" y1="50" x2="28" y2="18" stroke="#181A1B" stroke-width="1" opacity="0.35"/>
+              <line x1="28" y1="18" x2="44" y2="36" stroke="#126A67" stroke-width="1" opacity="0.35"/>
+              <line x1="12" y1="50" x2="44" y2="36" stroke="#181A1B" stroke-width="1" opacity="0.25"/>
+              <line x1="44" y1="36" x2="72" y2="18" stroke="#126A67" stroke-width="1" opacity="0.35"/>
+              <line x1="44" y1="36" x2="76" y2="64" stroke="#126A67" stroke-width="1" opacity="0.35"/>
+              <line x1="72" y1="18" x2="76" y2="64" stroke="#181A1B" stroke-width="1" opacity="0.25"/>
+              <line x1="76" y1="64" x2="32" y2="84" stroke="#181A1B" stroke-width="1" opacity="0.35"/>
+              <line x1="32" y1="84" x2="12" y2="50" stroke="#181A1B" stroke-width="1" opacity="0.25" stroke-dasharray="3 3"/>
+              <line x1="76" y1="64" x2="12" y2="84" stroke="#FF5A36" stroke-width="1" opacity="0.6"/>
+              <line x1="32" y1="84" x2="12" y2="84" stroke="#FF5A36" stroke-width="1" opacity="0.6"/>
+            </g>
+          </svg>
+          <div class="map-nodes" id="mapNodes">
+            <!-- Static fallback nodes for no-JS -->
+            <div class="map-node human" style="left:12%; top:50%">Human</div>
+            <div class="map-node teal" style="left:28%; top:18%">Context</div>
+            <div class="map-node teal" style="left:44%; top:36%">AI</div>
+            <div class="map-node" style="left:72%; top:18%">Tools</div>
+            <div class="map-node" style="left:76%; top:64%">Workflow</div>
+            <div class="map-node" style="left:32%; top:84%">Evidence</div>
+            <div class="map-node value" style="left:12%; top:84%">Value</div>
+          </div>
+        </div>
+        <div class="map-explainer">
+          <div id="mapDetail" aria-live="polite">
+            <div class="map-detail-title">Human</div>
+            <div class="map-detail-q">Where is judgement, responsibility or creativity required?</div>
+            <div class="map-detail-desc">Human judgement stays at the centre. Select a node to see its role in the system. The diagram shows how AI is inserted into an existing human work system rather than replacing the human.</div>
+          </div>
+          <div class="map-supporting">From isolated AI usage to a designed human–AI system.</div>
+          <div class="map-cta"><a href="#organisations" class="btn btn-secondary">Explore the Augmentation Map</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR ORGANISATIONS -->
+  <section class="section path-section" id="organisations" aria-labelledby="org-title">
+    <div class="container">
+      <div class="mono eyebrow-title">FOR ORGANISATIONS</div>
+      <div class="path-grid">
+        <div class="path-intro">
+          <h2 class="h2" id="org-title">Build an AI practice, not a collection of pilots.</h2>
+          <p>Many organisations already have access to generative AI.</p>
+          <p>The harder question is how it should become part of real work.</p>
+          <p>DYAI helps teams move from fragmented experimentation toward deliberate, understandable and testable ways of working with AI.</p>
+        </div>
+        <div class="path-content">
+          <div class="intervention reveal">
+            <div class="intervention-title">AI Practice Discovery</div>
+            <div>
+              <div class="intervention-purpose">Find the workflows where AI could create meaningful value.</div>
+              <div class="intervention-desc">Map the problem, current work, capability gaps, risks and the smallest useful opportunity to test.</div>
+            </div>
+          </div>
+          <div class="intervention reveal">
+            <div class="intervention-title">Human–AI Workflow Sprint</div>
+            <div>
+              <div class="intervention-purpose">Redesign one real workflow.</div>
+              <div class="intervention-desc">Define what people decide, what AI contributes, what context it requires, where controls belong and how the result will be evaluated.</div>
+            </div>
+          </div>
+          <div class="intervention reveal">
+            <div class="intervention-title">Agent &amp; Capability Build</div>
+            <div>
+              <div class="intervention-purpose">Build the smallest technical system that the validated workflow actually needs.</div>
+              <div class="intervention-desc">That may involve LLMs, tools, APIs, AI agents, skills, knowledge systems or automation. The architecture follows the problem — not the other way around.</div>
+            </div>
+          </div>
+          <div class="intervention reveal">
+            <div class="intervention-title">AI Practice Operating System</div>
+            <div>
+              <div class="intervention-purpose">Turn successful experiments into organisational capability.</div>
+              <div class="intervention-desc">Create reusable patterns, practical AI literacy, governance, evaluation practices and clear ownership.</div>
+            </div>
+          </div>
+          <div style="margin-top:28px"><a href="#contact" class="btn btn-secondary">Explore AI Practice</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR INDIVIDUALS -->
+  <section class="section individuals-section" id="individuals" aria-labelledby="ind-title">
+    <div class="container">
+      <div class="mono eyebrow-title">FOR FOUNDERS, INDEPENDENT PROFESSIONALS &amp; CREATORS</div>
+      <div class="individuals-layout">
+        <div class="individuals-intro">
+          <h2 class="h2" id="ind-title">Build a personal AI system around the way you actually work.</h2>
+          <p>Your work is not a collection of apps.</p>
+          <p>It is a system of goals, knowledge, decisions, relationships, tools, content and execution.</p>
+          <p>AI becomes useful when it understands enough of that system to support the work without taking away your agency.</p>
+        </div>
+        <div class="individuals-cards">
+          <div class="personal-card reveal">
+            <div class="personal-card-title">Personal Augmentation Mapping</div>
+            <div>
+              <div class="personal-card-purpose">Map the work you are actually trying to do.</div>
+              <div class="personal-card-desc">Identify friction, recurring decisions, disconnected tools, knowledge gaps and opportunities for useful augmentation.</div>
+            </div>
+          </div>
+          <div class="personal-card reveal">
+            <div class="personal-card-title">Personal AI System Sprint</div>
+            <div>
+              <div class="personal-card-purpose">Build a small number of high-value AI-supported workflows around your real work.</div>
+              <div class="personal-card-desc">Not another productivity stack. A coherent working system.</div>
+            </div>
+          </div>
+          <div class="personal-card reveal">
+            <div class="personal-card-title">Augmentation Partnership</div>
+            <div>
+              <div class="personal-card-purpose">For work where strategic thinking, technical implementation, AI knowledge and continuous adaptation overlap.</div>
+              <div class="personal-card-desc">High context. Practical implementation. Critical sparring. The goal is not to outsource your working life. The goal is to increase your own leverage.</div>
+            </div>
+          </div>
+          <div><a href="#contact" class="btn btn-secondary">Explore Personal Augmentation</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW DYAI WORKS -->
+  <section class="section" id="how-it-works" aria-labelledby="how-title">
+    <div class="container">
+      <h2 class="h2" id="how-title">From problem to working practice.</h2>
+      <div class="process">
+        <div class="process-path" id="processPath">
+          <div class="process-line"><div class="process-line-fill" id="processFill"></div></div>
+          <div class="process-step" data-step="01">
+            <div class="process-marker" aria-hidden="true"></div>
+            <div class="process-num">01 — Understand</div>
+            <div>
+              <div class="process-title">Understand</div>
+              <div class="process-desc">Start with the actual problem and the desired change. Not with a model.</div>
+            </div>
+          </div>
+          <div class="process-step" data-step="02">
+            <div class="process-marker"></div>
+            <div class="process-num">02 — Map</div>
+            <div>
+              <div class="process-title">Map</div>
+              <div class="process-desc">Understand the current workflow, context, constraints and human decisions.</div>
+            </div>
+          </div>
+          <div class="process-step" data-step="03">
+            <div class="process-marker"></div>
+            <div class="process-num">03 — Design</div>
+            <div>
+              <div class="process-title">Design</div>
+              <div class="process-desc">Define the relationship between people, AI, knowledge, tools and controls.</div>
+            </div>
+          </div>
+          <div class="process-step" data-step="04">
+            <div class="process-marker"></div>
+            <div class="process-num">04 — Build</div>
+            <div>
+              <div class="process-title">Build</div>
+              <div class="process-desc">Create the smallest useful intervention.</div>
+            </div>
+          </div>
+          <div class="process-step" data-step="05">
+            <div class="process-marker"></div>
+            <div class="process-num">05 — Use</div>
+            <div>
+              <div class="process-title">Use</div>
+              <div class="process-desc">Put it into real work as early as possible.</div>
+            </div>
+          </div>
+          <div class="process-step verify" data-step="06">
+            <div class="process-marker"></div>
+            <div class="process-num">06 — Verify</div>
+            <div>
+              <div class="process-title">Verify</div>
+              <div class="process-desc">Observe what changed. Quality. Time. Friction. Coordination. Reliability. Learning. Where measurement is possible, measure it. Where it is not, do not pretend.</div>
+              <div class="process-evidence"><span>Quality</span><span>Time</span><span>Friction</span><span>Coordination</span><span>Reliability</span><span>Learning</span></div>
+            </div>
+          </div>
+          <div class="process-step reuse" data-step="07">
+            <div class="process-marker"></div>
+            <svg class="process-branch" viewBox="0 0 40 60" aria-hidden="true"><path d="M 0 0 L 0 20 C 0 30 12 32 20 40 C 28 48 28 52 28 60 M 0 20 C 0 30  -12 32 -20 40 C -28 48 -28 52 -28 60" /></svg>
+            <div class="process-num">07 — Reuse</div>
+            <div>
+              <div class="process-title">Reuse</div>
+              <div class="process-desc">When a pattern works repeatedly, turn it into a reusable DYAI asset.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY -->
+  <section class="section" id="technology" aria-labelledby="tech-title">
+    <div class="container">
+      <h2 class="h2" id="tech-title">Technology follows the problem.</h2>
+      <p class="lead">Depending on the work, a DYAI solution may involve:</p>
+      <div class="tech-matrix">
+        <div class="tech-item reveal">
+          <div class="tech-item-title">AI literacy and LLM enablement</div>
+          <div class="tech-item-desc">Understand what modern language models can and cannot do — and how to work with them effectively.</div>
+        </div>
+        <div class="tech-item reveal">
+          <div class="tech-item-title">Prompt and context design</div>
+          <div class="tech-item-desc">Give AI the instructions, context and boundaries it needs.</div>
+        </div>
+        <div class="tech-item reveal">
+          <div class="tech-item-title">Knowledge and retrieval systems</div>
+          <div class="tech-item-desc">Connect relevant information when a workflow requires durable context.</div>
+        </div>
+        <div class="tech-item reveal">
+          <div class="tech-item-title">Human–AI workflows</div>
+          <div class="tech-item-desc">Design how people and AI collaborate across a real process.</div>
+        </div>
+        <div class="tech-item reveal">
+          <div class="tech-item-title">Automation</div>
+          <div class="tech-item-desc">Automate work where automation genuinely removes friction.</div>
+        </div>
+        <div class="tech-item reveal">
+          <div class="tech-item-title">AI agents and agentic systems</div>
+          <div class="tech-item-desc">Use agents when tasks require tool use, multi-step execution or coordinated capabilities.</div>
+        </div>
+        <div class="tech-item reveal">
+          <div class="tech-item-title">API and tool integration</div>
+          <div class="tech-item-desc">Connect AI systems to the software and data they need.</div>
+        </div>
+        <div class="tech-item reveal">
+          <div class="tech-item-title">Custom GPTs, skills and project harnesses</div>
+          <div class="tech-item-desc">Create reusable AI working environments for specific domains and workflows.</div>
+        </div>
+        <div class="tech-item reveal">
+          <div class="tech-item-title">Evaluation and governance</div>
+          <div class="tech-item-desc">Define what good looks like, how results are checked and where human accountability remains.</div>
+        </div>
+      </div>
+      <div class="tech-emphasis reveal">
+        <p><strong>We do not add technology to make a solution look advanced.</strong></p>
+        <p>We use the smallest system that can create useful change.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVIDENCE -->
+  <section class="section" id="evidence" aria-labelledby="evidence-title">
+    <div class="container">
+      <h2 class="h2" id="evidence-title">Claims should be inspectable.</h2>
+      <p>AI makes it very easy to produce convincing demonstrations.</p>
+      <p>A demonstration is not the same as a working system.</p>
+      <p>DYAI separates different levels of evidence.</p>
+      <div class="evidence-scale" role="list" aria-label="Evidence maturity">
+        <div class="evidence-level reveal" role="listitem"><div class="evidence-label">CONCEPT</div><div class="evidence-desc">A proposed idea or system.</div></div>
+        <div class="evidence-level reveal" role="listitem"><div class="evidence-label">PROTOTYPE</div><div class="evidence-desc">Built enough to test.</div></div>
+        <div class="evidence-level reveal" role="listitem"><div class="evidence-label">USED IN PRACTICE</div><div class="evidence-desc">Used in real work.</div></div>
+        <div class="evidence-level reveal" role="listitem"><div class="evidence-label">REPEATED PATTERN</div><div class="evidence-desc">Worked across more than one relevant situation.</div></div>
+        <div class="evidence-level reveal" role="listitem"><div class="evidence-label">MEASURED CASE</div><div class="evidence-desc">A meaningful outcome has been observed against an appropriate baseline.</div></div>
+      </div>
+      <div class="evidence-notes">
+        <p>We distinguish what is imagined, what is built, what has been used and what has actually been measured.</p>
+        <p>No prototype is presented as proof.</p>
+        <p>No estimate becomes ROI simply because it sounds plausible.</p>
+        <div style="margin-top:20px"><a href="#how-it-works" class="btn btn-secondary">Explore work &amp; evidence</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAB -->
+  <section class="section" id="lab" aria-labelledby="lab-title">
+    <div class="container">
+      <div class="mono eyebrow-title">DYAI LAB</div>
+      <div class="lab-grid">
+        <div class="lab-intro">
+          <h2 class="h2" id="lab-title">What works should become easier to reuse.</h2>
+          <p>Client work should create more than a finished project.</p>
+          <p>When a useful solution pattern survives real work, it can become a reusable method, skill, agent pattern, workflow template, evaluation approach or product.</p>
+          <p>That is the role of DYAI Lab.</p>
+          <div class="lab-maturity">
+            <span>Experiment</span><i></i><span>Used</span><i></i><span>Repeated</span><i></i><span>Productised</span>
+          </div>
+          <p>The goal is not to collect assets.</p>
+          <p>The goal is to compound useful intelligence.</p>
+          <div style="margin-top:24px"><a href="#contact" class="btn btn-secondary">Explore the Lab</a></div>
+        </div>
+        <div class="lab-visual">
+          <div class="patterns" aria-label="Pattern objects showing maturity">
+            <div class="pattern-card reveal">
+              <div class="pattern-visual"><div class="pattern-line"></div></div>
+              <div class="pattern-title">Workflow Template — Draft</div>
+              <div class="pattern-meta"><span>type: workflow</span><span>maturity: experiment</span><span>evidence: prototype</span><span>reuse: low</span></div>
+            </div>
+            <div class="pattern-card reveal">
+              <div class="pattern-visual"><div class="pattern-line"></div></div>
+              <div class="pattern-title">Context Pack — Used</div>
+              <div class="pattern-meta"><span>type: knowledge</span><span>maturity: used</span><span>evidence: used in practice</span><span>reuse: medium</span></div>
+            </div>
+            <div class="pattern-card reveal">
+              <div class="pattern-visual" aria-hidden="true"></div>
+              <div class="pattern-title">Evaluation Method — Repeated</div>
+              <div class="pattern-meta"><span>type: evaluation</span><span>maturity: repeated</span><span>evidence: repeated pattern</span><span>reuse: high</span></div>
+            </div>
+            <div class="pattern-card reveal">
+              <div class="pattern-visual" aria-hidden="true"></div>
+              <div class="pattern-title">Agent Pattern — Productised</div>
+              <div class="pattern-meta"><span>type: agent</span><span>maturity: productised</span><span>evidence: measured case</span><span>reuse: high</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section class="section" id="principles" aria-labelledby="principles-title">
+    <div class="container">
+      <h2 class="h2 h2-large" id="principles-title">Human agency. Practical systems. Verifiable value.</h2>
+      <div class="principles-grid">
+        <div class="principle reveal"><div class="principle-title">Problem before tool</div><div class="principle-desc">We begin with the work that should change.</div></div>
+        <div class="principle reveal"><div class="principle-title">Human judgement stays visible</div><div class="principle-desc">Responsibility does not disappear because AI is involved.</div></div>
+        <div class="principle reveal"><div class="principle-title">Purpose before automation</div><div class="principle-desc">Not everything that can be automated should be automated.</div></div>
+        <div class="principle reveal"><div class="principle-title">Evidence before claims</div><div class="principle-desc">We separate assumptions, prototypes, observations and measured outcomes.</div></div>
+        <div class="principle reveal"><div class="principle-title">Smallest useful system</div><div class="principle-desc">Complexity must earn its place.</div></div>
+        <div class="principle reveal"><div class="principle-title">Reversible by design</div><div class="principle-desc">Useful systems should remain understandable, correctable and replaceable.</div></div>
+        <div class="principle reveal"><div class="principle-title">Learning becomes an asset</div><div class="principle-desc">Repeated solutions should improve the next piece of work.</div></div>
+        <div class="principle reveal"><div class="principle-title">Purpose before spectacle</div><div class="principle-desc">Interaction, motion and AI effects must help people understand something.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY DYAI -->
+  <section class="section" id="why-dyai" aria-labelledby="why-title">
+    <div class="container">
+      <div class="why-layout">
+        <div class="why-text">
+          <h2 class="h2" id="why-title">Strategy, work design and technology belong in the same conversation.</h2>
+          <p>AI projects often cross boundaries.</p>
+          <p>A workflow question becomes a technology question.</p>
+          <p>A technology question becomes an organisational question.</p>
+          <p>An organisational question becomes a learning question.</p>
+          <p>DYAI works across those boundaries.</p>
+          <p>Not because every problem needs everything.</p>
+          <p>Because the right solution often depends on understanding how the pieces affect one another.</p>
+        </div>
+        <div class="why-visual reveal" aria-hidden="true">
+          <svg class="why-cycle" viewBox="0 0 400 300" role="presentation">
+            <path d="M 60 150 C 60 80, 140 40, 200 80 S 340 120, 340 150 S 280 260, 200 220 S 60 220, 60 150" fill="none" stroke="#DAD8D1" stroke-width="1" stroke-dasharray="6 6"/>
+          </svg>
+          <div class="why-flow">
+            <span>Workflow <i></i></span>
+            <span>Technology <i></i></span>
+            <span>Organisation <i></i></span>
+            <span>Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <h2 class="h2" id="faq-title">FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">What is Augmented Intelligence?</button>
+          <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+            <p>At DYAI, Augmented Intelligence means designing systems in which artificial intelligence extends human capability without making human judgement, responsibility or context invisible.</p>
+            <p>The focus is not AI replacing people.</p>
+            <p>It is designing better ways for people and AI to work together.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">What is an AI Practice?</button>
+          <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+            <p>AI Practice is DYAI's term for the repeatable way an organisation works with AI.</p>
+            <p>It can include AI literacy, workflow design, model and tool selection, human review, agents, governance, evaluation and organisational learning.</p>
+            <p>The objective is to move beyond isolated experiments toward a capability the organisation can actually use and improve.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">How is DYAI different from traditional AI consulting?</button>
+          <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+            <p>DYAI does include advisory work when it is useful.</p>
+            <p>But advice alone is not the intended outcome.</p>
+            <p>We connect understanding, design, implementation, real-world use, verification and learning around a concrete work problem.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Does DYAI build AI agents?</button>
+          <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+            <p>Yes — when an agent is the right solution to a validated problem.</p>
+            <p>An agent can be useful when work requires multiple steps, access to tools or data, or coordinated capabilities.</p>
+            <p>We do not begin by assuming that every workflow needs an agent.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">Can DYAI help teams work with ChatGPT, Claude and other LLMs?</button>
+          <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+            <p>Yes.</p>
+            <p>That may start with practical AI literacy: understanding how LLMs work, how to communicate with them, how context and instructions affect results, and where their limitations matter.</p>
+            <p>The aim is to connect that knowledge to real work rather than teach prompting in isolation.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">Does DYAI train AI models?</button>
+          <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">
+            <p>“Training AI” can mean very different things.</p>
+            <p>Many useful business systems do not need a newly trained model.</p>
+            <p>Depending on the problem, the right approach may involve prompting, context design, retrieval, tools, integrations, evaluation, fine-tuning decisions or another architecture.</p>
+            <p>We choose that after understanding the requirement.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a7" id="faq-q7">What is Personal Augmentation?</button>
+          <div class="faq-answer" id="faq-a7" role="region" aria-labelledby="faq-q7">
+            <p>Personal Augmentation is DYAI's high-context approach for founders, independent professionals and creators.</p>
+            <p>It connects strategic thinking, AI capability, technical systems and everyday work around the individual's real goals and working environment.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a8" id="faq-q8">How does a DYAI engagement start?</button>
+          <div class="faq-answer" id="faq-a8" role="region" aria-labelledby="faq-q8">
+            <p>With a real problem.</p>
+            <p>You do not need to know which model, tool or agent you need.</p>
+            <p>The first useful question is:</p>
+            <p>What should become meaningfully better?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final" id="contact" aria-labelledby="final-title">
+    <div class="container">
+      <div class="final-grid">
+        <div class="final-copy">
+          <h2 class="final-h2" id="final-title">Bring a real problem.</h2>
+          <p class="final-lead">You do not need an AI roadmap before talking to us.</p>
+          <p class="final-lead">You do not need to know which model or agent you need.</p>
+          <p class="final-lead">Start with the work that should become:</p>
+          <ul class="change-list" aria-label="Desired changes">
+            <li>clearer</li>
+            <li>faster</li>
+            <li>more reliable</li>
+            <li>easier to coordinate</li>
+            <li>easier to repeat</li>
+            <li class="or">or simply possible</li>
+          </ul>
+          <p class="final-lead">Then we can determine whether AI belongs in the solution — and what kind.</p>
+          <div class="final-ctas">
+            <a href="#top" class="btn btn-primary">Start a conversation</a>
+            <a href="#augmentation-map" class="btn btn-secondary">Map your problem</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer" aria-labelledby="footer-title">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-word" id="footer-title">DYAI Studio</div>
+      <div class="footer-tag">Design Your Augmented Intelligence.</div>
+      <div class="footer-tag">Human–AI work design for organisations, founders and independent professionals.</div>
+    </div>
+    <div class="footer-meta">
+      <div>© DYAI Studio — Design Your Augmented Intelligence</div>
+      <div style="margin-top:8px">Precision Studio · Human Intelligence / Systems Practice</div>
+      <div style="margin-top:12px"><a href="#top">Back to top ↑</a> · <a href="#principles">Principles</a> · <a href="#evidence">Evidence</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Helpers */
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Header scroll */
+const header = document.getElementById('header');
+const progress = document.getElementById('progress');
+let lastScroll = 0;
+function onScroll(){
+  const y = window.scrollY;
+  if(y > 20) header.classList.add('scrolled'); else header.classList.remove('scrolled');
+  const docH = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docH > 0 ? (y / docH) * 100 : 0;
+  progress.style.width = pct + '%';
+  lastScroll = y;
+  // process fill
+  const path = document.getElementById('processPath');
+  if(path){
+    const rect = path.getBoundingClientRect();
+    const viewH = window.innerHeight;
+    const total = rect.height;
+    const visible = Math.min(Math.max(viewH - rect.top, 0), total);
+    const fillPct = total ? (visible / total) * 100 : 0;
+    const fillEl = document.getElementById('processFill');
+    if(fillEl) fillEl.style.height = Math.min(fillPct, 100) + '%';
+    // active steps
+    document.querySelectorAll('.process-step').forEach(step=>{
+      const r = step.getBoundingClientRect();
+      if(r.top < viewH * 0.7) step.classList.add('active');
+    });
+  }
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+/* Mobile nav */
+const mobileToggle = document.getElementById('mobileToggle');
+const nav = document.getElementById('nav');
+mobileToggle.addEventListener('click', ()=>{
+  const open = nav.classList.toggle('open');
+  mobileToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+nav.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=>{
+  nav.classList.remove('open');
+  mobileToggle.setAttribute('aria-expanded','false');
+}));
+
+/* Reveal on scroll */
+const revealEls = document.querySelectorAll('.reveal');
+if(!prefersReduced && 'IntersectionObserver' in window){
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.15});
+  revealEls.forEach(el=> io.observe(el));
+} else {
+  revealEls.forEach(el=> el.classList.add('in'));
+}
+
+/* Hero animation sequence */
+(function(){
+  const nodes = [
+    document.getElementById('hn-human'),
+    document.getElementById('hn-context'),
+    document.getElementById('hn-ai'),
+    document.getElementById('hn-tools'),
+    document.getElementById('hn-workflow'),
+    document.getElementById('hn-evidence'),
+    document.getElementById('hn-value')
+  ];
+  const lines = [
+    document.getElementById('hl-h-c'),
+    document.getElementById('hl-c-ai'),
+    document.getElementById('hl-h-ai'),
+    document.getElementById('hl-ai-t'),
+    document.getElementById('hl-ai-w'),
+    document.getElementById('hl-t-w'),
+    document.getElementById('hl-w-e'),
+    document.getElementById('hl-e-h'),
+    document.getElementById('hl-w-v'),
+    document.getElementById('hl-e-v')
+  ];
+  if(prefersReduced){
+    nodes.forEach(n=> n && n.classList.add('visible'));
+    lines.forEach(l=> l && l.classList.add('visible'));
+    return;
+  }
+  const seq = [
+    {el:nodes[0], delay:100},
+    {el:lines[0], delay:350},
+    {el:nodes[1], delay:550},
+    {el:lines[1], delay:750},
+    {el:lines[2], delay:800},
+    {el:nodes[2], delay:950},
+    {el:lines[3], delay:1200},
+    {el:lines[4], delay:1250},
+    {el:nodes[3], delay:1350},
+    {el:nodes[4], delay:1450},
+    {el:lines[5], delay:1500},
+    {el:lines[6], delay:1650},
+    {el:nodes[5], delay:1750},
+    {el:lines[7], delay:1900},
+    {el:lines[8], delay:2050},
+    {el:lines[9], delay:2100},
+    {el:nodes[6], delay:2200},
+  ];
+  seq.forEach(item=>{
+    if(!item.el) return;
+    setTimeout(()=> item.el.classList.add('visible'), item.delay);
+  });
+})();
+
+/* Augmentation Map */
+(function(){
+  const mapVisual = document.getElementById('mapVisual');
+  const mapSvg = document.getElementById('mapSvg');
+  const linesGroup = document.getElementById('mapLinesGroup');
+  const nodesContainer = document.getElementById('mapNodes');
+  const detail = document.getElementById('mapDetail');
+  const btnFrag = document.getElementById('btnFragmented');
+  const btnDes = document.getElementById('btnDesigned');
+
+  const nodesData = [
+    {id:'human', label:'Human', q:'Where is judgement, responsibility or creativity required?', desc:'Human judgement stays at the centre. AI extends the system but does not replace responsibility, creativity or accountability.', xD:12, yD:50, xF:18, yF:28, cls:'human'},
+    {id:'context', label:'Context', q:'What must the system know to be useful?', desc:'Context is the knowledge, history, constraints and intent that makes AI output actually useful. Without it, models guess.', xD:28, yD:18, xF:48, yF:14, cls:'teal'},
+    {id:'ai', label:'AI', q:'What can a model reliably contribute?', desc:'LLMs and models contribute language, synthesis, pattern recognition and draft generation — within clear boundaries and evaluation.', xD:44, yD:36, xF:68, yF:32, cls:'teal'},
+    {id:'tools', label:'Tools', q:'Which systems, data or APIs are required?', desc:'Tools connect the model to real systems: data, APIs, documents, calendars, code and business software.', xD:72, yD:18, xF:78, yF:68, cls:''},
+    {id:'workflow', label:'Workflow', q:'How should people, models and tools interact?', desc:'Workflow defines who does what, when, with which controls and handoffs. This is where fragmented tools become a working system.', xD:76, yD:64, xF:22, yF:74, cls:''},
+    {id:'evidence', label:'Evidence', q:'How will we know whether the result improved anything?', desc:'Evidence closes the feedback loop: quality, time, friction, coordination, reliability and learning. Measurement where possible, honesty where not.', xD:32, yD:84, xF:52, yF:88, cls:''},
+    {id:'value', label:'Value', q:'What changed in the actual work?', desc:'Value is the meaningful change in real work: clearer, faster, more reliable, easier to coordinate, easier to repeat, or simply possible.', xD:12, yD:84, xF:88, yF:14, cls:'value'}
+  ];
+
+  const connectionsDesigned = [
+    {from:'human', to:'context', type:'graphite'},
+    {from:'context', to:'ai', type:'teal'},
+    {from:'human', to:'ai', type:'graphite'},
+    {from:'ai', to:'tools', type:'teal'},
+    {from:'ai', to:'workflow', type:'teal'},
+    {from:'tools', to:'workflow', type:'graphite'},
+    {from:'workflow', to:'evidence', type:'graphite'},
+    {from:'evidence', to:'human', type:'graphite', dashed:true},
+    {from:'workflow', to:'value', type:'orange'},
+    {from:'evidence', to:'value', type:'orange'}
+  ];
+  const connectionsFragmented = [
+    {from:'context', to:'ai', type:'teal'},
+    {from:'ai', to:'tools', type:'teal'},
+    {from:'tools', to:'workflow', type:'graphite', dashed:true}
+  ];
+
+  let state = 'designed';
+  let activeId = 'human';
+
+  function getNodePos(node){
+    return state === 'designed' ? {x:node.xD, y:node.yD} : {x:node.xF, y:node.yF};
+  }
+  function getNodeById(id){ return nodesData.find(n=>n.id===id); }
+
+  function renderNodes(){
+    nodesContainer.innerHTML = '';
+    nodesData.forEach(n=>{
+      const pos = getNodePos(n);
+      const btn = document.createElement('button');
+      btn.className = 'map-node ' + (n.cls||'');
+      if(n.id===activeId) btn.classList.add('active');
+      btn.dataset.id = n.id;
+      btn.style.left = pos.x + '%';
+      btn.style.top = pos.y + '%';
+      btn.setAttribute('aria-label', n.label + ': ' + n.q);
+      btn.innerHTML = n.label;
+      btn.addEventListener('click', ()=> setActive(n.id));
+      btn.addEventListener('focus', ()=> setActive(n.id, false));
+      nodesContainer.appendChild(btn);
+    });
+  }
+
+  function renderLines(){
+    linesGroup.innerHTML = '';
+    const conns = state === 'designed' ? connectionsDesigned : connectionsFragmented;
+    conns.forEach(c=>{
+      const fromNode = getNodeById(c.from);
+      const toNode = getNodeById(c.to);
+      if(!fromNode || !toNode) return;
+      const fromPos = getNodePos(fromNode);
+      const toPos = getNodePos(toNode);
+      const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+      line.setAttribute('x1', fromPos.x);
+      line.setAttribute('y1', fromPos.y);
+      line.setAttribute('x2', toPos.x);
+      line.setAttribute('y2', toPos.y);
+      line.setAttribute('class','map-line ' + c.type + (c.dashed ? ' dashed' : '') + (activeId && (c.from===activeId || c.to===activeId) ? ' active' : ''));
+      if(activeId && !(c.from===activeId || c.to===activeId)){
+        line.classList.add('dim');
+      }
+      line.dataset.from = c.from;
+      line.dataset.to = c.to;
+      linesGroup.appendChild(line);
+    });
+  }
+
+  function updateLinesLive(){
+    const conns = state === 'designed' ? connectionsDesigned : connectionsFragmented;
+    const lines = linesGroup.querySelectorAll('line');
+    lines.forEach((line,i)=>{
+      const c = conns[i];
+      if(!c) return;
+      const fromEl = nodesContainer.querySelector('[data-id="'+c.from+'"]');
+      const toEl = nodesContainer.querySelector('[data-id="'+c.to+'"]');
+      if(!fromEl || !toEl) return;
+      const rect = mapVisual.getBoundingClientRect();
+      const fromRect = fromEl.getBoundingClientRect();
+      const toRect = toEl.getBoundingClientRect();
+      const fromX = ((fromRect.left + fromRect.width/2 - rect.left) / rect.width)*100;
+      const fromY = ((fromRect.top + fromRect.height/2 - rect.top) / rect.height)*100;
+      const toX = ((toRect.left + toRect.width/2 - rect.left) / rect.width)*100;
+      const toY = ((toRect.top + toRect.height/2 - rect.top) / rect.height)*100;
+      line.setAttribute('x1', fromX);
+      line.setAttribute('y1', fromY);
+      line.setAttribute('x2', toX);
+      line.setAttribute('y2', toY);
+    });
+  }
+
+  function setActive(id, focusDetail=true){
+    activeId = id;
+    const node = getNodeById(id);
+    if(!node) return;
+    // update nodes active
+    nodesContainer.querySelectorAll('.map-node').forEach(btn=>{
+      btn.classList.toggle('active', btn.dataset.id===id);
+    });
+    // update lines
+    linesGroup.querySelectorAll('line').forEach(line=>{
+      const isActive = line.dataset.from===id || line.dataset.to===id;
+      line.classList.toggle('active', isActive);
+      line.classList.toggle('dim', !isActive);
+    });
+    // update detail
+    detail.innerHTML = '<div class="map-detail-title">'+node.label+'</div><div class="map-detail-q">'+node.q+'</div><div class="map-detail-desc">'+node.desc+'</div>';
+    if(focusDetail && window.innerWidth < 1100){
+      // scroll to detail on mobile
+    }
+  }
+
+  function setState(newState){
+    if(newState===state) return;
+    state = newState;
+    btnFrag.setAttribute('aria-pressed', state==='fragmented' ? 'true' : 'false');
+    btnDes.setAttribute('aria-pressed', state==='designed' ? 'true' : 'false');
+    btnFrag.classList.toggle('active', state==='fragmented');
+    btnDes.classList.toggle('active', state==='designed');
+    // move nodes
+    nodesData.forEach(n=>{
+      const pos = getNodePos(n);
+      const el = nodesContainer.querySelector('[data-id="'+n.id+'"]');
+      if(el){
+        el.style.left = pos.x + '%';
+        el.style.top = pos.y + '%';
+      }
+    });
+    if(prefersReduced){
+      renderLines();
+      return;
+    }
+    // animate lines following nodes
+    let start = performance.now();
+    const duration = 600;
+    function anim(now){
+      const t = Math.min((now - start)/duration, 1);
+      updateLinesLive();
+      if(t < 1) requestAnimationFrame(anim);
+      else renderLines();
+    }
+    requestAnimationFrame(anim);
+  }
+
+  // init
+  renderNodes();
+  renderLines();
+  setActive('human', false);
+
+  // toggle listeners
+  btnFrag.addEventListener('click', ()=> setState('fragmented'));
+  btnDes.addEventListener('click', ()=> setState('designed'));
+
+  // keyboard navigation between nodes with arrows
+  nodesContainer.addEventListener('keydown', (e)=>{
+    if(!['ArrowRight','ArrowLeft','ArrowUp','ArrowDown'].includes(e.key)) return;
+    e.preventDefault();
+    const ids = nodesData.map(n=>n.id);
+    let idx = ids.indexOf(activeId);
+    if(e.key==='ArrowRight' || e.key==='ArrowDown') idx = (idx+1)%ids.length;
+    else idx = (idx-1+ids.length)%ids.length;
+    const nextId = ids[idx];
+    const nextBtn = nodesContainer.querySelector('[data-id="'+nextId+'"]');
+    if(nextBtn){ nextBtn.focus(); setActive(nextId); }
+  });
+
+  // resize
+  window.addEventListener('resize', ()=>{
+    renderLines();
+  });
+
+  // Intersection: when map enters view, trigger designed animation if reduced motion false
+  if(!prefersReduced && 'IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          // pulse value node
+          const val = nodesContainer.querySelector('[data-id="value"]');
+          if(val){ val.style.transform = 'translate(-50%,-50%) scale(1.08)'; setTimeout(()=> val.style.transform='', 400); }
+          io.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.3});
+    io.observe(mapVisual);
+  }
+})();
+
+/* FAQ */
+(function(){
+  const questions = document.querySelectorAll('.faq-question');
+  // For graceful degradation, answers are visible by default in HTML; hide them via JS on load
+  questions.forEach(btn=>{
+    const ans = document.getElementById(btn.getAttribute('aria-controls'));
+    if(ans){
+      ans.hidden = true;
+      btn.setAttribute('aria-expanded','false');
+    }
+    btn.addEventListener('click', ()=>{
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const ansId = btn.getAttribute('aria-controls');
+      const ansEl = document.getElementById(ansId);
+      // close others? Allow multiple open, but we toggle one
+      if(expanded){
+        btn.setAttribute('aria-expanded','false');
+        if(ansEl) ansEl.hidden = true;
+      } else {
+        btn.setAttribute('aria-expanded','true');
+        if(ansEl) ansEl.hidden = false;
+      }
+    });
+  });
+})();
+
+/* Smooth scroll for anchor links (native smooth already, but ensure focus) */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', (e)=>{
+    const id = a.getAttribute('href').slice(1);
+    if(!id) return;
+    const target = document.getElementById(id);
+    if(target){
+      // allow default smooth, then focus
+      setTimeout(()=> target.setAttribute('tabindex','-1'), 0);
+    }
+  });
+});
+</script>
+</body>
+</html>
