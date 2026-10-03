@@ -1,0 +1,47 @@
+project: DYAI-Studio
+product: studio.dyai.cloud
+owner: Ben
+operating_model: Kanban
+systems_of_record:
+  product_truth: Confluence/DYAIStudio
+  delivery_state: Jira/DYAI-board-733
+  technical_truth: GitHub/DYAI2025/DYAI-Studio
+truth_labels:
+  - VERIFIED
+  - USER_STATED
+  - DERIVED
+  - ASSUMPTION
+  - MISSING
+  - SOURCE_NEEDED
+  - CONFLICT
+  - BLOCKER
+evidence_classes:
+  - fake-only
+  - unit-only
+  - integration
+  - real-boundary-smoke
+  - production-observed
+  - user-confirmed
+gates:
+  G2_constitution: approved
+  G3_delivery_start: approved
+  G4_release: blocked
+product_guardrails:
+  - problem_before_tool
+  - human_agency
+  - no_fake_roi
+  - no_unlabelled_prototypes
+  - bilingual_parity
+  - accessibility_and_performance
+  - smallest_useful_system
+  - evidence_before_claim
+  - asset_reuse_over_asset_count
+asset_maturity:
+  - experiment
+  - used
+  - repeated
+  - productised
+destructive_actions:
+  require_explicit_owner_authority: true
+production_claims:
+  minimum_evidence: real-boundary-smoke
