@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DYAI Traceability Row",
+  "type": "object",
+  "required": ["customer_problem","product_goal","work_item","verification"],
+  "properties": {
+    "customer_problem": {"type":"string"},
+    "business_outcome": {"type":"string"},
+    "product_goal": {"type":"string"},
+    "requirement_or_hypothesis": {"type":"string"},
+    "work_item": {"type":"string"},
+    "implementation_ref": {"type":"string"},
+    "verification": {"type":"string"},
+    "runtime_or_user_evidence": {"type":"string"},
+    "learning": {"type":"string"},
+    "asset_candidate": {"type":"string"}
+  },
+  "additionalProperties": false
+}
