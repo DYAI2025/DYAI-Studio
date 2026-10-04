@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DYAI Studio | AI Strategy, Workflows &amp; Agentic Systems</title>
+<meta name="description" content="DYAI Studio helps organisations, founders and independent professionals turn AI into reliable ways of working — from AI literacy and LLM integration to human–AI workflows and agentic systems.">
+<link rel="canonical" href="https://studio.dyai.cloud/en">
+<link rel="alternate" hreflang="en" href="https://studio.dyai.cloud/en">
+<meta name="theme-color" content="#071311">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DYAI Studio">
+<meta property="og:locale" content="en">
+<meta property="og:url" content="https://studio.dyai.cloud/en">
+<meta property="og:title" content="DYAI Studio — Design Your Augmented Intelligence">
+<meta property="og:description" content="We design how humans and AI work together — around real problems, real workflows and evidence that matters.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DYAI Studio — Design Your Augmented Intelligence">
+<meta name="twitter:description" content="We design how humans and AI work together — around real problems, real workflows and evidence that matters.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://studio.dyai.cloud/en#organization",
+      "name": "DYAI Studio",
+      "alternateName": "DYAI — Design Your Augmented Intelligence",
+      "url": "https://studio.dyai.cloud/en",
+      "slogan": "Design Your Augmented Intelligence.",
+      "description": "DYAI Studio helps organisations, founders and independent professionals turn AI into reliable ways of working — from AI literacy and LLM integration to human–AI workflows and agentic systems."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://studio.dyai.cloud/en#webpage",
+      "url": "https://studio.dyai.cloud/en",
+      "name": "DYAI Studio | AI Strategy, Workflows & Agentic Systems",
+      "inLanguage": "en",
+      "description": "DYAI Studio helps organisations, founders and independent professionals turn AI into reliable ways of working — from AI literacy and LLM integration to human–AI workflows and agentic systems.",
+      "about": { "@id": "https://studio.dyai.cloud/en#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://studio.dyai.cloud/en#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is Augmented Intelligence?", "acceptedAnswer": { "@type": "Answer", "text": "At DYAI, Augmented Intelligence means designing systems in which artificial intelligence extends human capability without making human judgement, responsibility or context invisible. The focus is not AI replacing people. It is designing better ways for people and AI to work together." } },
+        { "@type": "Question", "name": "What is an AI Practice?", "acceptedAnswer": { "@type": "Answer", "text": "AI Practice is DYAI's term for the repeatable way an organisation works with AI. It can include AI literacy, workflow design, model and tool selection, human review, agents, governance, evaluation and organisational learning. The objective is to move beyond isolated experiments toward a capability the organisation can actually use and improve." } },
+        { "@type": "Question", "name": "How is DYAI different from traditional AI consulting?", "acceptedAnswer": { "@type": "Answer", "text": "DYAI does include advisory work when it is useful. But advice alone is not the intended outcome. We connect understanding, design, implementation, real-world use, verification and learning around a concrete work problem." } },
+        { "@type": "Question", "name": "Does DYAI build AI agents?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — when an agent is the right solution to a validated problem. An agent can be useful when work requires multiple steps, access to tools or data, or coordinated capabilities. We do not begin by assuming that every workflow needs an agent." } },
+        { "@type": "Question", "name": "Can DYAI help teams work with ChatGPT, Claude and other LLMs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. That may start with practical AI literacy: understanding how LLMs work, how to communicate with them, how context and instructions affect results, and where their limitations matter. The aim is to connect that knowledge to real work rather than teach prompting in isolation." } },
+        { "@type": "Question", "name": "Does DYAI train AI models?", "acceptedAnswer": { "@type": "Answer", "text": "“Training AI” can mean very different things. Many useful business systems do not need a newly trained model. Depending on the problem, the right approach may involve prompting, context design, retrieval, tools, integrations, evaluation, fine-tuning decisions or another architecture. We choose that after understanding the requirement." } },
+        { "@type": "Question", "name": "What is Personal Augmentation?", "acceptedAnswer": { "@type": "Answer", "text": "Personal Augmentation is DYAI's high-context approach for founders, independent professionals and creators. It connects strategic thinking, AI capability, technical systems and everyday work around the individual's real goals and working environment." } },
+        { "@type": "Question", "name": "How does a DYAI engagement start?", "acceptedAnswer": { "@type": "Answer", "text": "With a real problem. You do not need to know which model, tool or agent you need. The first useful question is: What should become meaningfully better?" } }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+/* ------------------------------------------------------------------
+   DYAI Studio — Living Intelligence / The Augmented Field
+   ------------------------------------------------------------------ */
+:root{
+  --ink:#071311;
+  --carbon:#0D1B18;
+  --soft:#142521;
+  --bone:#EEECE4;
+  --white:#F7F5EE;
+  --grey:#A7AEAA;
+  --mint:#72E2C1;
+  --amber:#FFB35C;
+  --acid:#D5FF62;
+  --hair:#22332F;
+  --mint-rgb:114,226,193;
+  --amber-rgb:255,179,92;
+  --acid-rgb:213,255,98;
+  --bone-rgb:238,236,228;
+  --sans:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  --header-h:64px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--ink);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;font-family:var(--sans);color:var(--bone);background:var(--ink);
+  font-size:clamp(1rem,.95rem + .25vw,1.125rem);line-height:1.55;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--acid);outline-offset:3px;border-radius:3px}
+p{margin:0 0 1em;max-width:62ch}
+ul,ol{margin:0;padding:0;list-style:none}
+strong{font-weight:600}
+
+.skip{position:absolute;left:1rem;top:-200px;z-index:200;background:var(--acid);color:var(--ink);padding:.7rem 1.1rem;font-weight:600;border-radius:4px;text-decoration:none}
+.skip:focus{top:1rem}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;padding:0;margin:-1px}
+.wrap{width:min(100% - clamp(2.5rem,8vw,9rem),1440px);margin-inline:auto}
+
+/* Typography */
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mint);margin:0 0 1.4rem;font-weight:400}
+.eyebrow--amber{color:var(--amber)}
+h1,h2,h3,h4{font-weight:500;letter-spacing:-.02em;line-height:1.04;margin:0;color:var(--white)}
+.display{font-size:clamp(2.6rem,5.6vw,6.4rem);letter-spacing:-.03em;max-width:12ch}
+.h2{font-size:clamp(2.1rem,1.4rem + 3.2vw,4.4rem);margin:0 0 1.6rem;max-width:17ch}
+.h3{font-size:clamp(1.3rem,1.1rem + .9vw,1.85rem);line-height:1.15}
+.lead{font-size:clamp(1.15rem,1rem + .6vw,1.5rem);line-height:1.4;color:var(--white);max-width:40ch}
+.muted{color:var(--grey)}
+.mono{font-family:var(--mono);letter-spacing:.08em}
+.copy p{margin-bottom:1.1em}
+.copy p:last-child{margin-bottom:0}
+.statement{font-size:clamp(1.5rem,1.1rem + 1.8vw,2.6rem);line-height:1.15;color:var(--white);letter-spacing:-.015em;max-width:24ch;margin:0}
+.statement em{font-style:normal;color:var(--amber)}
+.index{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;color:var(--mint)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.65rem;min-height:48px;padding:.75rem 1.5rem;border-radius:999px;border:1px solid var(--hair);text-decoration:none;font-weight:500;line-height:1.1;transition:border-color .3s,background .3s,color .3s,transform .3s var(--ease)}
+.btn svg{width:14px;height:14px;flex:none}
+.btn--primary{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+.btn--primary:hover{background:var(--white);transform:translateY(-1px)}
+.btn--ghost{color:var(--bone)}
+.btn--ghost:hover{border-color:var(--mint);color:var(--mint)}
+.btn--amber{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.btn--amber:hover{background:#ffc078}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.2rem}
+.link{display:inline-flex;align-items:center;gap:.5rem;font-weight:500;text-decoration:none;color:var(--mint);min-height:44px;border-bottom:1px solid transparent}
+.link:hover{border-bottom-color:var(--mint)}
+.link svg{width:14px;height:14px}
+
+/* Header */
+.header{position:absolute;inset:0 0 auto;z-index:60;height:var(--header-h);transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+.header__inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:100%}
+.brand{font-weight:700;letter-spacing:.22em;text-decoration:none;font-size:.95rem;color:var(--white);display:inline-flex;align-items:center;gap:.6rem;min-height:44px}
+.brand__mark{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--amber);box-shadow:inset 0 0 0 2px var(--ink),inset 0 0 0 8px var(--amber)}
+.nav ul{display:flex;align-items:center;gap:clamp(.9rem,2vw,2.2rem)}
+.nav a{font-size:.86rem;text-decoration:none;color:var(--grey);display:inline-flex;align-items:center;min-height:44px;padding:0 .1rem;letter-spacing:.01em;transition:color .3s}
+.nav a:hover{color:var(--white)}
+.nav a.nav__lang{font-family:var(--mono);letter-spacing:.14em;font-size:.72rem;color:var(--bone);border:1px solid var(--hair);border-radius:999px;min-height:32px;padding:0 .7rem}
+@media (min-width:1000px){
+  .header{position:fixed}
+  .header.is-scrolled{background:rgba(7,19,17,.84);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:var(--hair)}
+}
+@media (max-width:999px){
+  .header{height:auto;padding-top:.5rem}
+  .header__inner{flex-wrap:wrap;row-gap:0}
+  .nav{width:100%;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1 * clamp(1.25rem,4vw,4.5rem));padding-inline:clamp(1.25rem,4vw,4.5rem)}
+  .nav::-webkit-scrollbar{display:none}
+  .nav ul{gap:1.3rem;white-space:nowrap;padding-bottom:.25rem}
+}
+
+/* Sections */
+.section{position:relative;padding-block:clamp(5rem,10vw,9.5rem);border-top:1px solid var(--hair)}
+.section__head{margin-bottom:clamp(2.5rem,5vw,4.5rem)}
+.section--tight{padding-block:clamp(4rem,8vw,7rem)}
+
+/* Stage layout: text column + sticky field */
+.stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,6rem);align-items:start}
+.stage__field{position:sticky;top:calc(var(--header-h) + 1.25rem);height:calc(100vh - var(--header-h) - 2.5rem);height:calc(100svh - var(--header-h) - 2.5rem);min-height:460px;max-height:860px;display:flex;flex-direction:column}
+.stage__field .field{flex:1 1 auto;height:auto;min-height:0}
+.stage--flip .stage__field{order:-1}
+.stage__content{min-width:0}
+.stage__tools{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.9rem}
+@media (max-width:1099px){
+  .stage{grid-template-columns:minmax(0,1fr)}
+  .stage__field{order:-1;position:sticky;top:0;height:auto;min-height:0;z-index:5;background:var(--ink);padding-block:.75rem;margin-inline:calc(-1 * clamp(1.25rem,4vw,4.5rem));padding-inline:clamp(1.25rem,4vw,4.5rem);border-bottom:1px solid var(--hair);margin-bottom:2rem}
+  .stage__field::after{content:"";position:absolute;left:0;right:0;bottom:-18px;height:18px;background:linear-gradient(var(--ink),transparent);pointer-events:none}
+  .stage__tools{margin-bottom:.5rem}
+  .stage__field .field{flex:none;height:300px}
+}
+@media (max-width:699px){
+  .stage__field .field{height:300px}
+  .stage__field .field__caption{display:none}
+  .stage__tools{gap:.3rem}
+}
+
+/* Field */
+.field{position:relative;overflow:hidden;border:1px solid var(--hair);border-radius:14px;background:radial-gradient(120% 80% at 70% 20%,var(--carbon),var(--ink) 70%);height:100%}
+.field--bare{border:0;border-radius:0;background:none}
+.field__svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.field__nodes{position:absolute;inset:0}
+.field__caption{position:absolute;left:.8rem;bottom:.7rem;padding:.3rem .5rem;border-radius:6px;background:rgba(7,19,17,.78);font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);opacity:.8;pointer-events:none;max-width:calc(100% - 2rem)}
+.field__callout{position:absolute;left:1rem;right:1rem;bottom:1rem;max-width:34ch;padding:.9rem 1rem;border:1px solid var(--hair);border-radius:10px;background:rgba(13,27,24,.92);font-size:.92rem;line-height:1.4;color:var(--white);opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s var(--ease);pointer-events:none}
+.field__callout.is-on{opacity:1;transform:none;pointer-events:auto}
+.field__callout b{display:block;font-family:var(--mono);font-weight:400;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mint);margin-bottom:.35rem}
+.field__callout.is-human b{color:var(--amber)}
+.field__callout .field__close{position:absolute;top:.4rem;right:.4rem;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:var(--grey)}
+.field__callout .field__close:hover{color:var(--white)}
+
+/* Links */
+.link-path{fill:none;stroke:var(--grey);stroke-width:1;stroke-opacity:.42;stroke-linecap:round;opacity:0;transition:opacity .7s,stroke-opacity .5s,stroke-width .3s}
+.link-path.is-in{opacity:1}
+.link-path.link--ai{stroke:var(--mint);stroke-opacity:.62}
+.link-path.link--human{stroke:var(--amber);stroke-opacity:.62}
+.link-path.link--value{stroke:var(--acid);stroke-opacity:.8}
+.link-path.link--dashed{stroke-dasharray:2 6}
+.link-path.link--weak{stroke-opacity:.18}
+.link-path.is-active{stroke-opacity:1;stroke-width:1.6}
+.link-path.is-faded{stroke-opacity:.12}
+.frame-rect{fill:none;stroke:var(--hair);stroke-width:1;stroke-dasharray:3 5;opacity:0;transition:opacity .7s;rx:10}
+.frame-rect.is-in{opacity:1}
+.frame-rect.frame--solid{stroke-dasharray:none;stroke:#2f4740;fill:rgba(20,37,33,.35)}
+.frame-rect.frame--mint{stroke:rgba(var(--mint-rgb),.55)}
+.frame-rect.frame--acid{stroke:rgba(var(--acid-rgb),.6)}
+.frame-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;fill:var(--grey);opacity:0;transition:opacity .7s}
+.frame-label.is-in{opacity:.9}
+.pulse{fill:var(--mint);filter:drop-shadow(0 0 3px rgba(var(--mint-rgb),.55))}
+.pulse--human{fill:var(--amber);filter:drop-shadow(0 0 3px rgba(var(--amber-rgb),.55))}
+.pulse--value{fill:var(--acid);filter:drop-shadow(0 0 4px rgba(var(--acid-rgb),.6))}
+.pulse--neutral{fill:var(--bone);filter:none}
+
+/* Nodes */
+.node{position:absolute;left:0;top:0;width:44px;height:44px;margin:-22px 0 0 -22px;display:block;opacity:0;transition:opacity .6s;color:var(--bone);will-change:transform;cursor:default;-webkit-tap-highlight-color:transparent}
+.node.is-in{opacity:1}
+.node.is-out{opacity:0;pointer-events:none}
+.node.is-faded{opacity:.42}
+.node[data-interactive]{cursor:pointer}
+.node[data-interactive]:focus-visible{outline:2px solid var(--acid);outline-offset:-2px;border-radius:50%}
+.node::before{content:"";position:absolute;inset:7px;border-radius:50%;border:1px solid currentColor;opacity:0;transform:scale(.6);transition:opacity .35s,transform .35s var(--ease)}
+.node.is-selected::before{opacity:.65;transform:scale(1)}
+.node[data-interactive]:hover::before{opacity:.35;transform:scale(1)}
+.node__dot{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--bone);transition:background .4s,box-shadow .4s,border-color .4s,opacity .4s}
+.node__label{position:absolute;top:calc(50% + 12px);left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;line-height:1;color:var(--grey);white-space:nowrap;text-transform:uppercase}
+.node--lp-right .node__label{top:50%;left:calc(50% + 15px);transform:translateY(-50%)}
+.node--lp-left .node__label{top:50%;left:auto;right:calc(50% + 15px);transform:translateY(-50%)}
+.node--lp-top .node__label{top:auto;bottom:calc(50% + 12px)}
+.node--human{color:var(--amber)}
+.node--human .node__dot{width:16px;height:16px;margin:-8px 0 0 -8px;background:transparent;border:1.5px solid var(--amber);box-shadow:inset 0 0 0 3px var(--ink),inset 0 0 0 20px var(--amber)}
+.node--human .node__label{color:var(--bone)}
+.node--big .node__dot{width:22px;height:22px;margin:-11px 0 0 -11px;box-shadow:inset 0 0 0 4px var(--ink),inset 0 0 0 24px var(--amber)}
+.node--ai{color:var(--mint)}
+.node--ai .node__dot{background:var(--mint);box-shadow:0 0 9px rgba(var(--mint-rgb),.3)}
+.node--agent .node__dot{background:var(--mint);box-shadow:0 0 0 2px var(--ink),0 0 0 3px rgba(var(--mint-rgb),.7)}
+.node--context .node__dot{background:transparent;border:1.5px solid var(--bone)}
+.node--tool{color:var(--grey)}
+.node--tool .node__dot{border-radius:2px;background:var(--grey)}
+.node--workflow .node__dot{border-radius:3px;width:12px;height:12px;margin:-6px 0 0 -6px;background:transparent;border:1.5px solid var(--bone)}
+.node--evidence{color:var(--amber)}
+.node--evidence .node__dot{transform:rotate(45deg);border-radius:1px;width:11px;height:11px;margin:-5.5px 0 0 -5.5px;background:transparent;border:1.5px solid var(--amber)}
+.node--evidence.is-solid .node__dot{background:var(--amber)}
+.node--value{color:var(--amber)}
+.node--value .node__dot{background:var(--amber);box-shadow:0 0 0 3px var(--ink),0 0 0 4px var(--amber)}
+.node--value .node__label{color:var(--bone)}
+.node--value.is-acid{color:var(--acid)}
+.node--value.is-acid .node__dot{background:var(--acid);box-shadow:0 0 0 3px var(--ink),0 0 0 4px var(--acid),0 0 16px rgba(var(--acid-rgb),.3)}
+.node--neutral .node__dot{background:var(--grey)}
+.node--pattern{color:var(--acid)}
+.node--pattern .node__dot{border-radius:3px;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;background:transparent;border:1.5px solid var(--acid)}
+.node--pattern .node__label{color:var(--bone)}
+.node.is-ghost .node__dot{background:transparent!important;border:1px dashed var(--grey)!important;box-shadow:none!important}
+.node.is-ghost .node__label{opacity:.65}
+.node.is-dim{opacity:.45}
+.node.is-emerge .node__dot::after{content:"";position:absolute;inset:-5px;border-radius:inherit;border:1px solid var(--acid);animation:emerge 1.2s var(--ease) forwards}
+@keyframes emerge{from{transform:scale(1);opacity:.9}to{transform:scale(4.2);opacity:0}}
+@media (max-width:559px){.node__label{font-size:9.5px;letter-spacing:.1em}}
+
+/* Legend */
+.legend{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-top:1rem}
+.legend li{display:inline-flex;align-items:center;gap:.5rem}
+.legend i{width:10px;height:10px;border-radius:50%;flex:none;display:inline-block}
+.legend .l-human{border:1.5px solid var(--amber);box-shadow:inset 0 0 0 2px var(--ink),inset 0 0 0 8px var(--amber)}
+.legend .l-ai{background:var(--mint)}
+.legend .l-acid{background:var(--acid)}
+.legend .l-dash{width:22px;height:0;border-top:1px dashed var(--grey);border-radius:0}
+
+/* Reveal */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .reveal.is-in{opacity:1;transform:none}
+.js .reveal[data-delay="1"]{transition-delay:.12s}
+.js .reveal[data-delay="2"]{transition-delay:.24s}
+.js .reveal[data-delay="3"]{transition-delay:.36s}
+.js .reveal[data-delay="4"]{transition-delay:.48s}
+.js .reveal[data-delay="5"]{transition-delay:.6s}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:grid;align-items:center;padding:calc(var(--header-h) + 3rem) 0 3.5rem;overflow:hidden}
+.hero__field{position:absolute;inset:0;pointer-events:none}
+.hero__field .node{pointer-events:auto}
+.hero__field .field__callout{pointer-events:auto}
+.hero__field::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 72% 45%,rgba(13,27,24,.9),transparent 70%);pointer-events:none}
+.hero__content{position:relative;z-index:2;max-width:44rem;pointer-events:none}
+.hero__content a,.hero__content button,.hero__content p{pointer-events:auto}
+.hero__content .lead{margin:1.5rem 0 1.2rem}
+.hero__content .copy p{max-width:52ch}
+.hero__micro{margin-top:2rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.js .hero .word{display:inline-block;opacity:0;transform:translateY(.35em);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .hero.is-ready .word{opacity:1;transform:none}
+.hero__note{position:absolute;right:clamp(1rem,4vw,4rem);top:calc(var(--header-h) + 2.5rem);max-width:32ch;z-index:4;font-size:.95rem;line-height:1.45;color:var(--white);padding:.75rem 1rem .8rem;border-left:2px solid var(--amber);background:rgba(7,19,17,.86);border-radius:0 10px 10px 0;opacity:0;transform:translateY(6px);transition:opacity .45s,transform .45s var(--ease);pointer-events:none;z-index:3}
+.hero__note.is-on{opacity:1;transform:none;pointer-events:auto}
+.hero__note b{display:block;font-family:var(--mono);font-weight:400;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.4rem}
+.hero__note.is-ai{border-color:var(--mint)}.hero__note.is-ai b{color:var(--mint)}
+.hero__note.is-context{border-color:var(--bone)}.hero__note.is-context b{color:var(--bone)}
+.hero__hint{position:absolute;left:50%;right:0;bottom:1.25rem;max-width:none;text-align:center;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);pointer-events:none;opacity:.75}
+.hero__static{opacity:.9;margin-bottom:2rem}
+@media (max-width:999px){
+  .hero{display:block;padding-top:calc(var(--header-h) + 3.5rem)}
+  .hero__field{position:relative;height:min(48vh,420px);min-height:300px;margin-bottom:2rem;border:1px solid var(--hair);border-radius:14px;background:radial-gradient(120% 80% at 70% 20%,var(--carbon),var(--ink) 70%);overflow:hidden}
+  .hero__field::before{display:none}
+  .hero__content{max-width:none}
+  .hero__note{position:static;margin:1rem auto 0;width:min(100% - clamp(2.5rem,8vw,9rem),1440px);max-width:none}
+  .hero__hint{display:none}
+}
+
+/* Problem */
+.qs{counter-reset:q;margin:2.5rem 0}
+.qs li{display:grid;grid-template-columns:3.2rem 1fr;align-items:baseline;gap:.5rem;padding:1.1rem 0;border-top:1px solid var(--hair);font-size:clamp(1.25rem,1rem + 1.1vw,1.9rem);line-height:1.2;letter-spacing:-.01em;color:var(--white)}
+.qs li:last-child{border-bottom:1px solid var(--hair)}
+.qs li::before{counter-increment:q;content:counter(q,decimal-leading-zero);font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;color:var(--mint)}
+.qs li.is-passed::before{color:var(--amber)}
+.emph{font-size:clamp(2rem,1.3rem + 3vw,4rem);line-height:1.05;letter-spacing:-.025em;color:var(--white);margin:3rem 0 0;max-width:16ch}
+.emph span{color:var(--acid)}
+
+/* Components (meaning) */
+.components{margin-top:1rem;border-top:1px solid var(--hair)}
+.components li{border-bottom:1px solid var(--hair)}
+.components button{display:grid;grid-template-columns:2.4rem 1fr auto;align-items:center;gap:.8rem;width:100%;text-align:left;padding:1rem 0;min-height:56px;color:var(--white);font-size:clamp(1.05rem,1rem + .4vw,1.3rem);transition:color .3s}
+.components button .index{color:var(--grey)}
+.components button[aria-pressed="true"]{color:var(--mint)}
+.components button[aria-pressed="true"] .index{color:var(--mint)}
+.components .rel{grid-column:2;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:var(--grey);max-height:0;overflow:hidden;transition:max-height .4s var(--ease),padding .4s;text-transform:uppercase}
+.components button[aria-pressed="true"] .rel{max-height:4rem;padding-top:.4rem}
+.components .shape{width:14px;height:14px;display:inline-block;justify-self:end}
+.meaning__close{margin-top:2.5rem}
+
+/* Augmentation map */
+.map{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(2rem,4vw,5rem);align-items:start}
+.map__field{height:clamp(480px,72vh,760px)}
+.modes{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.1rem}
+.modes__q{flex:0 0 100%;max-width:none;font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);margin-bottom:.3rem}
+.chip{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.55rem 1.1rem;border-radius:999px;border:1px solid var(--hair);color:var(--bone);font-size:.9rem;transition:border-color .3s,background .3s,color .3s}
+.chip:hover{border-color:var(--grey)}
+.chip[aria-checked="true"],.chip[aria-pressed="true"],.chip[aria-current]{background:var(--soft);border-color:var(--mint);color:var(--white)}
+.chip[aria-checked="true"]::before,.chip[aria-current]::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mint)}
+.chip--sm{min-height:40px;padding:.4rem .9rem;font-size:.8rem;font-family:var(--mono);letter-spacing:.1em}
+@media (max-width:699px){.chip--sm{padding:.35rem .5rem;min-height:38px;font-size:.74rem;letter-spacing:.06em}.labnav .arrow{font-size:.7rem}}
+.map__aside{position:sticky;top:calc(var(--header-h) + 1.25rem)}
+.mapq{border-top:1px solid var(--hair);margin-top:1.5rem}
+.mapq li{border-bottom:1px solid var(--hair)}
+.mapq button{display:grid;grid-template-columns:1.1rem 1fr;gap:1rem;align-items:start;width:100%;text-align:left;padding:.95rem 0;min-height:56px;transition:color .3s}
+.mapq button i{width:11px;height:11px;border-radius:50%;margin-top:.45rem;background:var(--bone);display:inline-block;flex:none;transition:transform .3s var(--ease)}
+.mapq .q__name{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);margin-bottom:.3rem}
+.mapq .q__text{display:block;font-size:clamp(1rem,.95rem + .35vw,1.2rem);line-height:1.35;color:var(--bone);transition:color .3s}
+.mapq button[aria-pressed="true"] .q__name{color:var(--mint)}
+.mapq button[aria-pressed="true"] .q__text{color:var(--white)}
+.mapq button[aria-pressed="true"] i{transform:scale(1.35)}
+.mapq .i-human{background:transparent;border:1.5px solid var(--amber);box-shadow:inset 0 0 0 2px var(--ink),inset 0 0 0 8px var(--amber)}
+.mapq .i-context{background:transparent;border:1.5px solid var(--bone)}
+.mapq .i-ai{background:var(--mint)}
+.mapq .i-tools{background:var(--grey);border-radius:2px}
+.mapq .i-workflow{background:transparent;border:1.5px solid var(--bone);border-radius:3px}
+.mapq .i-evidence{background:transparent;border:1.5px solid var(--amber);border-radius:1px;transform:rotate(45deg)}
+.mapq .i-value{background:var(--amber);box-shadow:0 0 0 2px var(--ink),0 0 0 3px var(--amber)}
+.mapq button[aria-pressed="true"] .i-evidence{transform:rotate(45deg) scale(1.35)}
+.map__callout{position:relative;left:auto;right:auto;bottom:auto;max-width:none;min-height:70px;margin-top:.8rem;display:flex;align-items:center;gap:1.2rem;padding-right:3rem;transform:none}
+.map__callout b{display:inline-block;margin:0;min-width:7ch}
+.map__callout:not(.is-on){border-color:transparent;background:transparent}
+.map__foot{margin-top:2rem;display:flex;flex-wrap:wrap;gap:1.2rem 2rem;align-items:center}
+@media (max-width:1099px){
+  .map{grid-template-columns:minmax(0,1fr)}
+  .map__field{height:clamp(420px,60vh,560px)}
+  .map__aside{position:static}
+}
+@media (max-width:559px){.map__field{height:480px}}
+
+/* Offers / steps */
+.offers{counter-reset:offer}
+.offer{position:relative;padding:2.2rem 0 2.2rem 0;border-top:1px solid var(--hair);transition:opacity .4s}
+.offer:last-of-type{border-bottom:1px solid var(--hair)}
+.offer::before{content:"";position:absolute;left:-1.6rem;top:2.6rem;bottom:2.6rem;width:2px;background:var(--mint);opacity:0;transition:opacity .4s}
+.offer.is-current::before{opacity:1}
+.offer .index{display:block;margin-bottom:.9rem}
+.offer .h3{margin-bottom:1rem}
+.offer p{max-width:56ch}
+.offer .statement{margin-top:1.4rem;font-size:clamp(1.25rem,1.1rem + .8vw,1.7rem);max-width:30ch}
+.steps .offer{display:grid;grid-template-columns:5rem 1fr;gap:1rem;align-items:start}
+.steps .offer .num{font-family:var(--mono);font-size:clamp(1.4rem,1.2rem + 1vw,2rem);color:var(--grey);letter-spacing:.05em;line-height:1;transition:color .4s}
+.steps .offer.is-current .num{color:var(--acid)}
+.steps .offer .h3{margin-bottom:.8rem}
+.verify-list{display:flex;flex-wrap:wrap;gap:.4rem .9rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin:.6rem 0 1rem}
+.verify-list li::after{content:"·";margin-left:.9rem;color:var(--hair)}
+.verify-list li:last-child::after{content:none}
+@media (max-width:559px){.steps .offer{grid-template-columns:3.4rem 1fr}}
+
+/* Technology */
+.caps{border-top:1px solid var(--hair)}
+.caps li{border-bottom:1px solid var(--hair)}
+.caps h3{font-size:1rem;font-weight:500}
+.caps h3 button{display:flex;align-items:center;gap:.9rem;width:100%;text-align:left;padding:1.05rem 0 .35rem;min-height:52px;font-size:clamp(1.05rem,1rem + .4vw,1.3rem);color:var(--white);transition:color .3s}
+.caps h3 button::before{content:"";width:9px;height:9px;border-radius:50%;border:1px dashed var(--grey);flex:none;transition:background .3s,border-color .3s}
+.caps h3 button[aria-pressed="true"]{color:var(--mint)}
+.caps h3 button[aria-pressed="true"]::before{background:var(--mint);border:1px solid var(--mint)}
+.caps p{margin:0 0 1.1rem 1.5rem;color:var(--grey);font-size:.98rem;max-width:56ch}
+.tech__emph{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--hair)}
+.tech__emph p{font-size:clamp(1.25rem,1.05rem + 1vw,1.9rem);line-height:1.2;color:var(--white);max-width:28ch;letter-spacing:-.01em}
+
+/* Evidence */
+.levels{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair);margin:3rem 0}
+.level{background:var(--ink);padding:1.4rem 1.2rem 1.6rem;display:flex;flex-direction:column;gap:.9rem;min-width:0}
+.level svg{width:100%;height:auto;max-height:120px}
+.level h3{font-family:var(--mono);font-weight:400;font-size:.72rem;letter-spacing:.2em;color:var(--bone)}
+.level p{margin:0;color:var(--grey);font-size:.95rem}
+.level .lvl-i{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;color:var(--mint)}
+.js .level{opacity:0;transform:translateY(10px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.js .level.is-in{opacity:1;transform:none}
+.js .level:nth-child(2){transition-delay:.1s}.js .level:nth-child(3){transition-delay:.2s}.js .level:nth-child(4){transition-delay:.3s}.js .level:nth-child(5){transition-delay:.4s}
+.ev-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,6rem)}
+@media (max-width:1099px){.levels{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:899px){.ev-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:699px){.levels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:459px){.levels{grid-template-columns:minmax(0,1fr)}}
+.ev-svg .n{fill:var(--bone)}.ev-svg .h{fill:none;stroke:var(--amber);stroke-width:1.5}.ev-svg .a{fill:var(--mint)}.ev-svg .t{fill:var(--grey)}
+.ev-svg .l{stroke:var(--grey);stroke-opacity:.6;stroke-width:1;fill:none}.ev-svg .la{stroke:var(--mint);stroke-width:1;fill:none}.ev-svg .lh{stroke:var(--amber);stroke-width:1;fill:none}
+.ev-svg .ghost{fill:none;stroke:var(--grey);stroke-width:1;stroke-dasharray:2 3}.ev-svg .txt{font-family:var(--mono);font-size:7px;letter-spacing:.12em;fill:var(--grey)}
+.ev-svg .fr{fill:none;stroke:var(--hair);stroke-dasharray:3 4}.ev-svg .frs{fill:rgba(20,37,33,.5);stroke:#2f4740}
+
+/* Lab */
+.labnav{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem}
+.labnav .arrow{color:var(--grey);font-family:var(--mono);font-size:.8rem;padding:0 .1rem}
+.lab__path{font-family:var(--mono);font-size:clamp(.85rem,.8rem + .4vw,1.05rem);letter-spacing:.12em;text-transform:uppercase;color:var(--bone);margin:2rem 0;padding:1.1rem 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.lab__path span{color:var(--acid)}
+.lab__state{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-top:1.2rem;min-height:1.5em}
+
+/* Principles */
+.principles{border-top:1px solid var(--hair)}
+.principles li{border-bottom:1px solid var(--hair)}
+.principles h3{font-size:clamp(1.15rem,1.05rem + .6vw,1.5rem);font-weight:500}
+.principles h3 button{display:flex;align-items:center;justify-content:space-between;gap:1rem;width:100%;text-align:left;padding:1.1rem 0 .4rem;min-height:52px;color:var(--white);transition:color .3s}
+.principles h3 button .index{color:var(--grey);font-size:.66rem;transition:color .3s}
+.principles h3 button[aria-pressed="true"]{color:var(--mint)}
+.principles h3 button[aria-pressed="true"] .index{color:var(--acid)}
+.principles p{margin:0 0 1.1rem;color:var(--grey);max-width:50ch}
+.principles .rule{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin:-.4rem 0 1.1rem;max-height:0;overflow:hidden;transition:max-height .4s var(--ease),margin .4s}
+.principles li.is-on .rule{max-height:4rem;margin-top:0}
+
+/* Why */
+.why{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,6rem);align-items:center}
+.why__loop{max-width:560px;margin-inline:auto;width:100%}
+.loop{width:100%;height:auto}
+.loop .ring{fill:none;stroke:var(--hair);stroke-width:1}
+.loop .arc{fill:none;stroke:var(--mint);stroke-width:1.4;stroke-linecap:round;stroke-dasharray:1 1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s var(--ease)}
+.loop .arc.a2{transition-delay:.35s}.loop .arc.a3{transition-delay:.7s}.loop .arc.a4{transition-delay:1.05s}
+.is-in .loop .arc{stroke-dashoffset:0}
+.loop .nd{fill:var(--ink);stroke:var(--bone);stroke-width:1.5}
+.loop .nd.human{stroke:var(--amber)}
+.loop .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.16em;fill:var(--bone)}
+.loop .sub{font-family:var(--sans);font-size:10px;fill:var(--grey);letter-spacing:.02em}
+.loop .ctr{font-family:var(--mono);font-size:9px;letter-spacing:.2em;fill:var(--grey)}
+.loop .arrow{fill:var(--mint)}
+.loop .trav{fill:var(--acid);opacity:0}
+.is-in .loop .trav{opacity:1}
+.why__lines{margin:2rem 0;border-top:1px solid var(--hair)}
+.why__lines li{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--hair);font-size:clamp(1.05rem,1rem + .5vw,1.35rem);color:var(--white);line-height:1.3}
+.why__lines li .mono{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mint);padding-top:.35rem}
+@media (max-width:899px){.why{grid-template-columns:minmax(0,1fr)}.why__loop{order:-1}}
+@media (max-width:459px){.why__lines li{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq{position:relative;overflow:hidden}
+.faq__bg{position:absolute;inset:0;pointer-events:none;opacity:.5}
+.faq__bg svg{width:100%;height:100%}
+.faq__grid{position:relative;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:clamp(2rem,5vw,6rem);align-items:start}
+.faq__list{border-top:1px solid var(--hair)}
+.faq details{border-bottom:1px solid var(--hair)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.35rem 0;cursor:pointer;list-style:none;min-height:60px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary h3{font-size:clamp(1.1rem,1rem + .6vw,1.5rem);font-weight:500;line-height:1.25}
+.faq summary .ic{flex:none;width:32px;height:32px;border:1px solid var(--hair);border-radius:50%;display:grid;place-items:center;transition:transform .35s var(--ease),border-color .3s}
+.faq summary .ic::before,.faq summary .ic::after{content:"";position:absolute;width:12px;height:1px;background:var(--bone)}
+.faq summary .ic::after{transform:rotate(90deg);transition:transform .35s var(--ease)}
+.faq summary .ic{position:relative}
+.faq details[open] summary .ic{border-color:var(--mint)}
+.faq details[open] summary .ic::after{transform:rotate(0)}
+.faq summary:hover .ic{border-color:var(--grey)}
+.faq .ans{padding:0 0 1.6rem;color:var(--bone)}
+.faq .ans p{max-width:62ch}
+.faq .ans p:last-child{margin:0}
+@media (max-width:899px){.faq__grid{grid-template-columns:minmax(0,1fr)}}
+
+/* Final */
+.final{position:relative;overflow:hidden;padding-block:clamp(5rem,10vw,8rem)}
+.final__content{position:relative;z-index:2;text-align:center;margin-inline:auto;max-width:52rem;display:flex;flex-direction:column;align-items:center}
+.final__content .display{margin-inline:auto;max-width:14ch}
+.final__content p{margin-inline:auto}
+.final__content .copy{margin-top:1.8rem}
+.outcomes{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:1.6rem auto 1.8rem;max-width:40rem}
+.outcomes li{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:.55rem .9rem;border:1px dashed var(--hair);border-radius:999px;color:var(--bone)}
+.js .outcomes li{opacity:0;transform:translateY(8px);transition:opacity .6s var(--ease),transform .6s var(--ease),border-color .6s}
+.js .outcomes.is-in li{opacity:1;transform:none;border-color:rgba(var(--amber-rgb),.6)}
+.js .outcomes.is-in li:nth-child(1){transition-delay:.15s}.js .outcomes.is-in li:nth-child(2){transition-delay:.45s}.js .outcomes.is-in li:nth-child(3){transition-delay:.75s}.js .outcomes.is-in li:nth-child(4){transition-delay:1.05s}.js .outcomes.is-in li:nth-child(5){transition-delay:1.35s}.js .outcomes.is-in li:nth-child(6){transition-delay:1.65s}
+.final .actions{justify-content:center}
+.final__field{position:relative;height:clamp(300px,42vh,420px);margin:clamp(3rem,6vw,5rem) auto 0;max-width:1100px;border:1px solid var(--hair);border-radius:14px;overflow:hidden;background:radial-gradient(120% 80% at 50% 20%,var(--carbon),var(--ink) 70%)}
+.final__field .field__caption{left:50%;transform:translateX(-50%);text-align:center}
+
+/* Footer */
+.footer{border-top:1px solid var(--hair);padding:3rem 0 2.5rem;color:var(--grey);font-size:.92rem}
+.footer__grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:2rem;align-items:start}
+.footer .brand{margin-bottom:.9rem}
+.footer p{margin:0 0 .35rem}
+.footer p.tag{color:var(--bone);font-size:1.05rem}
+.footer nav ul{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;justify-content:flex-end}
+.footer nav a{text-decoration:none;color:var(--grey);min-height:44px;display:inline-flex;align-items:center}
+.footer nav a:hover{color:var(--bone)}
+.footer__meta{margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--hair);font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase}
+@media (max-width:699px){.footer__grid{grid-template-columns:minmax(0,1fr)}.footer nav ul{justify-content:flex-start}}
+
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .js .reveal,.js .level,.js .outcomes li,.js .hero .word{opacity:1;transform:none}
+  .loop .arc{stroke-dashoffset:0}
+}
+</style>
+<noscript><style>
+.hero__field,.stage__field,.map__field,.final__field,.field__caption,.hero__hint,.stage__tools,.modes,.labnav,.lab__state{display:none!important}
+.stage{grid-template-columns:minmax(0,1fr)}
+.map{grid-template-columns:minmax(0,1fr)}
+.components .rel{max-height:none;padding-top:.4rem}
+.principles .rule{max-height:none}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div id="top" aria-hidden="true" style="position:absolute;top:0;height:1px;width:1px"></div>
+
+<!-- Shared SVG marker definitions for directional relationships -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="mk-neutral" viewBox="0 0 8 8" markerWidth="7" markerHeight="7" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L7 4 L1 7 Z" fill="#A7AEAA" fill-opacity=".7"/></marker>
+    <marker id="mk-ai" viewBox="0 0 8 8" markerWidth="7" markerHeight="7" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L7 4 L1 7 Z" fill="#72E2C1" fill-opacity=".85"/></marker>
+    <marker id="mk-human" viewBox="0 0 8 8" markerWidth="7" markerHeight="7" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L7 4 L1 7 Z" fill="#FFB35C" fill-opacity=".85"/></marker>
+    <marker id="mk-value" viewBox="0 0 8 8" markerWidth="7" markerHeight="7" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L7 4 L1 7 Z" fill="#D5FF62" fill-opacity=".9"/></marker>
+  </defs>
+</svg>
+
+<header class="header" id="site-header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#top" aria-label="DYAI — home"><span class="brand__mark" aria-hidden="true"></span>DYAI</a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#organisations">Organisations</a></li>
+        <li><a href="#individuals">Individuals</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#lab">Lab</a></li>
+        <li><a href="#principles">Principles</a></li>
+        <li><a class="nav__lang" href="https://studio.dyai.cloud/en" hreflang="en" lang="en" aria-current="page" aria-label="Language: English">EN</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================================================== HERO -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="hero__field field field--bare" id="field-hero" data-field="hero">
+    <p class="hero__hint" aria-hidden="true">Select Human · Context · AI</p>
+  </div>
+  <div class="wrap">
+    <noscript>
+      <svg class="hero__static" viewBox="0 0 640 300" width="640" height="300" role="img" aria-labelledby="hs-t hs-d" style="max-width:100%;height:auto">
+        <title id="hs-t">The Field: a human–AI working system</title>
+        <desc id="hs-d">Six labelled nodes — Human, Context, AI, Work, Evidence and Value — connected into one stable system. Human judgement links to Context and Work; AI contributes through Context into Work; Work produces Evidence; Evidence feeds back to the Human and confirms Value.</desc>
+        <g stroke="#A7AEAA" stroke-opacity=".5" fill="none">
+          <line x1="110" y1="170" x2="230" y2="80" stroke="#FFB35C"/><line x1="230" y1="80" x2="440" y2="90" stroke="#72E2C1"/><line x1="110" y1="170" x2="320" y2="170" stroke="#FFB35C"/><line x1="230" y1="80" x2="320" y2="170"/><line x1="440" y1="90" x2="320" y2="170" stroke="#72E2C1"/><line x1="320" y1="170" x2="360" y2="250"/><path d="M360 250 Q220 280 110 170" stroke-dasharray="3 5"/><line x1="360" y1="250" x2="520" y2="200" stroke="#D5FF62"/>
+        </g>
+        <g font-family="SFMono-Regular,Consolas,monospace" font-size="10" fill="#A7AEAA" letter-spacing="1.5">
+          <circle cx="110" cy="170" r="9" fill="none" stroke="#FFB35C" stroke-width="1.5"/><circle cx="110" cy="170" r="4" fill="#FFB35C"/><text x="110" y="196" text-anchor="middle" fill="#EEECE4">HUMAN</text>
+          <circle cx="230" cy="80" r="5" fill="none" stroke="#EEECE4" stroke-width="1.5"/><text x="230" y="64" text-anchor="middle">CONTEXT</text>
+          <circle cx="440" cy="90" r="5" fill="#72E2C1"/><text x="440" y="74" text-anchor="middle">AI</text>
+          <rect x="314" y="164" width="12" height="12" rx="2" fill="none" stroke="#EEECE4" stroke-width="1.5"/><text x="320" y="196" text-anchor="middle">WORK</text>
+          <rect x="354" y="244" width="11" height="11" fill="none" stroke="#FFB35C" stroke-width="1.5" transform="rotate(45 359.5 249.5)"/><text x="360" y="276" text-anchor="middle">EVIDENCE</text>
+          <circle cx="520" cy="200" r="6" fill="#FFB35C"/><circle cx="520" cy="200" r="10" fill="none" stroke="#FFB35C"/><text x="520" y="226" text-anchor="middle" fill="#EEECE4">VALUE</text>
+        </g>
+      </svg>
+    </noscript>
+    <div class="hero__content">
+      <p class="eyebrow">Augmented Intelligence Studio</p>
+      <h1 class="display" id="hero-title">Design how humans and AI work together.</h1>
+      <p class="lead">AI tools are easy to add.<br>Useful ways of working are harder to design.</p>
+      <div class="copy">
+        <p>DYAI Studio helps organisations, founders and independent professionals turn scattered AI tools and experiments into reliable ways of working.</p>
+        <p>We connect human judgement, context, LLMs, tools, workflows and agentic systems around real problems — and define how we will know whether the result is actually better.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn--primary" href="#contact">Start with a real problem <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <a class="btn btn--ghost" href="#how-dyai-works">Explore how DYAI works</a>
+      </div>
+      <p class="hero__micro">For organisations · founders · independent professionals · creators</p>
+    </div>
+  </div>
+  <div class="hero__note" id="hero-note" aria-live="polite"></div>
+</section>
+
+<!-- ===================================================== PROBLEM -->
+<section class="section" id="problem" aria-labelledby="problem-title">
+  <div class="wrap stage">
+    <div class="stage__content">
+      <h2 class="h2 reveal" id="problem-title">More AI does not automatically create better work.</h2>
+      <div class="copy reveal" data-delay="1">
+        <p class="lead">A new model, copilot or agent can help.</p>
+        <p>It can also become another tool, another workflow and another layer of uncertainty.</p>
+        <p>That is why we do not start with technology.</p>
+        <p>We start with the work itself.</p>
+      </div>
+      <ol class="qs" id="problem-questions">
+        <li>What should change?</li>
+        <li>What should remain human?</li>
+        <li>What context does AI need?</li>
+        <li>What can be automated safely?</li>
+        <li>Where does human review matter?</li>
+        <li>How will we recognise real improvement?</li>
+      </ol>
+      <p class="emph" id="problem-emphasis">Not more AI. <span>Better work with AI.</span></p>
+    </div>
+    <div class="stage__field">
+      <div class="field" id="field-problem" data-field="problem">
+        <p class="field__caption" id="problem-caption">System · stable</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== WHAT AUGMENTED INTELLIGENCE MEANS -->
+<section class="section" id="augmented-intelligence" aria-labelledby="meaning-title">
+  <div class="wrap stage stage--flip">
+    <div class="stage__content">
+      <h2 class="h2 reveal" id="meaning-title">AI is one part of the system.</h2>
+      <div class="copy reveal" data-delay="1">
+        <p class="lead">At DYAI, Augmented Intelligence means deliberately designing how human judgement and artificial intelligence work together.</p>
+        <p>The useful system usually involves more than a model.</p>
+        <p>It may include:</p>
+      </div>
+      <ol class="components reveal" data-delay="2" id="components" aria-label="Components of an augmented intelligence system">
+        <li><button type="button" aria-pressed="false" data-cluster="judgement"><span class="index">01</span><span>Human judgement</span><span class="shape" aria-hidden="true" style="border-radius:50%;border:1.5px solid var(--amber);box-shadow:inset 0 0 0 2px var(--ink),inset 0 0 0 8px var(--amber)"></span><span class="rel" data-rel></span></button></li>
+        <li><button type="button" aria-pressed="false" data-cluster="context"><span class="index">02</span><span>Context and knowledge</span><span class="shape" aria-hidden="true" style="border-radius:50%;border:1.5px solid var(--bone)"></span><span class="rel" data-rel></span></button></li>
+        <li><button type="button" aria-pressed="false" data-cluster="models"><span class="index">03</span><span>LLMs and AI models</span><span class="shape" aria-hidden="true" style="border-radius:50%;background:var(--mint)"></span><span class="rel" data-rel></span></button></li>
+        <li><button type="button" aria-pressed="false" data-cluster="tools"><span class="index">04</span><span>Tools and APIs</span><span class="shape" aria-hidden="true" style="border-radius:2px;background:var(--grey)"></span><span class="rel" data-rel></span></button></li>
+        <li><button type="button" aria-pressed="false" data-cluster="workflows"><span class="index">05</span><span>Workflows and automation</span><span class="shape" aria-hidden="true" style="border-radius:3px;border:1.5px solid var(--bone)"></span><span class="rel" data-rel></span></button></li>
+        <li><button type="button" aria-pressed="false" data-cluster="agents"><span class="index">06</span><span>Agents</span><span class="shape" aria-hidden="true" style="border-radius:50%;background:var(--mint);box-shadow:0 0 0 2px var(--ink),0 0 0 3px var(--mint)"></span><span class="rel" data-rel></span></button></li>
+        <li><button type="button" aria-pressed="false" data-cluster="feedback"><span class="index">07</span><span>Feedback and evaluation</span><span class="shape" aria-hidden="true" style="border-radius:50%;border:1px dashed var(--grey)"></span><span class="rel" data-rel></span></button></li>
+        <li><button type="button" aria-pressed="false" data-cluster="evidence"><span class="index">08</span><span>Evidence of value</span><span class="shape" aria-hidden="true" style="border:1.5px solid var(--amber);transform:rotate(45deg) scale(.85)"></span><span class="rel" data-rel></span></button></li>
+      </ol>
+      <div class="copy meaning__close reveal" data-delay="3">
+        <p class="statement">The goal is not maximum automation.<br>The goal is a better working system.</p>
+      </div>
+    </div>
+    <div class="stage__field">
+      <div class="field" id="field-meaning" data-field="meaning">
+        <p class="field__caption">One living system · select a component to inspect its relationships</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== AUGMENTATION MAP -->
+<section class="section" id="augmentation-map" aria-labelledby="map-title">
+  <div class="wrap">
+    <div class="section__head">
+      <h2 class="h2 reveal" id="map-title">See the system, not just the tool.</h2>
+      <div class="copy reveal" data-delay="1">
+        <p class="lead">Start with a real situation.</p>
+        <p>Then make the invisible parts of AI-enabled work visible.</p>
+      </div>
+    </div>
+    <div class="map">
+      <div>
+        <div class="modes" role="radiogroup" aria-labelledby="modes-q" id="modes">
+          <p class="modes__q" id="modes-q">What are you trying to augment?</p>
+          <button type="button" class="chip" role="radio" aria-checked="true" data-mode="myself" tabindex="0">Myself</button>
+          <button type="button" class="chip" role="radio" aria-checked="false" data-mode="team" tabindex="-1">A Team</button>
+          <button type="button" class="chip" role="radio" aria-checked="false" data-mode="workflow" tabindex="-1">A Workflow</button>
+          <button type="button" class="chip" role="radio" aria-checked="false" data-mode="organisation" tabindex="-1">An Organisation</button>
+        </div>
+        <div class="field map__field" id="map-field" data-field="map" tabindex="-1"></div>
+        <div class="field__callout map__callout" id="map-callout" aria-live="polite"></div>
+        <ul class="legend" aria-label="Reading the field">
+          <li><i class="l-human" aria-hidden="true"></i>Amber — human decision, responsibility, value</li>
+          <li><i class="l-ai" aria-hidden="true"></i>Mint — AI capability, intelligence flow</li>
+          <li><i class="l-acid" aria-hidden="true"></i>Acid — emergence, confirmation</li>
+          <li><i class="l-dash" aria-hidden="true"></i>Dashed — potential or not yet verified</li>
+        </ul>
+      </div>
+      <aside class="map__aside" aria-label="Augmentation Map questions">
+        <p class="eyebrow">Augmentation Map · node detail</p>
+        <ol class="mapq" id="mapq">
+          <li><button type="button" aria-pressed="false" data-q="human"><i class="i-human" aria-hidden="true"></i><span><span class="q__name">Human</span><span class="q__text">Where is judgement, responsibility or creativity required?</span></span></button></li>
+          <li><button type="button" aria-pressed="false" data-q="context"><i class="i-context" aria-hidden="true"></i><span><span class="q__name">Context</span><span class="q__text">What must the system know to be useful?</span></span></button></li>
+          <li><button type="button" aria-pressed="false" data-q="ai"><i class="i-ai" aria-hidden="true"></i><span><span class="q__name">AI</span><span class="q__text">What can a model reliably contribute?</span></span></button></li>
+          <li><button type="button" aria-pressed="false" data-q="tools"><i class="i-tools" aria-hidden="true"></i><span><span class="q__name">Tools</span><span class="q__text">Which systems, data or APIs are required?</span></span></button></li>
+          <li><button type="button" aria-pressed="false" data-q="workflow"><i class="i-workflow" aria-hidden="true"></i><span><span class="q__name">Workflow</span><span class="q__text">How should people, models and tools interact?</span></span></button></li>
+          <li><button type="button" aria-pressed="false" data-q="evidence"><i class="i-evidence" aria-hidden="true"></i><span><span class="q__name">Evidence</span><span class="q__text">How will we know whether the result improved anything?</span></span></button></li>
+          <li><button type="button" aria-pressed="false" data-q="value"><i class="i-value" aria-hidden="true"></i><span><span class="q__name">Value</span><span class="q__text">What changed in the actual work?</span></span></button></li>
+        </ol>
+        <div class="map__foot">
+          <a class="btn btn--ghost" href="#map-field">Explore the Augmentation Map</a>
+          <p class="muted" style="margin:0">From isolated AI usage to a designed human–AI system.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== FOR ORGANISATIONS -->
+<section class="section" id="organisations" aria-labelledby="org-title">
+  <div class="wrap stage">
+    <div class="stage__content">
+      <p class="eyebrow reveal">For Organisations</p>
+      <h2 class="h2 reveal" data-delay="1" id="org-title">Build an AI practice, not a collection of pilots.</h2>
+      <div class="copy reveal" data-delay="2">
+        <p class="lead">Many organisations already have access to generative AI.</p>
+        <p>The harder question is how it should become part of real work.</p>
+        <p>DYAI helps teams move from fragmented experimentation toward deliberate, understandable and testable ways of working with AI.</p>
+      </div>
+      <ol class="offers" id="org-offers" data-driver="org" style="margin-top:3rem">
+        <li class="offer" data-scene="discovery">
+          <span class="index">01 · Observation</span>
+          <h3 class="h3">AI Practice Discovery</h3>
+          <p>Find the workflows where AI could create meaningful value.</p>
+          <p>Map the problem, current work, capability gaps, risks and the smallest useful opportunity to test.</p>
+        </li>
+        <li class="offer" data-scene="sprint">
+          <span class="index">02 · Reorganisation</span>
+          <h3 class="h3">Human–AI Workflow Sprint</h3>
+          <p>Redesign one real workflow.</p>
+          <p>Define what people decide, what AI contributes, what context it requires, where controls belong and how the result will be evaluated.</p>
+        </li>
+        <li class="offer" data-scene="build">
+          <span class="index">03 · Capability</span>
+          <h3 class="h3">Agent &amp; Capability Build</h3>
+          <p>Build the smallest technical system that the validated workflow actually needs.</p>
+          <p>That may involve LLMs, tools, APIs, AI agents, skills, knowledge systems or automation.</p>
+          <p class="statement">The architecture follows the problem — not the other way around.</p>
+        </li>
+        <li class="offer" data-scene="os">
+          <span class="index">04 · Stabilisation</span>
+          <h3 class="h3">AI Practice Operating System</h3>
+          <p>Turn successful experiments into organisational capability.</p>
+          <p>Create reusable patterns, practical AI literacy, governance, evaluation practices and clear ownership.</p>
+        </li>
+      </ol>
+      <div class="actions">
+        <a class="btn btn--ghost" href="#faq-ai-practice">Explore AI Practice</a>
+      </div>
+    </div>
+    <div class="stage__field">
+      <div class="stage__tools" role="group" aria-label="Organisation system stages" id="org-nav"></div>
+      <div class="field" id="field-org" data-field="org">
+        <p class="field__caption" id="org-caption">Multi-human work system</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== FOR INDIVIDUALS -->
+<section class="section" id="individuals" aria-labelledby="ind-title">
+  <div class="wrap stage stage--flip">
+    <div class="stage__content">
+      <p class="eyebrow eyebrow--amber reveal">For Founders, Independent Professionals &amp; Creators</p>
+      <h2 class="h2 reveal" data-delay="1" id="ind-title">Build a personal AI system around the way you actually work.</h2>
+      <div class="copy reveal" data-delay="2">
+        <p class="lead">Your work is not a collection of apps.</p>
+        <p>It is a system of goals, knowledge, decisions, relationships, tools, content and execution.</p>
+        <p>AI becomes useful when it understands enough of that system to support the work without taking away your agency.</p>
+      </div>
+      <ol class="offers" id="ind-offers" data-driver="ind" style="margin-top:3rem">
+        <li class="offer" data-scene="mapping">
+          <span class="index">01 · Map</span>
+          <h3 class="h3">Personal Augmentation Mapping</h3>
+          <p>Map the work you are actually trying to do.</p>
+          <p>Identify friction, recurring decisions, disconnected tools, knowledge gaps and opportunities for useful augmentation.</p>
+        </li>
+        <li class="offer" data-scene="sprint">
+          <span class="index">02 · Build</span>
+          <h3 class="h3">Personal AI System Sprint</h3>
+          <p>Build a small number of high-value AI-supported workflows around your real work.</p>
+          <p>Not another productivity stack.</p>
+          <p>A coherent working system.</p>
+        </li>
+        <li class="offer" data-scene="partnership">
+          <span class="index">03 · Partner</span>
+          <h3 class="h3">Augmentation Partnership</h3>
+          <p>For work where strategic thinking, technical implementation, AI knowledge and continuous adaptation overlap.</p>
+          <p>High context. Practical implementation. Critical sparring.</p>
+        </li>
+      </ol>
+      <div class="copy" style="margin-top:2.5rem">
+        <p class="statement">The goal is not to outsource your working life.<br>The goal is to increase your own leverage.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn--ghost" href="#faq-personal-augmentation">Explore Personal Augmentation</a>
+      </div>
+    </div>
+    <div class="stage__field">
+      <div class="stage__tools" role="group" aria-label="Personal system stages" id="ind-nav"></div>
+      <div class="field" id="field-ind" data-field="ind">
+        <p class="field__caption" id="ind-caption">Personal operating system</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== HOW DYAI WORKS -->
+<section class="section" id="how-dyai-works" aria-labelledby="how-title">
+  <div class="wrap stage">
+    <div class="stage__content">
+      <h2 class="h2 reveal" id="how-title">From problem to working practice.</h2>
+      <ol class="offers steps" id="how-steps" data-driver="how" style="margin-top:2.5rem">
+        <li class="offer" data-scene="understand">
+          <span class="num" aria-hidden="true">01</span>
+          <div>
+            <h3 class="h3"><span class="sr">01 — </span>Understand</h3>
+            <p>Start with the actual problem and the desired change.</p>
+            <p>Not with a model.</p>
+          </div>
+        </li>
+        <li class="offer" data-scene="map">
+          <span class="num" aria-hidden="true">02</span>
+          <div>
+            <h3 class="h3"><span class="sr">02 — </span>Map</h3>
+            <p>Understand the current workflow, context, constraints and human decisions.</p>
+          </div>
+        </li>
+        <li class="offer" data-scene="design">
+          <span class="num" aria-hidden="true">03</span>
+          <div>
+            <h3 class="h3"><span class="sr">03 — </span>Design</h3>
+            <p>Define the relationship between people, AI, knowledge, tools and controls.</p>
+          </div>
+        </li>
+        <li class="offer" data-scene="build">
+          <span class="num" aria-hidden="true">04</span>
+          <div>
+            <h3 class="h3"><span class="sr">04 — </span>Build</h3>
+            <p>Create the smallest useful intervention.</p>
+          </div>
+        </li>
+        <li class="offer" data-scene="use">
+          <span class="num" aria-hidden="true">05</span>
+          <div>
+            <h3 class="h3"><span class="sr">05 — </span>Use</h3>
+            <p>Put it into real work as early as possible.</p>
+          </div>
+        </li>
+        <li class="offer" data-scene="verify">
+          <span class="num" aria-hidden="true">06</span>
+          <div>
+            <h3 class="h3"><span class="sr">06 — </span>Verify</h3>
+            <p>Observe what changed.</p>
+            <ul class="verify-list" aria-label="What is observed"><li>Quality.</li><li>Time.</li><li>Friction.</li><li>Coordination.</li><li>Reliability.</li><li>Learning.</li></ul>
+            <p>Where measurement is possible, measure it.</p>
+            <p>Where it is not, do not pretend.</p>
+          </div>
+        </li>
+        <li class="offer" data-scene="reuse">
+          <span class="num" aria-hidden="true">07</span>
+          <div>
+            <h3 class="h3"><span class="sr">07 — </span>Reuse</h3>
+            <p>When a pattern works repeatedly, turn it into a reusable DYAI asset.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="stage__field">
+      <div class="stage__tools" role="group" aria-label="Process stages" id="how-nav"></div>
+      <div class="field" id="field-how" data-field="how">
+        <p class="field__caption" id="how-caption">01 · Understand — unknown relationships</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== TECHNOLOGY -->
+<section class="section" id="technology" aria-labelledby="tech-title">
+  <div class="wrap stage stage--flip">
+    <div class="stage__content">
+      <h2 class="h2 display reveal" id="tech-title" style="max-width:10ch">Technology follows the problem.</h2>
+      <p class="lead reveal" data-delay="1" style="margin-bottom:2rem">Depending on the work, a DYAI solution may involve:</p>
+      <ul class="caps reveal" data-delay="2" id="caps" aria-label="Technology capabilities">
+        <li><h3><button type="button" aria-pressed="false" data-cap="literacy">AI literacy and LLM enablement</button></h3><p>Understand what modern language models can and cannot do — and how to work with them effectively.</p></li>
+        <li><h3><button type="button" aria-pressed="false" data-cap="prompt">Prompt and context design</button></h3><p>Give AI the instructions, context and boundaries it needs.</p></li>
+        <li><h3><button type="button" aria-pressed="false" data-cap="retrieval">Knowledge and retrieval systems</button></h3><p>Connect relevant information when a workflow requires durable context.</p></li>
+        <li><h3><button type="button" aria-pressed="false" data-cap="hai">Human–AI workflows</button></h3><p>Design how people and AI collaborate across a real process.</p></li>
+        <li><h3><button type="button" aria-pressed="false" data-cap="automation">Automation</button></h3><p>Automate work where automation genuinely removes friction.</p></li>
+        <li><h3><button type="button" aria-pressed="false" data-cap="agents">AI agents and agentic systems</button></h3><p>Use agents when tasks require tool use, multi-step execution or coordinated capabilities.</p></li>
+        <li><h3><button type="button" aria-pressed="false" data-cap="api">API and tool integration</button></h3><p>Connect AI systems to the software and data they need.</p></li>
+        <li><h3><button type="button" aria-pressed="false" data-cap="gpts">Custom GPTs, skills and project harnesses</button></h3><p>Create reusable AI working environments for specific domains and workflows.</p></li>
+        <li><h3><button type="button" aria-pressed="false" data-cap="eval">Evaluation and governance</button></h3><p>Define what good looks like, how results are checked and where human accountability remains.</p></li>
+      </ul>
+      <div class="tech__emph reveal">
+        <p>We do not add technology to make a solution look advanced.</p>
+        <p>We use the smallest system that can create useful change.</p>
+      </div>
+    </div>
+    <div class="stage__field">
+      <div class="field" id="field-tech" data-field="tech">
+        <p class="field__caption" id="tech-caption">Primary layer: the problem · select a capability to reveal the technical layer</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== EVIDENCE / WORK -->
+<section class="section" id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="ev-grid">
+      <div>
+        <p class="eyebrow reveal">Work &amp; Evidence</p>
+        <h2 class="h2 reveal" data-delay="1" id="work-title">Claims should be inspectable.</h2>
+      </div>
+      <div class="copy reveal" data-delay="2">
+        <p class="lead">AI makes it very easy to produce convincing demonstrations.</p>
+        <p>A demonstration is not the same as a working system.</p>
+        <p>DYAI separates different levels of evidence.</p>
+      </div>
+    </div>
+    <ol class="levels" id="evidence-levels" aria-label="Evidence maturity levels">
+      <li class="level">
+        <svg class="ev-svg" viewBox="0 0 160 110" role="img" aria-labelledby="ev1t ev1d"><title id="ev1t">Concept</title><desc id="ev1d">A single thin dashed outline — an idea that is not yet built.</desc>
+          <circle class="ghost" cx="80" cy="50" r="12"/><path class="ghost" d="M92 50 H120"/><circle class="ghost" cx="128" cy="50" r="5"/><path class="ghost" d="M68 50 H40"/><circle class="ghost" cx="32" cy="50" r="5"/><text class="txt" x="80" y="84" text-anchor="middle">OUTLINE</text></svg>
+        <span class="lvl-i">Level 01</span>
+        <h3>CONCEPT</h3>
+        <p>A proposed idea or system.</p>
+      </li>
+      <li class="level">
+        <svg class="ev-svg" viewBox="0 0 160 110" role="img" aria-labelledby="ev2t ev2d"><title id="ev2t">Prototype</title><desc id="ev2d">A formed node with two thin test connections to outline nodes.</desc>
+          <path class="l" d="M80 50 L40 30"/><path class="l" d="M80 50 L120 30"/><circle class="n" cx="80" cy="50" r="7"/><circle class="ghost" cx="40" cy="30" r="5"/><circle class="ghost" cx="120" cy="30" r="5"/><text class="txt" x="80" y="84" text-anchor="middle">FORMED</text></svg>
+        <span class="lvl-i">Level 02</span>
+        <h3>PROTOTYPE</h3>
+        <p>Built enough to test.</p>
+      </li>
+      <li class="level">
+        <svg class="ev-svg" viewBox="0 0 160 110" role="img" aria-labelledby="ev3t ev3d"><title id="ev3t">Used in practice</title><desc id="ev3d">A connected operational pattern: a human node, an AI node and a tool node joined by solid directional links.</desc>
+          <path class="lh" d="M44 56 L76 36"/><path class="la" d="M84 36 L116 56"/><path class="l" d="M110 60 L50 60" stroke-dasharray="2 4"/><circle class="h" cx="40" cy="58" r="7"/><circle cx="40" cy="58" r="3" fill="#FFB35C"/><circle class="a" cx="80" cy="34" r="5"/><rect class="t" x="115" y="53" width="10" height="10" rx="1"/><text class="txt" x="80" y="88" text-anchor="middle">CONNECTED · OPERATIONAL</text></svg>
+        <span class="lvl-i">Level 03</span>
+        <h3>USED IN PRACTICE</h3>
+        <p>Used in real work.</p>
+      </li>
+      <li class="level">
+        <svg class="ev-svg" viewBox="0 0 160 110" role="img" aria-labelledby="ev4t ev4d"><title id="ev4t">Repeated pattern</title><desc id="ev4d">Three equivalent instances of the same connected pattern placed side by side.</desc>
+          <g transform="translate(6 20) scale(.62)"><rect class="fr" x="10" y="8" width="90" height="70" rx="6"/><path class="lh" d="M34 56 L56 40"/><path class="la" d="M64 40 L84 56"/><circle class="h" cx="30" cy="58" r="7"/><circle cx="30" cy="58" r="3" fill="#FFB35C"/><circle class="a" cx="60" cy="38" r="5"/><rect class="t" x="84" y="53" width="10" height="10"/></g>
+          <g transform="translate(52 20) scale(.62)"><rect class="fr" x="10" y="8" width="90" height="70" rx="6"/><path class="lh" d="M34 56 L56 40"/><path class="la" d="M64 40 L84 56"/><circle class="h" cx="30" cy="58" r="7"/><circle cx="30" cy="58" r="3" fill="#FFB35C"/><circle class="a" cx="60" cy="38" r="5"/><rect class="t" x="84" y="53" width="10" height="10"/></g>
+          <g transform="translate(98 20) scale(.62)"><rect class="fr" x="10" y="8" width="90" height="70" rx="6"/><path class="lh" d="M34 56 L56 40"/><path class="la" d="M64 40 L84 56"/><circle class="h" cx="30" cy="58" r="7"/><circle cx="30" cy="58" r="3" fill="#FFB35C"/><circle class="a" cx="60" cy="38" r="5"/><rect class="t" x="84" y="53" width="10" height="10"/></g>
+          <text class="txt" x="80" y="92" text-anchor="middle">× MULTIPLE SITUATIONS</text></svg>
+        <span class="lvl-i">Level 04</span>
+        <h3>REPEATED PATTERN</h3>
+        <p>Worked across more than one relevant situation.</p>
+      </li>
+      <li class="level">
+        <svg class="ev-svg" viewBox="0 0 160 110" role="img" aria-labelledby="ev5t ev5d"><title id="ev5t">Measured case</title><desc id="ev5d">A solid pattern with an explicit Evidence relationship drawn to a baseline.</desc>
+          <rect class="frs" x="14" y="14" width="86" height="60" rx="6"/><path class="lh" d="M38 56 L58 40"/><path class="la" d="M66 40 L86 56"/><circle class="h" cx="34" cy="58" r="7"/><circle cx="34" cy="58" r="3" fill="#FFB35C"/><circle class="a" cx="62" cy="38" r="5"/><rect class="t" x="86" y="53" width="10" height="10"/>
+          <path class="lh" d="M100 44 H126"/><rect x="128" y="38" width="12" height="12" fill="none" stroke="#FFB35C" stroke-width="1.5" transform="rotate(45 134 44)"/><text class="txt" x="134" y="30" text-anchor="middle">EVIDENCE</text>
+          <path class="l" d="M20 92 H140"/><path class="lh" d="M134 52 V88"/><text class="txt" x="80" y="103" text-anchor="middle">BASELINE</text></svg>
+        <span class="lvl-i">Level 05</span>
+        <h3>MEASURED CASE</h3>
+        <p>A meaningful outcome has been observed against an appropriate baseline.</p>
+      </li>
+    </ol>
+    <div class="ev-grid">
+      <div class="copy reveal">
+        <p class="statement">We distinguish what is imagined, what is built, what has been used and what has actually been measured.</p>
+      </div>
+      <div class="copy reveal" data-delay="1">
+        <p>No prototype is presented as proof.</p>
+        <p>No estimate becomes ROI simply because it sounds plausible.</p>
+        <div class="actions"><a class="btn btn--ghost" href="#evidence-levels">Explore work &amp; evidence</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== DYAI LAB -->
+<section class="section" id="lab" aria-labelledby="lab-title">
+  <div class="wrap stage">
+    <div class="stage__content">
+      <p class="eyebrow reveal">DYAI Lab</p>
+      <h2 class="h2 reveal" data-delay="1" id="lab-title">What works should become easier to reuse.</h2>
+      <div class="copy reveal" data-delay="2">
+        <p class="lead">Client work should create more than a finished project.</p>
+        <p>When a useful solution pattern survives real work, it can become a reusable method, skill, agent pattern, workflow template, evaluation approach or product.</p>
+        <p>That is the role of DYAI Lab.</p>
+      </div>
+      <p class="lab__path reveal" data-delay="3" id="lab-patterns">Experiment <span aria-hidden="true">→</span><span class="sr">then</span> Used <span aria-hidden="true">→</span><span class="sr">then</span> Repeated <span aria-hidden="true">→</span><span class="sr">then</span> Productised</p>
+      <div class="copy reveal">
+        <p class="statement">The goal is not to collect assets.<br>The goal is to compound useful intelligence.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn--ghost" href="#lab-patterns">Explore the Lab</a>
+      </div>
+    </div>
+    <div class="stage__field">
+      <div class="stage__tools labnav" role="group" aria-label="Pattern maturity" id="lab-nav">
+        <button type="button" class="chip chip--sm" data-stage="experiment" aria-current="step">Experiment</button><span class="arrow" aria-hidden="true">→</span>
+        <button type="button" class="chip chip--sm" data-stage="used">Used</button><span class="arrow" aria-hidden="true">→</span>
+        <button type="button" class="chip chip--sm" data-stage="repeated">Repeated</button><span class="arrow" aria-hidden="true">→</span>
+        <button type="button" class="chip chip--sm" data-stage="productised">Productised</button>
+      </div>
+      <div class="field" id="field-lab" data-field="lab">
+        <p class="field__caption" id="lab-caption">Pattern object · experiment — small, fragile</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== PRINCIPLES -->
+<section class="section" id="principles" aria-labelledby="principles-title">
+  <div class="wrap stage stage--flip">
+    <div class="stage__content">
+      <h2 class="h2 reveal" id="principles-title">Human agency. Practical systems. Verifiable value.</h2>
+      <ol class="principles reveal" data-delay="1" id="principles-list">
+        <li data-rule="problem"><h3><button type="button" aria-pressed="false">Problem before tool <span class="index">01</span></button></h3><p>We begin with the work that should change.</p><p class="rule">Constraint: tool nodes stay dormant until problem context exists.</p></li>
+        <li data-rule="human"><h3><button type="button" aria-pressed="false">Human judgement stays visible <span class="index">02</span></button></h3><p>Responsibility does not disappear because AI is involved.</p><p class="rule">Constraint: the Human node cannot disappear.</p></li>
+        <li data-rule="purpose"><h3><button type="button" aria-pressed="false">Purpose before automation <span class="index">03</span></button></h3><p>Not everything that can be automated should be automated.</p><p class="rule">Constraint: automation stays unconnected until a human decision links it.</p></li>
+        <li data-rule="evidence"><h3><button type="button" aria-pressed="false">Evidence before claims <span class="index">04</span></button></h3><p>We separate assumptions, prototypes, observations and measured outcomes.</p><p class="rule">Constraint: Value cannot be confirmed before Evidence appears.</p></li>
+        <li data-rule="smallest"><h3><button type="button" aria-pressed="false">Smallest useful system <span class="index">05</span></button></h3><p>Complexity must earn its place.</p><p class="rule">Constraint: unnecessary nodes fade away.</p></li>
+        <li data-rule="reversible"><h3><button type="button" aria-pressed="false">Reversible by design <span class="index">06</span></button></h3><p>Useful systems should remain understandable, correctable and replaceable.</p><p class="rule">Constraint: every relationship stays separable and correctable.</p></li>
+        <li data-rule="learning"><h3><button type="button" aria-pressed="false">Learning becomes an asset <span class="index">07</span></button></h3><p>Repeated solutions should improve the next piece of work.</p><p class="rule">Constraint: evidence feeds a pattern that outlives the system.</p></li>
+        <li data-rule="spectacle"><h3><button type="button" aria-pressed="false">Purpose before spectacle <span class="index">08</span></button></h3><p>Interaction, motion and AI effects must help people understand something.</p><p class="rule">Constraint: the field reduces to what explains something.</p></li>
+      </ol>
+    </div>
+    <div class="stage__field">
+      <div class="field" id="field-principles" data-field="principles">
+        <p class="field__caption" id="principles-caption">Each principle acts as a constraint on the system</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== WHY DYAI -->
+<section class="section" id="why-dyai" aria-labelledby="why-title">
+  <div class="wrap why">
+    <div>
+      <h2 class="h2 reveal" id="why-title">Strategy, work design and technology belong in the same conversation.</h2>
+      <div class="copy reveal" data-delay="1">
+        <p class="lead">AI projects often cross boundaries.</p>
+      </div>
+      <ul class="why__lines reveal" data-delay="2" aria-label="How questions cross boundaries">
+        <li><span class="mono">Workflow → Technology</span><span>A workflow question becomes a technology question.</span></li>
+        <li><span class="mono">Technology → Organisation</span><span>A technology question becomes an organisational question.</span></li>
+        <li><span class="mono">Organisation → Learning</span><span>An organisational question becomes a learning question.</span></li>
+      </ul>
+      <div class="copy reveal" data-delay="3">
+        <p>DYAI works across those boundaries.</p>
+        <p>Not because every problem needs everything.</p>
+        <p>Because the right solution often depends on understanding how the pieces affect one another.</p>
+      </div>
+    </div>
+    <div class="why__loop reveal" id="why-loop">
+      <svg class="loop" viewBox="0 0 520 520" role="img" aria-labelledby="loop-t loop-d">
+        <title id="loop-t">The boundary-crossing loop</title>
+        <desc id="loop-d">A loop with four stations — Workflow, Technology, Organisation and Learning — connected in a circle so that Learning returns to Workflow.</desc>
+        <defs><marker id="lp-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#72E2C1"/></marker></defs>
+        <circle class="ring" cx="260" cy="260" r="180"/>
+        <path id="loop-path" d="M260 80 A180 180 0 1 1 259.9 80" fill="none" stroke="none"/>
+        <g pathLength="1">
+          <path class="arc a1" marker-end="url(#lp-arrow)" pathLength="1" d="M274 80.5 A180 180 0 0 1 439.5 246"/>
+          <path class="arc a2" marker-end="url(#lp-arrow)" pathLength="1" d="M439.5 274 A180 180 0 0 1 274 439.5"/>
+          <path class="arc a3" marker-end="url(#lp-arrow)" pathLength="1" d="M246 439.5 A180 180 0 0 1 80.5 274"/>
+          <path class="arc a4" marker-end="url(#lp-arrow)" pathLength="1" d="M80.5 246 A180 180 0 0 1 246 80.5"/>
+        </g>
+        <g><circle class="nd" cx="260" cy="80" r="9"/><text class="lbl" x="260" y="52" text-anchor="middle">WORKFLOW</text></g>
+        <g><circle class="nd" cx="440" cy="260" r="9"/><text class="lbl" x="440" y="296" text-anchor="middle">TECHNOLOGY</text></g>
+        <g><circle class="nd human" cx="260" cy="440" r="9"/><text class="lbl" x="260" y="476" text-anchor="middle">ORGANISATION</text></g>
+        <g><circle class="nd" cx="80" cy="260" r="9"/><text class="lbl" x="80" y="226" text-anchor="middle">LEARNING</text></g>
+        <text class="ctr" x="260" y="252" text-anchor="middle">ONE CONVERSATION</text>
+        <text class="sub" x="260" y="272" text-anchor="middle">across workflow, technology, organisation and learning</text>
+        <circle class="trav" r="4" cx="260" cy="80"><animateMotion id="loop-anim" dur="5s" begin="indefinite" fill="freeze" rotate="auto"><mpath href="#loop-path"/></animateMotion></circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== FAQ -->
+<section class="section faq" id="faq" aria-labelledby="faq-title">
+  <div class="faq__bg" aria-hidden="true">
+    <svg viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice">
+      <g stroke="#22332F" stroke-width="1" fill="none">
+        <path d="M120 180 L420 120 L760 220 L1040 140 L1320 260"/><path d="M420 120 L520 460 L760 220"/><path d="M520 460 L300 700 L80 560 L120 180"/><path d="M1040 140 L1180 480 L1320 260"/><path d="M1180 480 L900 720 L520 460"/><path d="M900 720 L1260 800"/>
+      </g>
+      <g fill="#22332F"><circle cx="120" cy="180" r="3"/><circle cx="420" cy="120" r="3"/><circle cx="760" cy="220" r="3"/><circle cx="1040" cy="140" r="3"/><circle cx="1320" cy="260" r="3"/><circle cx="520" cy="460" r="3"/><circle cx="300" cy="700" r="3"/><circle cx="80" cy="560" r="3"/><circle cx="1180" cy="480" r="3"/><circle cx="900" cy="720" r="3"/><circle cx="1260" cy="800" r="3"/></g>
+    </svg>
+  </div>
+  <div class="wrap faq__grid">
+    <div>
+      <p class="eyebrow reveal">FAQ</p>
+      <h2 class="h2 reveal" data-delay="1" id="faq-title">Questions people ask before bringing a problem.</h2>
+    </div>
+    <div class="faq__list reveal" data-delay="2">
+      <details id="faq-augmented-intelligence">
+        <summary><h3>What is Augmented Intelligence?</h3><span class="ic" aria-hidden="true"></span></summary>
+        <div class="ans"><p>At DYAI, Augmented Intelligence means designing systems in which artificial intelligence extends human capability without making human judgement, responsibility or context invisible.</p><p>The focus is not AI replacing people.</p><p>It is designing better ways for people and AI to work together.</p></div>
+      </details>
+      <details id="faq-ai-practice">
+        <summary><h3>What is an AI Practice?</h3><span class="ic" aria-hidden="true"></span></summary>
+        <div class="ans"><p>AI Practice is DYAI's term for the repeatable way an organisation works with AI.</p><p>It can include AI literacy, workflow design, model and tool selection, human review, agents, governance, evaluation and organisational learning.</p><p>The objective is to move beyond isolated experiments toward a capability the organisation can actually use and improve.</p></div>
+      </details>
+      <details id="faq-consulting">
+        <summary><h3>How is DYAI different from traditional AI consulting?</h3><span class="ic" aria-hidden="true"></span></summary>
+        <div class="ans"><p>DYAI does include advisory work when it is useful.</p><p>But advice alone is not the intended outcome.</p><p>We connect understanding, design, implementation, real-world use, verification and learning around a concrete work problem.</p></div>
+      </details>
+      <details id="faq-agents">
+        <summary><h3>Does DYAI build AI agents?</h3><span class="ic" aria-hidden="true"></span></summary>
+        <div class="ans"><p>Yes — when an agent is the right solution to a validated problem.</p><p>An agent can be useful when work requires multiple steps, access to tools or data, or coordinated capabilities.</p><p>We do not begin by assuming that every workflow needs an agent.</p></div>
+      </details>
+      <details id="faq-llms">
+        <summary><h3>Can DYAI help teams work with ChatGPT, Claude and other LLMs?</h3><span class="ic" aria-hidden="true"></span></summary>
+        <div class="ans"><p>Yes.</p><p>That may start with practical AI literacy: understanding how LLMs work, how to communicate with them, how context and instructions affect results, and where their limitations matter.</p><p>The aim is to connect that knowledge to real work rather than teach prompting in isolation.</p></div>
+      </details>
+      <details id="faq-training">
+        <summary><h3>Does DYAI train AI models?</h3><span class="ic" aria-hidden="true"></span></summary>
+        <div class="ans"><p>“Training AI” can mean very different things.</p><p>Many useful business systems do not need a newly trained model.</p><p>Depending on the problem, the right approach may involve prompting, context design, retrieval, tools, integrations, evaluation, fine-tuning decisions or another architecture.</p><p>We choose that after understanding the requirement.</p></div>
+      </details>
+      <details id="faq-personal-augmentation">
+        <summary><h3>What is Personal Augmentation?</h3><span class="ic" aria-hidden="true"></span></summary>
+        <div class="ans"><p>Personal Augmentation is DYAI's high-context approach for founders, independent professionals and creators.</p><p>It connects strategic thinking, AI capability, technical systems and everyday work around the individual's real goals and working environment.</p></div>
+      </details>
+      <details id="faq-start">
+        <summary><h3>How does a DYAI engagement start?</h3><span class="ic" aria-hidden="true"></span></summary>
+        <div class="ans"><p>With a real problem.</p><p>You do not need to know which model, tool or agent you need.</p><p>The first useful question is:</p><p><strong>What should become meaningfully better?</strong></p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== FINAL CTA -->
+<section class="section final" id="contact" aria-labelledby="final-title">
+  <div class="wrap">
+    <div class="final__content">
+      <h2 class="display reveal" id="final-title">Bring a real problem.</h2>
+      <div class="copy reveal" data-delay="1">
+        <p class="lead" style="text-align:center">You do not need an AI roadmap before talking to us.</p>
+        <p>You do not need to know which model or agent you need.</p>
+        <p>Start with the work that should become:</p>
+      </div>
+      <ul class="outcomes" id="outcomes" aria-label="Potential outcomes">
+        <li>clearer</li><li>faster</li><li>more reliable</li><li>easier to coordinate</li><li>easier to repeat</li><li>or simply possible</li>
+      </ul>
+      <div class="copy reveal" data-delay="2">
+        <p>Then we can determine whether AI belongs in the solution — and what kind.</p>
+      </div>
+      <div class="actions reveal" data-delay="3">
+        <!-- Placeholder destination: replace with the live contact / booking route. -->
+        <a class="btn btn--amber" href="https://studio.dyai.cloud/en/contact">Start a conversation <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <a class="btn btn--ghost" href="#augmentation-map">Map your problem</a>
+      </div>
+    </div>
+    <div class="final__field field" id="field-final" data-field="final">
+      <p class="field__caption">One stable path · potential outcomes, not guaranteed results</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" id="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="#top" aria-label="DYAI — back to top"><span class="brand__mark" aria-hidden="true"></span>DYAI</a>
+        <p class="tag">DYAI Studio</p>
+        <p>Design Your Augmented Intelligence.</p>
+        <p>Human–AI work design for organisations, founders and independent professionals.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#organisations">Organisations</a></li>
+          <li><a href="#individuals">Individuals</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#lab">Lab</a></li>
+          <li><a href="#principles">Principles</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer__meta">studio.dyai.cloud · EN</p>
+  </div>
+</footer>
+<script>
+(function(){
+'use strict';
+var doc=document, root=doc.documentElement;
+root.classList.add('js');
+var mq=matchMedia('(prefers-reduced-motion: reduce)');
+var RM=function(){return mq.matches;};
+var raf=window.requestAnimationFrame.bind(window);
+var SVGNS='http://www.w3.org/2000/svg';
+function svgEl(t,attrs){var e=doc.createElementNS(SVGNS,t);for(var k in attrs)e.setAttribute(k,attrs[k]);return e;}
+function $(s,c){return (c||doc).querySelector(s);}
+function $$(s,c){return Array.prototype.slice.call((c||doc).querySelectorAll(s));}
+var KIND={human:'human',context:'context',knowledge:'context',ai:'ai',model:'ai',agent:'agent',tool:'tool',workflow:'workflow',evidence:'evidence',value:'value',neutral:'neutral',pattern:'pattern'};
+var TRANSIENT=['is-in','is-out','is-selected','is-faded','is-emerge'];
+
+/* ------------------------------------------------------------------
+   The Field — a semantic network engine.
+   Nodes are HTML elements (buttons when interactive) positioned over an
+   SVG layer of relationships. Positions are eased in rAF only while
+   something is actually moving; the loop stops when the system settles.
+   ------------------------------------------------------------------ */
+function Field(el,opts){
+  var self=this;
+  this.el=el;this.opts=opts||{};
+  this.nodes={};this.links={};this.frames={};this.pulses=[];
+  this.order=[];
+  this.w=el.clientWidth||600;this.h=el.clientHeight||400;
+  this.running=false;this.last=0;this.scene=null;this.selected=null;this.hl=null;
+  this.px=0;this.py=0;this.ptx=0;this.pty=0;
+  var r=el.getBoundingClientRect();
+  this.visible=r.bottom>0&&r.top<window.innerHeight;
+  this.svg=svgEl('svg',{'class':'field__svg','aria-hidden':'true',focusable:'false'});
+  this.gFrames=svgEl('g',{});this.gLinks=svgEl('g',{});this.gPulses=svgEl('g',{});
+  this.svg.appendChild(this.gFrames);this.svg.appendChild(this.gLinks);this.svg.appendChild(this.gPulses);
+  this.layer=doc.createElement('div');this.layer.className='field__nodes';
+  el.insertBefore(this.layer,el.firstChild);el.insertBefore(this.svg,this.layer);
+  this.tick=this.tick.bind(this);
+  if('ResizeObserver' in window){new ResizeObserver(function(){self.resize();}).observe(el);}
+  else window.addEventListener('resize',function(){self.resize();});
+  new IntersectionObserver(function(es){es.forEach(function(e){self.visible=e.isIntersecting;if(self.visible)self.wake();else self.running=false;});},{rootMargin:'60px'}).observe(el);
+  this.layer.addEventListener('click',function(e){var b=e.target.closest('.node[data-interactive]');if(b)self.select(b.getAttribute('data-id'),true);});
+  this.layer.addEventListener('keydown',function(e){self.onKey(e);});
+  if(this.opts.parallax&&matchMedia('(pointer:fine)').matches){
+    var host=this.opts.parallaxHost||el;
+    host.addEventListener('pointermove',function(e){if(RM())return;var rr=host.getBoundingClientRect();self.setPointer((e.clientX-rr.left)/rr.width*2-1,(e.clientY-rr.top)/rr.height*2-1);},{passive:true});
+    host.addEventListener('pointerleave',function(){self.setPointer(0,0);});
+  }
+}
+Field.prototype.mode=function(){return this.w<480?'compact':((this.w<600||this.h<340)?'reduced':'full');};
+Field.prototype.resize=function(){
+  var w=this.el.clientWidth,h=this.el.clientHeight;if(!w||!h)return;
+  var prev=this.mode();this.w=w;this.h=h;
+  if(this.scene){if(this.mode()!==prev)this.setScene(this.scene,{instant:true});else{this.place(this.scene);this.snap();}}
+};
+Field.prototype.targets=function(scene){
+  var mode=this.mode(),self=this;
+  var specs=scene.nodes.filter(function(s){return mode==='full'||!s.opt;});
+  var T={},auto=false;
+  if(mode==='compact'){
+    var allM=specs.every(function(s){return s.m;});
+    if(allM){specs.forEach(function(s){T[s.id]=[s.m[0]*self.w,s.m[1]*self.h];});}
+    else{
+      auto=true;var n=specs.length,cols=n<=8?2:(n<=12?3:4),rows=Math.ceil(n/cols);
+      var px=Math.max(64,self.w*.2),top=26,bottom=44;
+      var cw=cols>1?(self.w-2*px)/(cols-1):0,rh=rows>1?(self.h-top-bottom)/(rows-1):0;
+      specs.forEach(function(s,i){var r=Math.floor(i/cols),c=i%cols;if(r%2)c=cols-1-c;T[s.id]=[cols>1?px+c*cw:self.w/2,rows>1?top+r*rh:self.h/2];});
+    }
+  }else specs.forEach(function(s){var p=(mode==='reduced'&&s.r)?s.r:[s.x,s.y];var y=mode==='reduced'?(.11+p[1]*.7):p[1];T[s.id]=[p[0]*self.w,y*self.h];});
+  return {specs:specs,T:T,auto:auto,mode:mode};
+};
+Field.prototype.place=function(scene){
+  var t=this.targets(scene),self=this;
+  this.auto=t.auto;
+  t.specs.forEach(function(s){var n=self.nodes[s.id];if(n){n.tx=t.T[s.id][0];n.ty=t.T[s.id][1];}});
+};
+Field.prototype.snap=function(){
+  var self=this;
+  Object.keys(this.nodes).forEach(function(id){var n=self.nodes[id];n.cx=n.tx;n.cy=n.ty;n.s=n.ts;});
+  this.px=this.ptx;this.py=this.pty;
+  this.draw();
+};
+Field.prototype.nodeClass=function(s,el){
+  var k=KIND[s.kind]||'neutral';
+  var c='node node--'+k;
+  if(s.big)c+=' node--big';
+  if(s.ghost)c+=' is-ghost';
+  if(s.dim)c+=' is-dim';
+  if(s.solid)c+=' is-solid';
+  if(s.acid)c+=' is-acid';
+  var lp=(this.auto||this.mode()==='compact')?'':(s.lp||'');
+  if(lp)c+=' node--lp-'+lp;
+  if(el)TRANSIENT.forEach(function(t){if(el.classList.contains(t))c+=' '+t;});
+  return c;
+};
+Field.prototype.makeNode=function(s){
+  var inter=!!s.q||!!s.interactive;
+  var el=doc.createElement(inter?'button':'span');
+  if(inter){el.type='button';el.setAttribute('data-interactive','1');el.setAttribute('aria-pressed','false');}
+  el.setAttribute('data-id',s.id);
+  var dot=doc.createElement('span');dot.className='node__dot';
+  var lab=doc.createElement('span');lab.className='node__label';
+  el.appendChild(dot);el.appendChild(lab);
+  var n={el:el,lab:lab,id:s.id,cx:0,cy:0,tx:0,ty:0,s:1,ts:1,ox:0,oy:0,spec:s};
+  this.updateNode(n,s);
+  return n;
+};
+Field.prototype.updateNode=function(n,s){
+  n.spec=s;
+  n.lab.textContent=s.label||s.id.replace(/\d+$/,'').toUpperCase();
+  n.el.className=this.nodeClass(s,n.el);
+  if(s.q)n.el.setAttribute('data-q',s.q);else n.el.removeAttribute('data-q');
+  n.depth=s.depth!=null?s.depth:(s.kind==='human'?.35:1);
+};
+Field.prototype.linkClass=function(L){
+  var l=L.spec,c='link-path link--'+(l.kind||'neutral');
+  if(l.dashed)c+=' link--dashed';if(l.weak)c+=' link--weak';
+  if(L.in)c+=' is-in';if(L.active)c+=' is-active';if(L.faded)c+=' is-faded';
+  return c;
+};
+Field.prototype.syncLink=function(L){L.el.setAttribute('class',this.linkClass(L));};
+Field.prototype.setScene=function(scene,o){
+  o=o||{};var self=this;
+  this.scene=scene;
+  var instant=!!o.instant||RM()||!this.visible;
+  var t=this.targets(scene);this.auto=t.auto;
+  var ids={};
+  t.specs.forEach(function(s){ids[s.id]=1;});
+  // nodes
+  t.specs.forEach(function(s){
+    var n=self.nodes[s.id],tx=t.T[s.id][0],ty=t.T[s.id][1];
+    if(!n){
+      n=self.makeNode(s);self.nodes[s.id]=n;self.order.push(s.id);
+      var sx=tx,sy=ty;
+      if(s.from&&self.nodes[s.from]&&!instant){sx=self.nodes[s.from].cx;sy=self.nodes[s.from].cy;}
+      else if(!instant){sx=tx+(self.w/2-tx)*.1;sy=ty+(self.h/2-ty)*.1;}
+      n.cx=sx;n.cy=sy;n.s=instant?1:.5;
+      self.layer.appendChild(n.el);
+      if(instant)n.el.classList.add('is-in');else raf(function(){raf(function(){n.el.classList.add('is-in');});});
+      if(s.emerge&&!instant){n.el.classList.add('is-emerge');setTimeout(function(){n.el.classList.remove('is-emerge');},1300);}
+    }else{
+      if(n.out){n.out=false;clearTimeout(n.outT);n.el.classList.remove('is-out');}
+      self.updateNode(n,s);
+      if(s.emerge&&!instant&&!n.el.classList.contains('is-emerge')){n.el.classList.add('is-emerge');setTimeout(function(){n.el.classList.remove('is-emerge');},1300);}
+    }
+    n.tx=tx;n.ty=ty;n.ts=1;
+  });
+  Object.keys(this.nodes).forEach(function(id){if(!ids[id])self.removeNode(id,instant);});
+  // links
+  var keys={};
+  (scene.links||[]).forEach(function(l){
+    if(!ids[l.a]||!ids[l.b])return;
+    var key=l.a+'>'+l.b+(l.key||'');keys[key]=1;
+    var L=self.links[key];
+    if(!L){
+      L={el:svgEl('path',{}),a:l.a,b:l.b,spec:l,in:instant};
+      self.links[key]=L;self.gLinks.appendChild(L.el);
+      if(!instant)raf(function(){raf(function(){L.in=true;self.syncLink(L);});});
+    }
+    L.spec=l;
+    if(l.dir)L.el.setAttribute('marker-end','url(#mk-'+(l.kind||'neutral')+')');else L.el.removeAttribute('marker-end');
+    self.syncLink(L);
+  });
+  Object.keys(this.links).forEach(function(k){
+    if(keys[k])return;var L=self.links[k];delete self.links[k];
+    if(instant){if(L.el.parentNode)L.el.parentNode.removeChild(L.el);}
+    else{L.in=false;self.syncLink(L);setTimeout(function(){if(L.el.parentNode)L.el.parentNode.removeChild(L.el);},750);}
+  });
+  // frames
+  var fkeys={};
+  if(!this.auto)(scene.frames||[]).forEach(function(f){
+    fkeys[f.id]=1;var F=self.frames[f.id];
+    if(!F){
+      F={rect:svgEl('rect',{'class':'frame-rect'}),text:svgEl('text',{'class':'frame-label'}),spec:f};
+      self.gFrames.appendChild(F.rect);self.gFrames.appendChild(F.text);self.frames[f.id]=F;
+      var on=function(){F.rect.classList.add('is-in');F.text.classList.add('is-in');};
+      if(instant)on();else raf(function(){raf(on);});
+    }
+    F.spec=f;
+    F.rect.setAttribute('class','frame-rect'+(f.solid?' frame--solid':'')+(f.tone?' frame--'+f.tone:'')+(F.rect.classList.contains('is-in')?' is-in':''));
+    F.text.textContent=f.label||'';
+  });
+  Object.keys(this.frames).forEach(function(k){
+    if(fkeys[k])return;var F=self.frames[k];delete self.frames[k];
+    var rm=function(){[F.rect,F.text].forEach(function(e){if(e.parentNode)e.parentNode.removeChild(e);});};
+    if(instant)rm();else{F.rect.classList.remove('is-in');F.text.classList.remove('is-in');setTimeout(rm,750);}
+  });
+  if(instant)this.snap();
+  this.applyHighlight();
+  this.wake();
+};
+Field.prototype.removeNode=function(id,instant){
+  var n=this.nodes[id],self=this;if(!n)return;
+  delete this.nodes[id];this.order=this.order.filter(function(x){return x!==id;});
+  if(this.selected===id){this.selected=null;}
+  if(instant){if(n.el.parentNode)n.el.parentNode.removeChild(n.el);return;}
+  n.out=true;n.el.classList.add('is-out');n.ts=.6;
+  n.outT=setTimeout(function(){if(n.el.parentNode)n.el.parentNode.removeChild(n.el);},700);
+  // keep easing until removed
+  this.ghosts=this.ghosts||[];this.ghosts.push(n);
+  setTimeout(function(){self.ghosts=self.ghosts.filter(function(g){return g!==n;});},720);
+};
+Field.prototype.wake=function(){if(this.running||!this.visible)return;this.running=true;this.last=0;raf(this.tick);};
+Field.prototype.setPointer=function(nx,ny){this.ptx=nx*7;this.pty=ny*5;this.wake();};
+Field.prototype.geo=function(L){
+  var a=this.nodes[L.a],b=this.nodes[L.b];if(!a||!b)return null;
+  var x1=a.cx+a.ox,y1=a.cy+a.oy,x2=b.cx+b.ox,y2=b.cy+b.oy;
+  var dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy)||1,ux=dx/len,uy=dy/len;
+  var ra=a.spec.big?13:9,rb=(b.spec.big?13:9)+(L.spec.dir?4:0);
+  var sx=x1+ux*ra,sy=y1+uy*ra,ex=x2-ux*rb,ey=y2-uy*rb;
+  var c=(L.spec.curve||0)*len;
+  return {sx:sx,sy:sy,ex:ex,ey:ey,mx:(sx+ex)/2-uy*c,my:(sy+ey)/2+ux*c};
+};
+Field.prototype.pointOn=function(L,t){
+  var g=this.geo(L);if(!g)return [0,0];var u=1-t;
+  return [u*u*g.sx+2*u*t*g.mx+t*t*g.ex,u*u*g.sy+2*u*t*g.my+t*t*g.ey];
+};
+Field.prototype.draw=function(){
+  var self=this;
+  var all=Object.keys(this.nodes).map(function(id){return self.nodes[id];}).concat(this.ghosts||[]);
+  all.forEach(function(n){n.el.style.transform='translate3d('+(n.cx+n.ox).toFixed(1)+'px,'+(n.cy+n.oy).toFixed(1)+'px,0) scale('+n.s.toFixed(3)+')';});
+  Object.keys(this.links).forEach(function(k){
+    var L=self.links[k],g=self.geo(L);
+    if(!g){L.el.removeAttribute('d');return;}
+    L.el.setAttribute('d','M'+g.sx.toFixed(1)+' '+g.sy.toFixed(1)+' Q'+g.mx.toFixed(1)+' '+g.my.toFixed(1)+' '+g.ex.toFixed(1)+' '+g.ey.toFixed(1));
+  });
+  Object.keys(this.frames).forEach(function(k){
+    var F=self.frames[k],f=F.spec,minx=1e9,miny=1e9,maxx=-1e9,maxy=-1e9,c=0;
+    f.ids.forEach(function(id){var n=self.nodes[id];if(!n)return;c++;minx=Math.min(minx,n.cx);maxx=Math.max(maxx,n.cx);miny=Math.min(miny,n.cy);maxy=Math.max(maxy,n.cy);});
+    if(!c){F.rect.removeAttribute('width');return;}
+    var p=f.pad||28;if(self.mode()==='reduced')p=Math.min(p,18);
+    F.rect.setAttribute('x',minx-p);F.rect.setAttribute('y',miny-p-16);F.rect.setAttribute('width',maxx-minx+2*p);F.rect.setAttribute('height',maxy-miny+2*p+28);
+    F.text.setAttribute('x',minx-p+10);F.text.setAttribute('y',miny-p-4);
+  });
+};
+Field.prototype.tick=function(ts){
+  if(!this.running)return;
+  var dt=this.last?Math.min(.05,(ts-this.last)/1000):.016;this.last=ts;
+  var k=1-Math.exp(-dt*5.2),moving=false,self=this;
+  this.px+=(this.ptx-this.px)*k;this.py+=(this.pty-this.py)*k;
+  if(Math.abs(this.ptx-this.px)>.05||Math.abs(this.pty-this.py)>.05)moving=true;
+  var all=Object.keys(this.nodes).map(function(id){return self.nodes[id];}).concat(this.ghosts||[]);
+  all.forEach(function(n){
+    var dx=n.tx-n.cx,dy=n.ty-n.cy;
+    if(Math.abs(dx)>.15||Math.abs(dy)>.15){n.cx+=dx*k;n.cy+=dy*k;moving=true;}else{n.cx=n.tx;n.cy=n.ty;}
+    var ds=n.ts-n.s;if(Math.abs(ds)>.004){n.s+=ds*k;moving=true;}else n.s=n.ts;
+    n.ox=self.px*n.depth;n.oy=self.py*n.depth;
+  });
+  for(var i=this.pulses.length-1;i>=0;i--){
+    var p=this.pulses[i];p.t+=dt/p.dur;
+    if(p.t>=1){if(p.el.parentNode)p.el.parentNode.removeChild(p.el);this.pulses.splice(i,1);continue;}
+    if(!this.links[p.key]){if(p.el.parentNode)p.el.parentNode.removeChild(p.el);this.pulses.splice(i,1);continue;}
+    var pt=this.pointOn(this.links[p.key],p.rev?1-p.t:p.t);
+    p.el.setAttribute('cx',pt[0].toFixed(1));p.el.setAttribute('cy',pt[1].toFixed(1));
+    p.el.setAttribute('opacity',Math.sin(p.t*Math.PI).toFixed(2));
+  }
+  if(this.pulses.length)moving=true;
+  this.draw();
+  if(moving)raf(this.tick);else this.running=false;
+};
+Field.prototype.pulse=function(a,b,o){
+  o=o||{};if(RM()||!this.visible||this.pulses.length>14)return;
+  var key=null,L=null,self=this;
+  Object.keys(this.links).some(function(k){var l=self.links[k];if((l.a===a&&l.b===b)||(l.a===b&&l.b===a)){key=k;L=l;return true;}return false;});
+  if(!L)return;
+  var el=svgEl('circle',{r:o.r||2.6,'class':'pulse pulse--'+(o.kind||L.spec.kind||'ai')});
+  this.gPulses.appendChild(el);
+  this.pulses.push({key:key,t:0,dur:o.dur||1.1,el:el,rev:L.a!==a});
+  this.wake();
+};
+Field.prototype.pulseFrom=function(id,o){var self=this;Object.keys(this.links).forEach(function(k){var l=self.links[k];if(l.a===id)self.pulse(id,l.b,o);else if(l.b===id)self.pulse(id,l.a,o);});};
+Field.prototype.pulsePath=function(ids,gap,o){var self=this;ids.forEach(function(id,i){if(i<ids.length-1)setTimeout(function(){self.pulse(id,ids[i+1],o);},i*(gap||350));});};
+Field.prototype.select=function(id,toggle){
+  var next=(toggle&&this.selected===id)?null:id,self=this;
+  this.selected=next;
+  Object.keys(this.nodes).forEach(function(k){var n=self.nodes[k],on=n.id===next;n.el.classList.toggle('is-selected',on);if(n.el.hasAttribute('data-interactive'))n.el.setAttribute('aria-pressed',String(on));});
+  this.applyHighlight();
+  if(next)this.pulseFrom(next);
+  if(this.opts.onSelect)this.opts.onSelect(next?this.nodes[next].spec:null,this);
+};
+Field.prototype.setHighlight=function(ids){this.hl=ids?ids.slice():null;this.applyHighlight();};
+Field.prototype.applyHighlight=function(){
+  var self=this,set=null;
+  if(this.hl)set=this.hl;else if(this.selected)set=[this.selected];
+  if(!set){
+    Object.keys(this.links).forEach(function(k){var L=self.links[k];if(L.active||L.faded){L.active=false;L.faded=false;self.syncLink(L);}});
+    Object.keys(this.nodes).forEach(function(k){self.nodes[k].el.classList.remove('is-faded');});
+    return;
+  }
+  var adj={};set.forEach(function(i){adj[i]=1;});
+  Object.keys(this.links).forEach(function(k){var L=self.links[k],on=set.indexOf(L.a)>-1||set.indexOf(L.b)>-1;if(on){adj[L.a]=1;adj[L.b]=1;}L.active=on;L.faded=!on;self.syncLink(L);});
+  Object.keys(this.nodes).forEach(function(k){self.nodes[k].el.classList.toggle('is-faded',!adj[k]);});
+};
+Field.prototype.interactiveEls=function(){return $$('.node[data-interactive]',this.layer);};
+Field.prototype.onKey=function(e){
+  var els=this.interactiveEls(),i=els.indexOf(doc.activeElement);
+  if(e.key==='Escape'){if(this.selected){this.select(null);e.preventDefault();}return;}
+  if(i<0)return;var n=null;
+  if(e.key==='ArrowRight'||e.key==='ArrowDown')n=els[(i+1)%els.length];
+  else if(e.key==='ArrowLeft'||e.key==='ArrowUp')n=els[(i-1+els.length)%els.length];
+  else if(e.key==='Home')n=els[0];else if(e.key==='End')n=els[els.length-1];
+  if(n){e.preventDefault();n.focus();}
+};
+Field.prototype.focusNode=function(id){var n=this.nodes[id];if(n&&n.el.focus)n.el.focus();};
+
+/* ---------------- scene helpers ---------------- */
+function N(id,kind,x,y,o){var s={id:id,kind:kind,x:x,y:y};if(o)for(var k in o)s[k]=o[k];return s;}
+function Lk(a,b,kind,o){var s={a:a,b:b,kind:kind||'neutral'};if(o)for(var k in o)s[k]=o[k];return s;}
+function clone(s,o){var c={};for(var k in s)c[k]=s[k];if(o)for(var j in o)c[j]=o[j];return c;}
+function spread(nodes,f){return nodes.map(function(n){return clone(n,{x:.5+(n.x-.5)*f,y:.5+(n.y-.5)*f});});}
+var Q={
+  human:'Where is judgement, responsibility or creativity required?',
+  context:'What must the system know to be useful?',
+  ai:'What can a model reliably contribute?',
+  tools:'Which systems, data or APIs are required?',
+  workflow:'How should people, models and tools interact?',
+  evidence:'How will we know whether the result improved anything?',
+  value:'What changed in the actual work?'
+};
+var QNAME={human:'Human',context:'Context',ai:'AI',tools:'Tools',workflow:'Workflow',evidence:'Evidence',value:'Value'};
+
+function stepNav(container,items,onPick){
+  if(!container)return null;
+  var btns=items.map(function(it){
+    var b=doc.createElement('button');b.type='button';b.className='chip chip--sm';b.textContent=it.short||it.label;b.setAttribute('data-key',it.key);
+    b.setAttribute('aria-label',it.label);
+    b.addEventListener('click',function(){onPick(it.key,true);});
+    container.appendChild(b);return b;
+  });
+  container.addEventListener('keydown',function(e){
+    var i=btns.indexOf(doc.activeElement);if(i<0)return;var n=null;
+    if(e.key==='ArrowRight')n=btns[(i+1)%btns.length];else if(e.key==='ArrowLeft')n=btns[(i-1+btns.length)%btns.length];
+    if(n){e.preventDefault();n.focus();n.click();}
+  });
+  return {set:function(key){btns.forEach(function(b){if(b.getAttribute('data-key')===key)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});}};
+}
+function scrollDriver(items,onCurrent){
+  if(!items.length)return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting)onCurrent(e.target.getAttribute('data-scene'),false);});
+  },{rootMargin:'-38% 0px -46% 0px',threshold:0});
+  items.forEach(function(it){io.observe(it);});
+}
+function offersSection(cfg){
+  var field=new Field($(cfg.field));
+  var items=$$(cfg.items+' .offer');
+  var cap=$(cfg.caption);
+  var current=null;
+  var nav=stepNav($(cfg.nav),items.map(function(it){return {key:it.getAttribute('data-scene'),label:$('.h3',it).textContent.trim(),short:(cfg.short&&cfg.short[it.getAttribute('data-scene')])||$('.h3',it).textContent.trim()};}),set);
+  function set(key){
+    if(key===current)return;current=key;
+    items.forEach(function(it){it.classList.toggle('is-current',it.getAttribute('data-scene')===key);});
+    if(nav)nav.set(key);
+    var sc=cfg.scenes[key];field.setScene(sc);
+    if(cap&&sc.caption)cap.textContent=sc.caption;
+    if(sc.after)setTimeout(function(){if(current===key)sc.after(field);},900);
+  }
+  scrollDriver(items,set);
+  set(items[0].getAttribute('data-scene'));
+  return field;
+}
+
+/* ==================================================================
+   HERO
+   ================================================================== */
+(function hero(){
+  var el=$('#field-hero');if(!el)return;
+  var note=$('#hero-note');
+  var heroSec=$('#hero');
+  var H1=$('#hero-title');
+  // progressive statement
+  H1.innerHTML=H1.textContent.split(' ').map(function(w,i){return '<span class="word" style="transition-delay:'+(i*70)+'ms">'+w+'</span>';}).join(' ');
+  var notes={
+    human:{tone:'is-human',title:'Human judgement anchors the system',text:'Where is judgement, responsibility or creativity required? Responsibility does not disappear because AI is involved.'},
+    context:{tone:'is-context',title:'Context without purpose is insufficient',text:'What must the system know to be useful? Context and knowledge connect human judgement with what a model can reliably contribute.'},
+    ai:{tone:'is-ai',title:'AI alone is incomplete',text:'What can a model reliably contribute? AI is one part of the system — the useful system usually involves more than a model.'}
+  };
+  var field=new Field(el,{parallax:true,parallaxHost:heroSec,onSelect:function(spec){
+    note.className='hero__note';
+    if(!spec){note.classList.remove('is-on');return;}
+    var n=notes[spec.id];note.innerHTML='<b>'+n.title+'</b>'+n.text;
+    note.classList.add(n.tone);note.classList.add('is-on');
+  }});
+  var H={big:true,q:'human',lp:'left',depth:.3},C={q:'context',lp:'top'},A={q:'ai',lp:'right'};
+  var final={
+    nodes:[
+      N('human','human',.56,.60,clone(H,{m:[.2,.3],r:[.22,.58]})),
+      N('context','context',.67,.34,clone(C,{m:[.5,.16],r:[.38,.3]})),
+      N('ai','ai',.90,.36,clone(A,{m:[.82,.3],r:[.72,.3]})),
+      N('work','workflow',.75,.58,{m:[.5,.52],r:[.52,.58]}),
+      N('evidence','evidence',.80,.82,{m:[.32,.82],r:[.6,.84]}),
+      N('value','value',.93,.68,{lp:'right',m:[.78,.8],r:[.86,.66]})
+    ],
+    links:[Lk('human','context','human'),Lk('context','ai','ai'),Lk('human','ai','neutral',{dashed:1,weak:1}),
+      Lk('human','work','human',{dir:1}),Lk('context','work'),Lk('ai','work','ai',{dir:1}),
+      Lk('work','evidence','neutral',{dir:1}),Lk('evidence','human','human',{dashed:1,dir:1,curve:.28}),Lk('evidence','value','value',{dir:1})]
+  };
+  var n=final.nodes;
+  var s1={nodes:[clone(n[0],{x:.56,y:.66})]};
+  var s2={nodes:[clone(n[0],{x:.56,y:.66}),clone(n[1],{x:.72,y:.28})]};
+  var s3={nodes:[clone(n[0],{x:.56,y:.66}),clone(n[1],{x:.72,y:.28}),clone(n[2],{x:.95,y:.44})]};
+  var s4={nodes:[n[0],n[1],n[2]],links:final.links.slice(0,3)};
+  var s5={nodes:[n[0],n[1],n[2],clone(n[3],{from:'context'})],links:final.links.slice(0,6)};
+  var s6={nodes:[n[0],n[1],n[2],n[3],clone(n[4],{from:'work'})],links:final.links.slice(0,8)};
+  var s7={nodes:[n[0],n[1],n[2],n[3],n[4],clone(n[5],{from:'evidence',emerge:1,acid:1})],links:final.links};
+  var timers=[];
+  function at(ms,fn){timers.push(setTimeout(fn,ms));}
+  function finish(){timers.forEach(clearTimeout);timers=[];field.setScene(final,{instant:true});}
+  if(RM()||!field.visible){field.setScene(final,{instant:true});heroSec.classList.add('is-ready');}
+  else{
+    field.setScene(s1,{instant:true});
+    at(80,function(){heroSec.classList.add('is-ready');});
+    at(900,function(){field.setScene(s2);});
+    at(1700,function(){field.setScene(s3);});
+    at(2600,function(){field.setScene(s4);at(500,function(){field.pulse('context','ai');field.pulse('human','context');});});
+    at(3600,function(){field.setScene(s5);at(600,function(){field.pulse('human','work');field.pulse('ai','work');});});
+    at(4700,function(){field.setScene(s6);at(600,function(){field.pulsePath(['work','evidence','human'],420);});});
+    at(5900,function(){field.setScene(s7);at(400,function(){field.pulse('evidence','value',{kind:'value'});});});
+    at(7300,function(){field.setScene(final);timers=[];});
+    el.addEventListener('click',function(e){if(e.target.closest('.node')&&timers.length)finish();},{once:false});
+  }
+  // clicking elsewhere in hero clears selection
+  heroSec.addEventListener('click',function(e){if(!e.target.closest('.node')&&field.selected)field.select(null);});
+})();
+
+/* ==================================================================
+   PROBLEM — the network destabilises, then simplifies
+   ================================================================== */
+(function problem(){
+  var el=$('#field-problem');if(!el)return;
+  var field=new Field(el),cap=$('#problem-caption');
+  var base=[
+    N('human','human',.22,.52,{big:1,lp:'left',m:[.18,.26]}),
+    N('context','context',.40,.26,{lp:'top',m:[.5,.12]}),
+    N('ai','ai',.72,.28,{lp:'top',m:[.84,.24]}),
+    N('work','workflow',.52,.56,{m:[.5,.46]}),
+    N('evidence','evidence',.60,.82,{m:[.3,.78]}),
+    N('value','value',.86,.66,{lp:'right',m:[.8,.76]})
+  ];
+  var baseLinks=[Lk('human','context','human'),Lk('context','ai','ai'),Lk('human','work','human',{dir:1}),Lk('context','work'),Lk('ai','work','ai',{dir:1}),Lk('work','evidence','neutral',{dir:1}),Lk('evidence','human','human',{dashed:1,dir:1,curve:.28}),Lk('evidence','value','value',{dir:1})];
+  var frag=[
+    {n:N('tool1','tool',.30,.10,{label:'TOOL',m:[.84,.48]}),l:[Lk('tool1','context','neutral',{dashed:1}),Lk('tool1','human')]},
+    {n:N('ai2','ai',.92,.12,{label:'AI',m:[.14,.5]}),l:[Lk('ai2','ai','ai',{dashed:1}),Lk('ai2','work','ai'),Lk('context','ai','ai',{key:'dup',curve:.3,dashed:1})]},
+    {n:N('tool2','tool',.08,.86,{label:'TOOL',m:[.06,.8]}),l:[Lk('tool2','human'),Lk('tool2','work','neutral',{dashed:1})]},
+    {n:N('model','model',.88,.92,{m:[.94,.6],lp:'left'}),l:[Lk('model','ai','ai'),Lk('model','evidence','neutral',{dashed:1}),Lk('human','work','human',{key:'dup',curve:-.3,dashed:1})]},
+    {n:N('agent','agent',.46,.94,{m:[.55,.64]}),l:[Lk('agent','work','ai'),Lk('agent','tool2','ai',{dashed:1}),Lk('agent','model','ai')]},
+    {n:N('tool3','tool',.06,.22,{label:'TOOL',m:[.32,.4]}),l:[Lk('tool3','human'),Lk('tool3','context','neutral',{dashed:1}),Lk('tool3','tool1','neutral',{dashed:1}),Lk('work','ai','ai',{key:'dup',curve:.35,dashed:1})]}
+  ];
+  var clean={nodes:[
+      N('human','human',.26,.5,{big:1,lp:'left',m:[.18,.26]}),N('context','context',.44,.3,{lp:'top',m:[.5,.12]}),N('ai','ai',.62,.3,{lp:'top',m:[.84,.24]}),
+      N('work','workflow',.5,.6,{m:[.5,.46]}),N('evidence','evidence',.58,.82,{m:[.3,.78]}),N('value','value',.8,.6,{lp:'right',m:[.8,.76]})],
+    links:[Lk('human','context','human'),Lk('context','ai','ai'),Lk('human','work','human',{dir:1}),Lk('ai','work','ai',{dir:1}),Lk('work','evidence','neutral',{dir:1}),Lk('evidence','human','human',{dashed:1,dir:1,curve:.28}),Lk('evidence','value','value',{dir:1})]};
+  function fragmented(k){
+    var nodes=spread(base,1+.2*k/6),links=baseLinks.slice();
+    for(var i=0;i<k;i++){nodes.push(frag[i].n);links=links.concat(frag[i].l);}
+    return {nodes:nodes,links:links};
+  }
+  var qs=$$('#problem-questions li'),emph=$('#problem-emphasis');
+  var passed={},simplified=false,state=null;
+  function update(){
+    var k=qs.reduce(function(a,li,i){return a+(passed[i]?1:0);},0);
+    var key=simplified?'clean':'f'+k;
+    if(key===state)return;state=key;
+    if(simplified){field.setScene(clean);cap.textContent='System · simplified — better work with AI';setTimeout(function(){if(state==='clean'){field.pulsePath(['human','work','evidence','value'],380);}},900);}
+    else{field.setScene(fragmented(k));cap.textContent=k===0?'System · stable':'System · fragmenting — '+(6+k)+' nodes, '+(baseLinks.length+frag.slice(0,k).reduce(function(a,f){return a+f.l.length;},0))+' relationships';}
+  }
+  var ioQ=new IntersectionObserver(function(es){
+    es.forEach(function(e){var i=qs.indexOf(e.target);passed[i]=e.isIntersecting||e.boundingClientRect.top<0;e.target.classList.toggle('is-passed',!!passed[i]);});
+    update();
+  },{rootMargin:'0px 0px -35% 0px'});
+  qs.forEach(function(li){ioQ.observe(li);});
+  new IntersectionObserver(function(es){es.forEach(function(e){simplified=e.isIntersecting||e.boundingClientRect.top<0;});update();},{rootMargin:'0px 0px -30% 0px'}).observe(emph);
+  update();
+})();
+
+/* ==================================================================
+   WHAT AUGMENTED INTELLIGENCE MEANS — one living system
+   ================================================================== */
+(function meaning(){
+  var el=$('#field-meaning');if(!el)return;
+  var clusters={
+    judgement:{ids:['human'],name:'Human judgement'},
+    context:{ids:['context','knowledge'],name:'Context and knowledge'},
+    models:{ids:['model'],name:'LLMs and AI models'},
+    tools:{ids:['tools','api'],name:'Tools and APIs'},
+    workflows:{ids:['workflow','automation'],name:'Workflows and automation'},
+    agents:{ids:['agent'],name:'Agents'},
+    feedback:{ids:['evaluation'],name:'Feedback and evaluation'},
+    evidence:{ids:['evidence','value'],name:'Evidence of value'}
+  };
+  var ofNode={};Object.keys(clusters).forEach(function(c){clusters[c].ids.forEach(function(id){ofNode[id]=c;});});
+  var I={interactive:1};
+  var scene={nodes:[
+      N('human','human',.2,.5,clone(I,{big:1,lp:'left'})),
+      N('context','context',.4,.26,clone(I,{lp:'top'})),N('knowledge','knowledge',.56,.14,clone(I,{lp:'top'})),
+      N('model','model',.68,.36,clone(I,{label:'AI MODEL',lp:'right'})),
+      N('tools','tool',.86,.3,clone(I,{lp:'top'})),N('api','tool',.94,.48,clone(I,{label:'API',lp:'right',opt:1})),
+      N('workflow','workflow',.5,.56,I),N('automation','tool',.66,.68,clone(I,{opt:1,lp:'right'})),
+      N('agent','agent',.86,.68,clone(I,{lp:'right'})),
+      N('evaluation','neutral',.44,.82,clone(I,{label:'EVALUATION'})),
+      N('evidence','evidence',.66,.9,I),N('value','value',.88,.88,clone(I,{lp:'right'}))],
+    links:[Lk('human','context','human'),Lk('human','workflow','human',{dir:1}),Lk('context','knowledge'),Lk('context','model','ai'),Lk('knowledge','model','ai'),
+      Lk('model','workflow','ai',{dir:1}),Lk('tools','api'),Lk('tools','workflow'),Lk('agent','tools','ai'),Lk('agent','model','ai'),Lk('workflow','automation'),
+      Lk('workflow','evaluation','neutral',{dir:1}),Lk('evaluation','human','human',{dashed:1,dir:1,curve:.25}),Lk('evaluation','evidence'),Lk('evidence','value','value',{dir:1}),Lk('human','evidence','neutral',{dashed:1,weak:1})]};
+  var btns=$$('#components button'),active=null;
+  var field=new Field(el,{onSelect:function(spec){setActive(spec?ofNode[spec.id]:null,false);}});
+  field.setScene(scene,{instant:true});
+  function related(c){
+    var ids=clusters[c].ids,out=[];
+    scene.links.forEach(function(l){var a=ids.indexOf(l.a)>-1,b=ids.indexOf(l.b)>-1;if(a!==b){var other=ofNode[a?l.b:l.a];if(other&&other!==c&&out.indexOf(other)<0)out.push(other);}});
+    return out.map(function(o){return clusters[o].name;});
+  }
+  function setActive(c,fromButton){
+    active=c;
+    btns.forEach(function(b){var on=b.getAttribute('data-cluster')===c;b.setAttribute('aria-pressed',String(on));var rel=$('[data-rel]',b);rel.textContent=on?'Connected to: '+related(c).join(' · '):'';});
+    if(c){field.setHighlight(clusters[c].ids);if(fromButton){field.selected=null;$$('.node',field.layer).forEach(function(n){n.classList.remove('is-selected');n.setAttribute('aria-pressed','false');});clusters[c].ids.forEach(function(id){field.pulseFrom(id);});}}
+    else field.setHighlight(null);
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){var c=b.getAttribute('data-cluster');setActive(active===c?null:c,true);});});
+})();
+
+/* ==================================================================
+   AUGMENTATION MAP — the signature experience
+   ================================================================== */
+(function map(){
+  var el=$('#map-field');if(!el)return;
+  var callout=$('#map-callout'),qbtns=$$('#mapq button'),modes=$$('#modes [role=radio]');
+  var S={
+    myself:{nodes:[
+        N('human','human',.5,.5,{big:1,q:'human',m:[.5,.42]}),
+        N('goals','neutral',.34,.26,{lp:'top',m:[.22,.16]}),N('decisions','neutral',.66,.26,{lp:'top',m:[.78,.16]}),
+        N('knowledge','knowledge',.24,.52,{lp:'left',m:[.14,.42]}),N('context','context',.34,.76,{q:'context',m:[.24,.66]}),
+        N('workflow','workflow',.66,.74,{q:'workflow',m:[.76,.66]}),N('ai','ai',.86,.44,{q:'ai',lp:'right',m:[.86,.42]}),
+        N('tools','tool',.9,.72,{q:'tools',lp:'right',m:[.5,.64]}),N('evidence','evidence',.5,.9,{q:'evidence',m:[.5,.9]}),
+        N('value','value',.8,.9,{q:'value',m:[.86,.9]}),N('patterns','pattern',.12,.8,{label:'PATTERNS',m:[.14,.9]})],
+      links:[Lk('human','goals','human'),Lk('human','decisions','human'),Lk('human','knowledge','human'),Lk('knowledge','context'),Lk('context','ai','ai'),Lk('ai','tools'),
+        Lk('human','workflow','human',{dir:1}),Lk('decisions','workflow'),Lk('ai','workflow','ai',{dir:1}),Lk('tools','workflow'),Lk('workflow','evidence','neutral',{dir:1}),
+        Lk('evidence','value','value',{dir:1}),Lk('evidence','patterns','neutral',{dashed:1}),Lk('patterns','human','neutral',{dashed:1}),Lk('goals','value','neutral',{dashed:1,weak:1})]},
+    team:{nodes:[
+        N('human','human',.26,.34,{big:1,q:'human',lp:'left',m:[.2,.14]}),N('human2','human',.5,.18,{q:'human',lp:'top',m:[.5,.1]}),N('human3','human',.74,.34,{q:'human',lp:'right',m:[.8,.14]}),
+        N('context','context',.5,.46,{q:'context',lp:'right',m:[.5,.3]}),N('knowledge','knowledge',.3,.6,{lp:'left',m:[.2,.42]}),N('ai','ai',.7,.6,{q:'ai',lp:'right',m:[.8,.42]}),
+        N('tools','tool',.9,.5,{q:'tools',lp:'right',m:[.86,.62]}),N('workflow','workflow',.5,.72,{q:'workflow',m:[.5,.58]}),
+        N('evidence','evidence',.34,.9,{q:'evidence',m:[.3,.8]}),N('value','value',.72,.9,{q:'value',m:[.72,.8]})],
+      links:[Lk('human','context','human'),Lk('human2','context','human'),Lk('human3','context','human'),Lk('human','knowledge','human'),Lk('human2','knowledge','human',{weak:1}),Lk('knowledge','context'),
+        Lk('knowledge','ai','ai'),Lk('context','ai','ai'),Lk('ai','tools'),Lk('human','workflow','human',{dir:1}),Lk('human3','workflow','human',{dir:1}),Lk('human2','workflow','human',{weak:1,dir:1}),
+        Lk('ai','workflow','ai',{dir:1}),Lk('workflow','evidence','neutral',{dir:1}),Lk('evidence','value','value',{dir:1}),Lk('evidence','context','neutral',{dashed:1,dir:1,curve:.3})],
+      frames:[{id:'shared',ids:['context','knowledge'],label:'SHARED',pad:30}]},
+    workflow:{nodes:[
+        N('workflow','workflow',.5,.12,{q:'workflow',lp:'top',m:[.5,.06]}),
+        N('human','human',.1,.56,{big:1,q:'human',m:[.25,.18]}),N('context','context',.24,.4,{q:'context',lp:'top',m:[.75,.26]}),
+        N('ai','ai',.4,.58,{q:'ai',m:[.25,.4]}),N('tools','tool',.56,.4,{q:'tools',lp:'top',m:[.75,.5]}),
+        N('human2','human',.72,.58,{label:'HUMAN REVIEW',q:'human',m:[.25,.62]}),N('evidence','evidence',.86,.4,{q:'evidence',lp:'top',m:[.75,.74]}),
+        N('value','value',.9,.78,{q:'value',m:[.5,.9]})],
+      links:[Lk('human','context','human',{dir:1}),Lk('context','ai','ai',{dir:1}),Lk('ai','tools','ai',{dir:1}),Lk('tools','human2','neutral',{dir:1}),Lk('human2','evidence','human',{dir:1}),
+        Lk('evidence','value','value',{dir:1}),Lk('evidence','human','human',{dashed:1,dir:1,curve:.32}),Lk('workflow','context','neutral',{dashed:1,weak:1}),Lk('workflow','tools','neutral',{dashed:1,weak:1}),Lk('workflow','human2','neutral',{dashed:1,weak:1})],
+      frames:[{id:'wf',ids:['human','context','ai','tools','human2','evidence'],label:'WORKFLOW · DIRECTIONAL',pad:34}]},
+    organisation:{nodes:[
+        N('human','human',.14,.3,{big:1,q:'human',lp:'left',m:[.14,.1]}),N('ai','ai',.28,.18,{q:'ai',lp:'top',m:[.4,.1]}),N('workflow','workflow',.28,.42,{q:'workflow',m:[.66,.1]}),
+        N('human3','human',.86,.3,{q:'human',lp:'right',m:[.14,.42]}),N('ai3','ai',.72,.18,{label:'AI',q:'ai',lp:'top',m:[.4,.42]}),N('workflow2','workflow',.72,.42,{label:'WORKFLOW',q:'workflow',m:[.66,.42]}),
+        N('human2','human',.14,.78,{q:'human',lp:'left',m:[.14,.74]}),N('tools','tool',.28,.66,{q:'tools',lp:'top',m:[.4,.74]}),N('ai2','ai',.28,.9,{label:'AI',q:'ai',m:[.66,.74]}),
+        N('context','context',.5,.3,{q:'context',lp:'right',m:[.92,.2]}),N('governance','neutral',.5,.5,{label:'GOVERNANCE',lp:'right',m:[.92,.44]}),
+        N('evidence','evidence',.5,.72,{q:'evidence',lp:'right',m:[.92,.62]}),N('patterns','pattern',.82,.62,{label:'PATTERNS',lp:'right',m:[.4,.92]}),N('value','value',.86,.84,{q:'value',lp:'right',m:[.74,.92]})],
+      links:[Lk('human','ai','human'),Lk('human','workflow','human',{dir:1}),Lk('ai','workflow','ai',{dir:1}),Lk('human3','ai3','human'),Lk('human3','workflow2','human',{dir:1}),Lk('ai3','workflow2','ai',{dir:1}),
+        Lk('human2','tools','human'),Lk('human2','ai2','human'),Lk('ai2','tools','ai'),Lk('workflow','context'),Lk('workflow2','context'),Lk('ai2','context','ai',{weak:1}),
+        Lk('governance','workflow','neutral',{dashed:1}),Lk('governance','workflow2','neutral',{dashed:1}),Lk('governance','tools','neutral',{dashed:1}),Lk('context','governance'),
+        Lk('workflow','evidence','neutral',{dir:1}),Lk('workflow2','evidence','neutral',{dir:1}),Lk('tools','evidence','neutral',{dir:1,weak:1}),Lk('evidence','patterns','neutral',{dashed:1}),Lk('patterns','context','neutral',{dashed:1,curve:-.25}),Lk('evidence','value','value',{dir:1})],
+      frames:[{id:'a',ids:['human','ai','workflow'],label:'SYSTEM A'},{id:'b',ids:['human2','tools','ai2'],label:'SYSTEM B'},{id:'c',ids:['human3','ai3','workflow2'],label:'SYSTEM C'}]}
+  };
+  var mode='myself',currentQ=null;
+  var field=new Field(el,{onSelect:function(spec){showQ(spec?spec.q:null,spec?spec.id:null);}});
+  function showQ(q,id){
+    currentQ=q;
+    qbtns.forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-q')===q));});
+    if(!q){callout.classList.remove('is-on');callout.innerHTML='';return;}
+    callout.className='field__callout is-on'+(q==='human'?' is-human':'');
+    callout.innerHTML='<b>'+QNAME[q]+'</b>'+Q[q]+'<button type="button" class="field__close" aria-label="Close detail">×</button>';
+    $('.field__close',callout).addEventListener('click',function(){field.select(null);field.focusNode(id);});
+  }
+  function pickQ(q){
+    var id=null;Object.keys(field.nodes).some(function(k){if(field.nodes[k].spec.q===q){id=k;return true;}return false;});
+    if(!id)return;
+    if(field.selected===id)field.select(null);else field.select(id);
+  }
+  qbtns.forEach(function(b){b.addEventListener('click',function(){pickQ(b.getAttribute('data-q'));});});
+  function setMode(m,focus){
+    mode=m;
+    modes.forEach(function(b){var on=b.getAttribute('data-mode')===m;b.setAttribute('aria-checked',String(on));b.tabIndex=on?0:-1;if(on&&focus)b.focus();});
+    var keepQ=currentQ;
+    field.selected=null;field.setScene(S[m]);
+    if(keepQ){var id=null;Object.keys(field.nodes).some(function(k){if(field.nodes[k].spec.q===keepQ){id=k;return true;}return false;});if(id)field.select(id);else showQ(null);}
+    setTimeout(function(){if(mode!==m)return;
+      if(m==='workflow')field.pulsePath(['human','context','ai','tools','human2','evidence','value'],300);
+      else if(m==='team'){field.pulseFrom('context');}
+      else if(m==='organisation'){field.pulse('workflow','evidence');field.pulse('workflow2','evidence');setTimeout(function(){field.pulse('evidence','patterns');},700);}
+      else{field.pulseFrom('human',{kind:'human'});}
+    },1000);
+  }
+  modes.forEach(function(b,i){
+    b.addEventListener('click',function(){setMode(b.getAttribute('data-mode'),false);});
+    b.addEventListener('keydown',function(e){var n=null;if(e.key==='ArrowRight'||e.key==='ArrowDown')n=modes[(i+1)%modes.length];else if(e.key==='ArrowLeft'||e.key==='ArrowUp')n=modes[(i-1+modes.length)%modes.length];if(n){e.preventDefault();setMode(n.getAttribute('data-mode'),true);}});
+  });
+  field.setScene(S.myself,{instant:true});
+  new IntersectionObserver(function(es,io){es.forEach(function(e){if(e.isIntersecting){setTimeout(function(){field.pulseFrom('human',{kind:'human'});},600);io.disconnect();}});},{threshold:.4}).observe(el);
+})();
+
+/* ==================================================================
+   ORGANISATIONS — a multi-human work system
+   ================================================================== */
+(function org(){
+  if(!$('#field-org'))return;
+  var H='human';
+  var scenes={
+    discovery:{caption:'Discovery · observation map — three people, shared context, workflows not yet designed',
+      nodes:[N('human',H,.2,.3,{big:1,lp:'left'}),N('human2',H,.5,.18,{lp:'top'}),N('human3',H,.8,.3,{lp:'right'}),
+        N('context','context',.5,.48,{ghost:1}),N('workflow','workflow',.3,.7,{ghost:1}),N('workflow2','workflow',.7,.7,{label:'WORKFLOW',ghost:1}),
+        N('tools','tool',.5,.86,{ghost:1}),N('ai','ai',.92,.6,{ghost:1,lp:'left',opt:1}),N('risk','neutral',.1,.56,{label:'RISK',ghost:1,opt:1})],
+      links:[Lk('human','context','neutral',{dashed:1,weak:1}),Lk('human2','context','neutral',{dashed:1,weak:1}),Lk('human3','context','neutral',{dashed:1,weak:1}),Lk('human','workflow','neutral',{dashed:1,weak:1}),
+        Lk('human3','workflow2','neutral',{dashed:1,weak:1}),Lk('workflow','tools','neutral',{dashed:1,weak:1}),Lk('workflow2','tools','neutral',{dashed:1,weak:1}),Lk('ai','workflow2','neutral',{dashed:1,weak:1}),Lk('risk','workflow','neutral',{dashed:1,weak:1})],
+      frames:[{id:'map',ids:['human','human2','human3','context','workflow','workflow2','tools'],label:'MAP · OBSERVED',pad:40}]},
+    sprint:{caption:'Workflow Sprint · one real workflow reorganises — people decide, AI contributes, controls belong somewhere',
+      nodes:[N('human',H,.14,.52,{big:1}),N('context','context',.32,.3,{lp:'top'}),N('ai','ai',.5,.52),N('human2',H,.68,.3,{label:'HUMAN REVIEW',lp:'top'}),
+        N('evidence','evidence',.86,.52,{lp:'right'}),N('human3',H,.5,.84,{lp:'bottom'})],
+      links:[Lk('human','context','human',{dir:1}),Lk('context','ai','ai',{dir:1}),Lk('ai','human2','ai',{dir:1}),Lk('human2','evidence','human',{dir:1}),Lk('evidence','human','human',{dashed:1,dir:1,curve:.3}),Lk('human3','context','neutral',{dashed:1})],
+      frames:[{id:'wf',ids:['human','context','ai','human2','evidence'],label:'ONE REAL WORKFLOW',pad:36}],
+      after:function(f){f.pulsePath(['human','context','ai','human2','evidence'],320);}},
+    build:{caption:'Capability Build · technical nodes enter only where the validated workflow needs them',
+      nodes:[N('human',H,.14,.52,{big:1}),N('context','context',.32,.3,{lp:'top'}),N('ai','ai',.5,.52),N('human2',H,.68,.3,{label:'HUMAN REVIEW',lp:'top'}),
+        N('evidence','evidence',.86,.52,{lp:'right'}),N('human3',H,.9,.86,{lp:'left',opt:1}),
+        N('knowledge','knowledge',.22,.12,{from:'context',lp:'top'}),N('model','model',.4,.74,{from:'ai'}),N('agent','agent',.58,.76,{from:'ai'}),N('tools','tool',.76,.72,{from:'agent',label:'TOOLS · API'})],
+      links:[Lk('human','context','human',{dir:1}),Lk('context','ai','ai',{dir:1}),Lk('ai','human2','ai',{dir:1}),Lk('human2','evidence','human',{dir:1}),Lk('evidence','human','human',{dashed:1,dir:1,curve:.3}),
+        Lk('context','knowledge'),Lk('ai','model','ai'),Lk('ai','agent','ai'),Lk('agent','tools','ai'),Lk('tools','human2','neutral',{weak:1}),Lk('human3','context','neutral',{dashed:1,weak:1})],
+      frames:[{id:'wf',ids:['human','context','ai','human2','evidence'],label:'ONE REAL WORKFLOW',pad:36},{id:'tech',ids:['model','agent','tools'],label:'SMALLEST TECHNICAL SYSTEM',pad:26,tone:'mint'}]},
+    os:{caption:'Operating System · the system stabilises and becomes reusable — patterns, literacy, governance, evaluation, ownership',
+      nodes:[N('human',H,.2,.5,{big:1}),N('context','context',.34,.34,{lp:'top'}),N('ai','ai',.48,.5),N('human2',H,.62,.34,{label:'HUMAN REVIEW',lp:'top'}),N('evidence','evidence',.76,.5,{lp:'right'}),
+        N('model','model',.4,.66,{opt:1}),N('agent','agent',.56,.66,{opt:1}),
+        N('pattern','pattern',.86,.16,{from:'evidence',lp:'left'}),N('literacy','neutral',.5,.1,{label:'AI LITERACY',lp:'top'}),N('governance','neutral',.18,.86,{label:'GOVERNANCE'}),
+        N('evaluation','neutral',.56,.88,{label:'EVALUATION'}),N('ownership','neutral',.88,.86,{label:'OWNERSHIP',lp:'left'})],
+      links:[Lk('human','context','human',{dir:1}),Lk('context','ai','ai',{dir:1}),Lk('ai','human2','ai',{dir:1}),Lk('human2','evidence','human',{dir:1}),Lk('evidence','human','human',{dashed:1,dir:1,curve:.3}),
+        Lk('ai','model','ai',{weak:1}),Lk('ai','agent','ai',{weak:1}),Lk('evidence','pattern','value',{dir:1}),Lk('pattern','context','neutral',{dashed:1,curve:-.2}),
+        Lk('literacy','human','neutral',{dashed:1}),Lk('literacy','human2','neutral',{dashed:1}),Lk('governance','human','human'),Lk('governance','ai','neutral',{dashed:1}),Lk('evaluation','evidence','neutral'),Lk('ownership','human2','human'),Lk('ownership','evidence','neutral',{weak:1})],
+      frames:[{id:'os',ids:['human','context','ai','human2','evidence','model','agent','literacy','governance','evaluation','ownership'],label:'AI PRACTICE · REUSABLE',pad:40,solid:1}],
+      after:function(f){f.pulse('evidence','pattern',{kind:'value'});}}
+  };
+  offersSection({field:'#field-org',items:'#org-offers',nav:'#org-nav',caption:'#org-caption',scenes:scenes,short:{discovery:'Discovery',sprint:'Sprint',build:'Build',os:'Operating System'}});
+})();
+
+/* ==================================================================
+   INDIVIDUALS — one human at the centre
+   ================================================================== */
+(function individuals(){
+  if(!$('#field-ind'))return;
+  var core=function(){return [N('human','human',.5,.5,{big:1}),N('work','workflow',.5,.18,{label:'WORK',lp:'top'}),N('knowledge','knowledge',.22,.32,{lp:'left'}),N('goals','neutral',.78,.32,{lp:'right'}),N('decisions','neutral',.2,.68,{lp:'left'}),N('tools','tool',.8,.68,{lp:'right'})];};
+  var scenes={
+    mapping:{caption:'Mapping · friction, recurring decisions, disconnected tools, knowledge gaps',
+      nodes:core().concat([N('ai','ai',.5,.84),N('tool2','tool',.94,.86,{label:'TOOL',ghost:1,opt:1,lp:'left'}),N('tool3','tool',.94,.5,{label:'TOOL',ghost:1,opt:1,lp:'left'}),N('gap','knowledge',.08,.14,{label:'GAP',ghost:1,opt:1})]),
+      links:[Lk('human','work','human'),Lk('human','goals','human'),Lk('human','decisions','human'),Lk('decisions','work','neutral',{dashed:1}),Lk('human','knowledge','neutral',{dashed:1}),Lk('knowledge','gap','neutral',{dashed:1,weak:1}),Lk('human','tools','neutral',{dashed:1}),Lk('ai','human','neutral',{dashed:1,weak:1}),Lk('goals','work','neutral',{dashed:1})]},
+    sprint:{caption:'System Sprint · a small number of high-value workflows — a coherent working system',
+      nodes:core().concat([N('ai','ai',.5,.72),N('workflow','workflow',.28,.9,{from:'human'}),N('workflow2','workflow',.72,.9,{label:'WORKFLOW',from:'human'})]),
+      links:[Lk('human','work','human'),Lk('human','goals','human'),Lk('human','decisions','human'),Lk('human','knowledge','human'),Lk('goals','work'),Lk('decisions','human','human',{weak:1}),
+        Lk('human','workflow','human',{dir:1}),Lk('human','workflow2','human',{dir:1}),Lk('ai','workflow','ai',{dir:1}),Lk('ai','workflow2','ai',{dir:1}),Lk('knowledge','ai','ai'),Lk('tools','workflow2'),Lk('tools','ai'),Lk('workflow','work','neutral',{dashed:1,curve:.35}),Lk('workflow2','work','neutral',{dashed:1,curve:-.35})],
+      frames:[{id:'sys',ids:['human','work','knowledge','goals','decisions','tools','ai','workflow','workflow2'],label:'COHERENT WORKING SYSTEM',pad:38,solid:1}],
+      after:function(f){f.pulsePath(['knowledge','ai','workflow'],340);f.pulse('human','workflow2',{kind:'human'});}},
+    partnership:{caption:'Partnership · strategy, implementation and AI knowledge overlap — continuous adaptation',
+      nodes:core().concat([N('ai','ai',.5,.72),N('workflow','workflow',.3,.9,{opt:1}),N('workflow2','workflow',.7,.9,{label:'WORKFLOW',opt:1}),N('strategy','neutral',.12,.1,{label:'STRATEGY'}),N('implementation','tool',.88,.1,{label:'IMPLEMENTATION',lp:'left'}),N('evidence','evidence',.94,.86,{lp:'left'}),N('patterns','pattern',.06,.86,{label:'PATTERNS',lp:'right'})]),
+      links:[Lk('human','work','human'),Lk('human','goals','human'),Lk('human','decisions','human'),Lk('human','knowledge','human'),Lk('goals','work'),Lk('human','ai','ai'),
+        Lk('human','workflow','human',{dir:1}),Lk('human','workflow2','human',{dir:1}),Lk('ai','workflow','ai',{dir:1}),Lk('ai','workflow2','ai',{dir:1}),Lk('knowledge','ai','ai'),Lk('tools','ai'),
+        Lk('strategy','goals','neutral'),Lk('strategy','human','human'),Lk('implementation','tools','neutral'),Lk('implementation','ai','ai'),Lk('workflow2','evidence','neutral',{dir:1}),Lk('evidence','patterns','neutral',{dashed:1,curve:.2}),Lk('patterns','human','neutral',{dashed:1}),Lk('evidence','human','human',{dashed:1,weak:1})],
+      frames:[{id:'sys',ids:['human','work','knowledge','goals','decisions','tools','ai'],label:'HIGH-CONTEXT PERSONAL OPERATING SYSTEM',pad:40,solid:1}],
+      after:function(f){f.pulse('human','ai');f.pulse('ai','human');setTimeout(function(){f.pulse('evidence','patterns');},600);}}
+  };
+  offersSection({field:'#field-ind',items:'#ind-offers',nav:'#ind-nav',caption:'#ind-caption',scenes:scenes,short:{mapping:'Mapping',sprint:'Sprint',partnership:'Partnership'}});
+})();
+
+/* ==================================================================
+   HOW DYAI WORKS — the same system changes at each stage
+   ================================================================== */
+(function how(){
+  if(!$('#field-how'))return;
+  var H=function(o){return N('human','human',.16,.5,clone({big:1,lp:'left'},o));};
+  var W=function(o){return N('work','workflow',.46,.32,clone({label:'WORK',lp:'top'},o));};
+  var scenes={
+    understand:{caption:'01 · Understand — unknown relationships',
+      nodes:[H(),W(),N('change','value',.78,.32,{label:'DESIRED CHANGE',ghost:1,lp:'top'}),N('context','context',.34,.74,{ghost:1}),N('ai','ai',.66,.58,{ghost:1}),N('tools','tool',.8,.74,{ghost:1})],
+      links:[Lk('human','work','human'),Lk('work','change','neutral',{dashed:1}),Lk('work','context','neutral',{dashed:1,weak:1}),Lk('work','ai','neutral',{dashed:1,weak:1}),Lk('ai','tools','neutral',{dashed:1,weak:1})]},
+    map:{caption:'02 · Map — visible relationships: workflow, context, constraints, human decisions',
+      nodes:[H(),W(),N('change','value',.78,.32,{label:'DESIRED CHANGE',ghost:1,lp:'top'}),N('decisions','neutral',.42,.6,{label:'DECISIONS',lp:'left'}),N('context','context',.34,.78),N('constraints','neutral',.12,.82,{label:'CONSTRAINTS'}),N('ai','ai',.66,.58,{ghost:1}),N('tools','tool',.8,.74,{ghost:1})],
+      links:[Lk('human','work','human'),Lk('human','decisions','human'),Lk('decisions','work'),Lk('work','context'),Lk('context','constraints'),Lk('human','constraints','neutral',{weak:1}),Lk('work','change','neutral',{dashed:1}),Lk('work','ai','neutral',{dashed:1,weak:1}),Lk('tools','work','neutral',{dashed:1,weak:1})]},
+    design:{caption:'03 · Design — intentional relationships between people, AI, knowledge, tools and controls',
+      nodes:[H(),W(),N('decisions','neutral',.42,.6,{label:'DECISIONS · CONTROLS',lp:'left'}),N('context','context',.34,.78),N('knowledge','knowledge',.22,.86,{from:'context'}),N('ai','ai',.66,.58),N('tools','tool',.8,.74),N('evidence','evidence',.78,.16,{ghost:1,lp:'top'})],
+      links:[Lk('human','work','human',{dir:1}),Lk('human','decisions','human'),Lk('decisions','ai','human',{dir:1}),Lk('context','ai','ai',{dir:1}),Lk('knowledge','context'),Lk('ai','work','ai',{dir:1}),Lk('tools','ai','neutral',{dashed:1}),Lk('work','evidence','neutral',{dashed:1,weak:1})],
+      frames:[{id:'d',ids:['human','work','decisions','context','ai','tools'],label:'INTENDED RELATIONSHIPS',pad:40}]},
+    build:{caption:'04 · Build — technical components enter: the smallest useful intervention',
+      nodes:[H(),W(),N('decisions','neutral',.42,.6,{label:'DECISIONS · CONTROLS',lp:'left'}),N('context','context',.34,.78),N('knowledge','knowledge',.22,.86),N('ai','ai',.66,.58),N('model','model',.78,.46,{from:'ai',lp:'right'}),N('tools','tool',.8,.74),N('api','tool',.92,.86,{label:'API',from:'tools',lp:'left'}),N('evidence','evidence',.78,.16,{ghost:1,lp:'top'})],
+      links:[Lk('human','work','human',{dir:1}),Lk('human','decisions','human'),Lk('decisions','ai','human',{dir:1}),Lk('context','ai','ai',{dir:1}),Lk('knowledge','context'),Lk('ai','work','ai',{dir:1}),Lk('ai','model','ai'),Lk('tools','ai'),Lk('tools','api'),Lk('work','evidence','neutral',{dashed:1,weak:1})],
+      frames:[{id:'b',ids:['ai','model','tools','api'],label:'SMALLEST USEFUL INTERVENTION',pad:28,tone:'mint'}]},
+    use:{caption:'05 · Use — signals move through the real workflow',
+      nodes:[H(),W(),N('decisions','neutral',.42,.6,{label:'DECISIONS · CONTROLS',lp:'left'}),N('context','context',.34,.78),N('knowledge','knowledge',.22,.86),N('ai','ai',.66,.58),N('model','model',.78,.46,{lp:'right'}),N('tools','tool',.8,.74),N('api','tool',.92,.86,{label:'API',lp:'left'}),N('evidence','evidence',.78,.16,{ghost:1,lp:'top'})],
+      links:[Lk('human','work','human',{dir:1}),Lk('human','decisions','human'),Lk('decisions','ai','human',{dir:1}),Lk('context','ai','ai',{dir:1}),Lk('knowledge','context'),Lk('ai','work','ai',{dir:1}),Lk('ai','model','ai'),Lk('tools','ai'),Lk('tools','api'),Lk('work','evidence','neutral',{dashed:1,weak:1})],
+      frames:[{id:'b',ids:['ai','model','tools','api'],label:'IN REAL WORK',pad:28,tone:'mint'}],
+      after:function(f){var run=function(){f.pulsePath(['knowledge','context','ai','work'],300);f.pulsePath(['human','decisions','ai'],300,{kind:'human'});f.pulse('api','tools');};run();setTimeout(run,1800);}},
+    verify:{caption:'06 · Verify — the Evidence node becomes active; Value is not yet confirmed',
+      nodes:[H(),W(),N('decisions','neutral',.42,.6,{label:'DECISIONS · CONTROLS',lp:'left'}),N('context','context',.34,.78),N('knowledge','knowledge',.22,.86),N('ai','ai',.66,.58),N('model','model',.78,.46,{lp:'right'}),N('tools','tool',.8,.74),N('api','tool',.92,.86,{label:'API',lp:'left'}),N('evidence','evidence',.78,.16,{solid:1,lp:'top',emerge:1}),N('value','value',.94,.3,{ghost:1,lp:'left'})],
+      links:[Lk('human','work','human',{dir:1}),Lk('human','decisions','human'),Lk('decisions','ai','human',{dir:1}),Lk('context','ai','ai',{dir:1}),Lk('knowledge','context'),Lk('ai','work','ai',{dir:1}),Lk('ai','model','ai'),Lk('tools','ai'),Lk('tools','api'),Lk('work','evidence','human',{dir:1}),Lk('evidence','human','human',{dashed:1,dir:1,curve:-.3}),Lk('evidence','value','neutral',{dashed:1})],
+      after:function(f){f.pulse('work','evidence',{kind:'human'});setTimeout(function(){f.pulse('evidence','human',{kind:'human'});},600);}},
+    reuse:{caption:'07 · Reuse — a pattern separates from the system and becomes a reusable asset',
+      nodes:[H(),W(),N('decisions','neutral',.42,.6,{label:'DECISIONS · CONTROLS',lp:'left'}),N('context','context',.34,.78),N('knowledge','knowledge',.22,.86),N('ai','ai',.6,.58),N('model','model',.7,.42,{lp:'right',opt:1}),N('tools','tool',.74,.8),N('api','tool',.88,.86,{label:'API',lp:'left',opt:1}),N('evidence','evidence',.7,.14,{solid:1,lp:'top'}),N('value','value',.9,.14,{lp:'right'}),
+        N('p_human','human',.82,.44,{label:'HUMAN',from:'human'}),N('p_ai','ai',.94,.38,{label:'AI',from:'ai',lp:'right'}),N('p_work','workflow',.9,.6,{label:'WORK',from:'work'})],
+      links:[Lk('human','work','human',{dir:1}),Lk('human','decisions','human'),Lk('decisions','ai','human',{dir:1}),Lk('context','ai','ai',{dir:1}),Lk('knowledge','context'),Lk('ai','work','ai',{dir:1}),Lk('ai','model','ai'),Lk('tools','ai'),Lk('tools','api'),Lk('work','evidence','human',{dir:1}),Lk('evidence','human','human',{dashed:1,dir:1,curve:-.3}),Lk('evidence','value','value',{dir:1}),
+        Lk('p_human','p_ai','human'),Lk('p_ai','p_work','ai',{dir:1}),Lk('p_human','p_work','human',{dir:1}),Lk('evidence','p_human','value',{dashed:1})],
+      frames:[{id:'p',ids:['p_human','p_ai','p_work'],label:'REUSABLE ASSET',pad:30,tone:'acid'}],
+      after:function(f){f.pulse('evidence','p_human',{kind:'value'});}}
+  };
+  offersSection({field:'#field-how',items:'#how-steps',nav:'#how-nav',caption:'#how-caption',scenes:scenes,short:{understand:'01',map:'02',design:'03',build:'04',use:'05',verify:'06',reuse:'07'}});
+})();
+
+/* ==================================================================
+   TECHNOLOGY — a secondary layer that appears only when selected
+   ================================================================== */
+(function tech(){
+  var el=$('#field-tech');if(!el)return;
+  var cap=$('#tech-caption');
+  var primary=[N('work','workflow',.5,.5,{label:'THE PROBLEM · WORK'}),N('human','human',.3,.34,{big:1,lp:'left'}),N('context','context',.3,.66,{lp:'left'}),N('ai','ai',.7,.34,{lp:'right'}),N('tools','tool',.7,.66,{lp:'right'}),N('evidence','evidence',.5,.84)];
+  var plinks=[Lk('human','work','human',{dir:1}),Lk('context','work'),Lk('ai','work','ai',{dir:1}),Lk('tools','work'),Lk('work','evidence','neutral',{dir:1}),Lk('evidence','human','human',{dashed:1,dir:1,curve:-.3}),Lk('context','ai','ai',{weak:1})];
+  var caps={
+    literacy:{n:N('literacy','neutral',.1,.16,{label:'LITERACY'}),to:[['human','human']]},
+    prompt:{n:N('prompt','context',.5,.1,{label:'PROMPT · CONTEXT',lp:'top'}),to:[['context','neutral'],['ai','ai']]},
+    retrieval:{n:N('retrieval','knowledge',.08,.54,{label:'RETRIEVAL',lp:'top'}),to:[['context','neutral']]},
+    hai:{n:N('hai','workflow',.28,.9,{label:'H–AI WORKFLOW'}),to:[['human','human'],['work','neutral']]},
+    automation:{n:N('automation','tool',.92,.54,{label:'AUTOMATION',lp:'top'}),to:[['tools','neutral'],['work','neutral']]},
+    agents:{n:N('agents','agent',.9,.16,{label:'AGENTS',lp:'left'}),to:[['ai','ai'],['tools','ai']]},
+    api:{n:N('api','tool',.9,.86,{label:'API · TOOLS',lp:'left'}),to:[['tools','neutral']]},
+    gpts:{n:N('gpts','pattern',.1,.86,{label:'CUSTOM GPTS'}),to:[['human','human'],['context','neutral']]},
+    eval:{n:N('eval','evidence',.72,.92,{label:'EVALUATION'}),to:[['evidence','neutral'],['human','human']]}
+  };
+  var active=[];
+  var field=new Field(el);
+  function build(){
+    var nodes=primary.slice(),links=plinks.slice();
+    active.forEach(function(k){var c=caps[k];nodes.push(clone(c.n,{from:c.to[0][0]}));c.to.forEach(function(t){links.push(Lk(c.n.id,t[0],t[1]));});});
+    field.setScene({nodes:nodes,links:links,frames:active.length?[{id:'p',ids:primary.map(function(n){return n.id;}),label:'PRIMARY LAYER · THE PROBLEM',pad:34}]:[]});
+    cap.textContent=active.length?'Technical layer · '+active.length+' of 9 capabilities selected — each connects to a part of the problem':'Primary layer: the problem · select a capability to reveal the technical layer';
+  }
+  build();
+  $$('#caps button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var k=b.getAttribute('data-cap'),i=active.indexOf(k);
+      if(i>-1){active.splice(i,1);b.setAttribute('aria-pressed','false');}
+      else{active.push(k);b.setAttribute('aria-pressed','true');}
+      build();
+      if(i<0)setTimeout(function(){field.pulseFrom(k);},700);
+    });
+  });
+})();
+
+/* ==================================================================
+   DYAI LAB — pattern objects grow in structure
+   ================================================================== */
+(function lab(){
+  var el=$('#field-lab');if(!el)return;
+  var cap=$('#lab-caption'),btns=$$('#lab-nav button');
+  function inst(p,cx,cy,o){
+    o=o||{};
+    return [N(p+'human','human',cx-.12,cy+.02,{label:'HUMAN'}),N(p+'context','context',cx,cy-.14,{label:'CONTEXT',lp:'top'}),N(p+'ai','ai',cx+.04,cy+.1,{label:'AI'}),N(p+'evidence','evidence',cx+.16,cy-.02,{label:'EVIDENCE',lp:'right'})];
+  }
+  function instLinks(p,o){o=o||{};return [Lk(p+'human',p+'ai','human',clone({dir:1},o)),Lk(p+'context',p+'ai','neutral',o),Lk(p+'ai',p+'evidence','ai',clone({dir:1},o)),Lk(p+'evidence',p+'human','human',clone({dashed:1,curve:.3},o))];}
+  var scenes={
+    experiment:{caption:'Pattern object · experiment — small, fragile',
+      nodes:[N('human','human',.4,.5,{label:'HUMAN'}),N('context','context',.56,.34,{lp:'top'}),N('ai','ai',.6,.6)],
+      links:[Lk('human','ai','neutral',{dashed:1,weak:1}),Lk('context','ai','neutral',{dashed:1,weak:1}),Lk('human','context','neutral',{dashed:1,weak:1})],
+      frames:[{id:'e',ids:['human','context','ai'],label:'EXPERIMENT',pad:34}]},
+    used:{caption:'Pattern object · used — one stable instance in real work',
+      nodes:inst('',.5,.5),links:instLinks(''),
+      frames:[{id:'u',ids:['human','context','ai','evidence'],label:'USED · ONE STABLE INSTANCE',pad:36,solid:1}],
+      after:function(f){f.pulsePath(['human','ai','evidence'],360);}},
+    repeated:{caption:'Pattern object · repeated — multiple linked instances across situations',
+      nodes:inst('',.22,.28).concat(inst('b',.78,.28),inst('c',.5,.8),[N('pattern','pattern',.5,.5,{label:'PATTERN'})]),
+      links:instLinks('').concat(instLinks('b'),instLinks('c'),[Lk('evidence','pattern','neutral',{dashed:1}),Lk('bevidence','pattern','neutral',{dashed:1}),Lk('cevidence','pattern','neutral',{dashed:1})]),
+      frames:[{id:'i1',ids:['human','context','ai','evidence'],label:'INSTANCE 1',pad:28},{id:'i2',ids:['bhuman','bcontext','bai','bevidence'],label:'INSTANCE 2',pad:28},{id:'i3',ids:['chuman','ccontext','cai','cevidence'],label:'INSTANCE 3',pad:28}],
+      after:function(f){f.pulse('evidence','pattern');f.pulse('bevidence','pattern');f.pulse('cevidence','pattern');}},
+    productised:{caption:'Pattern object · productised — a clear modular object with defined outputs',
+      nodes:inst('',.3,.44).concat([N('pattern','pattern',.3,.72,{label:'PATTERN · MODULE',from:'ai'}),N('method','pattern',.74,.12,{label:'METHOD',lp:'top'}),N('skill','pattern',.9,.28,{label:'SKILL',lp:'top'}),N('agentp','pattern',.86,.48,{label:'AGENT PATTERN'}),N('template','pattern',.9,.68,{label:'TEMPLATE'}),N('evalp','pattern',.76,.84,{label:'EVALUATION'}),N('product','pattern',.56,.84,{label:'PRODUCT',lp:'right'})]),
+      links:instLinks('').concat([Lk('evidence','pattern','value',{dir:1}),Lk('pattern','method','neutral'),Lk('pattern','skill','neutral'),Lk('pattern','agentp','neutral'),Lk('pattern','template','neutral'),Lk('pattern','evalp','neutral'),Lk('pattern','product','value',{dir:1})]),
+      frames:[{id:'m',ids:['human','context','ai','evidence','pattern'],label:'MODULAR OBJECT',pad:32,solid:1,tone:'acid'}],
+      after:function(f){f.pulseFrom('pattern');}}
+  };
+  var field=new Field(el),current=null,autoT=[],userTouched=false;
+  function set(key){
+    if(key===current)return;current=key;
+    btns.forEach(function(b){if(b.getAttribute('data-stage')===key)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
+    field.setScene(scenes[key]);cap.textContent=scenes[key].caption;
+    if(scenes[key].after)setTimeout(function(){if(current===key)scenes[key].after(field);},900);
+  }
+  btns.forEach(function(b,i){
+    b.addEventListener('click',function(){userTouched=true;autoT.forEach(clearTimeout);set(b.getAttribute('data-stage'));});
+    b.addEventListener('keydown',function(e){var n=null;if(e.key==='ArrowRight')n=btns[(i+1)%btns.length];else if(e.key==='ArrowLeft')n=btns[(i-1+btns.length)%btns.length];if(n){e.preventDefault();n.focus();n.click();}});
+  });
+  set('experiment');
+  new IntersectionObserver(function(es,io){
+    es.forEach(function(e){
+      if(!e.isIntersecting||RM()||userTouched)return;io.disconnect();
+      ['used','repeated','productised'].forEach(function(k,i){autoT.push(setTimeout(function(){if(!userTouched)set(k);},1800+i*2400));});
+    });
+  },{threshold:.5}).observe(el);
+})();
+
+/* ==================================================================
+   PRINCIPLES — each principle constrains the system
+   ================================================================== */
+(function principles(){
+  var el=$('#field-principles');if(!el)return;
+  var cap=$('#principles-caption'),items=$$('#principles-list li');
+  function base(o){o=o||{};
+    var g=function(id){return o.ghost&&o.ghost.indexOf(id)>-1;};
+    var d=function(id){return o.dim&&o.dim.indexOf(id)>-1;};
+    var mk=function(id,kind,x,y,extra){var s=N(id,kind,x,y,extra);if(g(id))s.ghost=1;if(d(id))s.dim=1;return s;};
+    var nodes=[mk('human','human',.18,.5,{big:1,lp:'left'}),mk('context','context',.38,.28,{lp:'top'}),mk('ai','ai',.6,.28,{lp:'top'}),mk('tools','tool',.84,.34,{lp:'right'}),mk('workflow','workflow',.5,.56),
+      mk('automation','tool',.72,.64,{label:'AUTOMATION',lp:'right'}),mk('agent','agent',.88,.78,{lp:'right'}),mk('model','model',.78,.12,{lp:'right'}),mk('evidence','evidence',.5,.82),mk('value','value',.8,.9,{lp:'right'})];
+    if(o.remove)nodes=nodes.filter(function(n){return o.remove.indexOf(n.id)<0;});
+    var dash=o.allDashed?{dashed:1}:{};
+    var links=[Lk('human','context','human',dash),Lk('context','ai','ai',dash),Lk('ai','workflow','ai',clone({dir:1},dash)),Lk('human','workflow','human',clone({dir:1},dash)),Lk('tools','workflow','neutral',clone(o.toolsDashed?{dashed:1}:{},dash)),
+      Lk('workflow','automation','neutral',clone(o.autoDashed?{dashed:1}:{},dash)),Lk('automation','agent','neutral',clone({dashed:1},dash)),Lk('ai','model','ai',clone(o.toolsDashed?{dashed:1,weak:1}:{},dash)),Lk('workflow','evidence','neutral',clone({dir:1},dash)),
+      Lk('evidence','value','value',clone({dir:1,dashed:o.valueDashed?1:0},dash)),Lk('evidence','human','human',clone({dashed:1,dir:1,curve:.3},dash))];
+    if(o.extraNodes)nodes=nodes.concat(o.extraNodes);if(o.extraLinks)links=links.concat(o.extraLinks);
+    return {nodes:nodes,links:links,frames:o.frames||[]};
+  }
+  var rules={
+    'default':{scene:base(),caption:'Each principle acts as a constraint on the system'},
+    problem:{scene:base({ghost:['tools','automation','agent','model'],toolsDashed:1,autoDashed:1}),caption:'Problem before tool · tools stay dormant until the problem context exists'},
+    human:{scene:base({dim:['context','ai','tools','workflow','automation','agent','model','evidence','value']}),caption:'Human judgement stays visible · the Human node cannot disappear'},
+    purpose:{scene:base({ghost:['automation','agent'],autoDashed:1}),caption:'Purpose before automation · automation stays unconnected until a human decision links it'},
+    evidence:{scene:base({ghost:['evidence','value'],valueDashed:1}),caption:'Evidence before claims · Value stays unconfirmed until Evidence appears',
+      then:function(){return base({extraNodes:[],valueDashed:0}).nodes.map(function(n){if(n.id==='evidence')n.solid=1;if(n.id==='value'){n.acid=1;n.emerge=1;}return n;});}},
+    smallest:{scene:base({remove:['agent','model','automation']}),caption:'Smallest useful system · unnecessary nodes fade away'},
+    reversible:{scene:(function(){var s=base({allDashed:1});s.nodes=spread(s.nodes,1.12);return s;})(),caption:'Reversible by design · every relationship stays separable and correctable'},
+    learning:{scene:base({extraNodes:[N('pattern','pattern',.9,.56,{label:'PATTERN',lp:'right'})],extraLinks:[Lk('evidence','pattern','value',{dir:1,curve:-.2}),Lk('pattern','context','neutral',{dashed:1,curve:-.3})],frames:[{id:'n',ids:['pattern'],label:'NEXT WORK',pad:30,tone:'acid'}]}),caption:'Learning becomes an asset · evidence feeds a pattern that outlives the system'},
+    spectacle:{scene:{nodes:[N('human','human',.22,.5,{big:1,lp:'left'}),N('ai','ai',.5,.3,{lp:'top'}),N('workflow','workflow',.5,.62),N('evidence','evidence',.78,.5,{lp:'right'})],links:[Lk('human','ai','neutral'),Lk('ai','workflow','neutral',{dir:1}),Lk('human','workflow','neutral',{dir:1}),Lk('workflow','evidence','neutral',{dir:1})]},caption:'Purpose before spectacle · the field reduces to what explains something'}
+  };
+  var field=new Field(el),pinned=null,shown=null,t=null;
+  field.setScene(rules['default'].scene,{instant:true});
+  function show(key){
+    key=key||'default';if(key===shown)return;shown=key;clearTimeout(t);
+    var r=rules[key];field.setScene(r.scene);cap.textContent=r.caption;
+    items.forEach(function(li){li.classList.toggle('is-on',li.getAttribute('data-rule')===key);});
+    if(key==='evidence'){t=setTimeout(function(){if(shown!=='evidence')return;var s=base();s.nodes=s.nodes.map(function(n){if(n.id==='evidence')n.solid=1;if(n.id==='value'){n.acid=1;n.emerge=1;}return n;});field.setScene(s);cap.textContent='Evidence before claims · Evidence appeared — Value can now be confirmed';field.pulse('evidence','value',{kind:'value'});},1600);}
+    if(key==='human')t=setTimeout(function(){field.pulseFrom('human',{kind:'human'});},800);
+    if(key==='learning')t=setTimeout(function(){field.pulse('evidence','pattern',{kind:'value'});},900);
+  }
+  items.forEach(function(li){
+    var key=li.getAttribute('data-rule'),b=$('button',li);
+    li.addEventListener('pointerenter',function(){if(!pinned)show(key);});
+    li.addEventListener('focusin',function(){if(!pinned)show(key);});
+    b.addEventListener('click',function(){
+      pinned=pinned===key?null:key;
+      items.forEach(function(x){$('button',x).setAttribute('aria-pressed',String(x.getAttribute('data-rule')===pinned));});
+      shown=null;show(pinned||key);
+    });
+  });
+  $('#principles-list').addEventListener('pointerleave',function(){if(!pinned)show('default');});
+  $('#principles-list').addEventListener('focusout',function(e){if(!pinned&&!$('#principles-list').contains(e.relatedTarget))show('default');});
+})();
+
+/* ==================================================================
+   FINAL — the network simplifies toward one stable path
+   ================================================================== */
+(function finalCta(){
+  var el=$('#field-final');if(!el)return;
+  var field=new Field(el);
+  var words=[['clearer',.5,.14,{m:[.5,.12]}],['faster',.76,.26,{lp:'right',m:[.84,.3]}],['more reliable',.8,.56,{lp:'right',m:[.86,.62]}],['easier to coordinate',.7,.84,{m:[.72,.88]}],['easier to repeat',.44,.88,{m:[.42,.88]}],['or simply possible',.22,.78,{lp:'left',m:[.18,.8]}]];
+  function scene(k){
+    var nodes=[N('human','human',.16,.5,{big:1,lp:'left',m:[.16,.5]}),N('problem','workflow',.5,.5,{label:'A REAL PROBLEM',m:[.5,.5]})];
+    var links=[Lk('human','problem','human',{dir:1})];
+    for(var i=0;i<k;i++){var w=words[i];nodes.push(N('o'+i,'value',w[1],w[2],clone({label:w[0].toUpperCase(),ghost:1,from:'problem'},w[3])));links.push(Lk('problem','o'+i,'human',{dashed:1,weak:1}));}
+    return {nodes:nodes,links:links};
+  }
+  field.setScene(scene(0),{instant:true});
+  var list=$('#outcomes'),done=false;
+  new IntersectionObserver(function(es,io){
+    es.forEach(function(e){
+      if(!e.isIntersecting||done)return;done=true;io.disconnect();
+      list.classList.add('is-in');
+      if(RM()){field.setScene(scene(6),{instant:true});return;}
+      words.forEach(function(w,i){setTimeout(function(){field.setScene(scene(i+1));},300+i*320);});
+      setTimeout(function(){field.pulse('human','problem',{kind:'human'});},2800);
+    });
+  },{threshold:.3}).observe(el);
+})();
+
+/* ==================================================================
+   Reveal, header state, Why-loop
+   ================================================================== */
+(function misc(){
+  var items=$$('.reveal, .level');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:.05});
+  items.forEach(function(i){io.observe(i);});
+  var loop=$('#why-loop');
+  if(loop){new IntersectionObserver(function(es,o){es.forEach(function(e){if(!e.isIntersecting)return;o.disconnect();loop.classList.add('is-in');var a=$('#loop-anim');if(a&&!RM()&&a.beginElement)setTimeout(function(){try{a.beginElement();}catch(err){}},1300);});},{threshold:.4}).observe(loop);}
+  var header=$('#site-header'),top=$('#top');
+  if(header&&top)new IntersectionObserver(function(es){es.forEach(function(e){header.classList.toggle('is-scrolled',!e.isIntersecting);});},{rootMargin:'40px 0px 0px 0px'}).observe(top);
+  // Nav: close the hero annotation when navigating with keyboard elsewhere
+  doc.addEventListener('keydown',function(e){if(e.key==='Escape'){var n=$('#hero-note');if(n)n.classList.remove('is-on');}});
+})();
+})();
+</script>
+</body>
+</html>
