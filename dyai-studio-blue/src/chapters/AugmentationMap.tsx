@@ -4,6 +4,7 @@ import { gsap, useMediaQuery, useReducedMotion, NARROW_QUERY } from "@/lib/motio
 import { useExperience } from "@/state/experience";
 import type { LayerRole } from "@/i18n";
 import { Trace } from "@/components/ui";
+import { ThreadSegment } from "@/thread/ThreadSegment";
 
 type Pos = Record<LayerId, { x: number; y: number }>;
 
@@ -74,6 +75,7 @@ export function AugmentationMap() {
   const select = (layer: LayerId) => dispatch({ type: "layer", layer: selected === layer ? null : layer });
 
   return <section className="map-section chapter" id="augmentation-map" aria-labelledby="map-heading">
+    <ThreadSegment id="map" />
     <div className="page-shell">
       <Trace state="system" />
       <div className="chapter-heading-row">

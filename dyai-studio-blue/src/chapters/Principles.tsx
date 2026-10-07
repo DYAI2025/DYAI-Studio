@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 import { gsap, useReducedMotion } from "@/lib/motion";
 import { useExperience } from "@/state/experience";
 import { Trace } from "@/components/ui";
+import { ThreadSegment } from "@/thread/ThreadSegment";
 
 /**
  * Chapter 9 — Principles / Why DYAI, merged into one editorial chapter. No cards.
@@ -24,6 +25,7 @@ export function Principles() {
   }, [reduced]);
 
   return <section className="principles-section chapter" id="principles" aria-labelledby="principles-heading" ref={section}>
+    <ThreadSegment id="principles" />
     <div className="page-shell">
       <Trace state="behaviour" />
       <div className="chapter-heading-row"><div><h2 className="chapter-title" id="principles-heading">{t.principles.title}</h2><p className="chapter-intro">{t.principles.intro}</p></div></div>

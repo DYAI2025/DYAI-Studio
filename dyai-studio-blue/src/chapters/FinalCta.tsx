@@ -1,5 +1,6 @@
 import { useExperience } from "@/state/experience";
 import { ButtonLink, Trace, TraceMark } from "@/components/ui";
+import { ThreadSegment } from "@/thread/ThreadSegment";
 
 /**
  * Chapter 10 — Final CTA. Graphite. The loop closes: the site began with a real problem and ends by asking for one.
@@ -7,6 +8,7 @@ import { ButtonLink, Trace, TraceMark } from "@/components/ui";
 export function FinalCta() {
   const { t, dispatch } = useExperience();
   return <section className="final-section dark-section" id="map-problem" aria-labelledby="final-heading">
+    <ThreadSegment id="final" />
     <div className="page-shell final-layout">
       <div>
         <Trace state="loop" inverse />

@@ -1,6 +1,7 @@
 import { EVIDENCE_IDS, type EvidenceId, type Route } from "@/data/model";
 import { useExperience } from "@/state/experience";
 import { ButtonLink, Trace } from "@/components/ui";
+import { ThreadSegment } from "@/thread/ThreadSegment";
 
 /**
  * Chapter 7 — Evidence. Visually calm; the interaction communicates intellectual honesty.
@@ -13,6 +14,7 @@ export function Evidence({ navigate }: { navigate: (r: Route) => void }) {
   const index = EVIDENCE_IDS.indexOf(level);
   const active = t.evidence.levels[level];
   return <section className="evidence-section chapter" id="evidence" aria-labelledby="evidence-heading">
+    <ThreadSegment id="evidence" />
     <div className="page-shell">
       <Trace state="bounded" />
       <div className="chapter-heading-row"><div><h2 className="chapter-title" id="evidence-heading">{t.evidence.title}</h2><p className="chapter-intro">{t.evidence.intro}</p></div></div>

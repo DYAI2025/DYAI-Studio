@@ -3,6 +3,7 @@ import { COMPOSER, SCENARIO_IDS, SYSTEMS, type CapabilityId, type ScenarioId } f
 import { gsap, useReducedMotion } from "@/lib/motion";
 import { useExperience } from "@/state/experience";
 import { Trace } from "@/components/ui";
+import { ThreadSegment } from "@/thread/ThreadSegment";
 
 /**
  * Chapter 6 — Capability Composer. Technology follows the problem.
@@ -39,6 +40,7 @@ export function Composer() {
   const llmPresent = problem ? SYSTEMS[problem].aiCentral || added.includes("llm") : true;
 
   return <section className="composer-section chapter" id="composer" aria-labelledby="composer-heading">
+    <ThreadSegment id="composer" />
     <div className="page-shell">
       <Trace state="reduced" />
       <div className="chapter-heading-row"><div><h2 className="chapter-title" id="composer-heading">{t.composer.title}</h2><p className="chapter-intro">{t.composer.intro}</p></div></div>

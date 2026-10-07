@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 import { gsap, useMediaQuery, useReducedMotion } from "@/lib/motion";
 import { useExperience } from "@/state/experience";
 import { Trace } from "@/components/ui";
+import { ThreadSegment } from "@/thread/ThreadSegment";
 
 /**
  * Chapter 2 — The Gap. Graphite. Diagnosis, not repetition of the hero.
@@ -45,6 +46,7 @@ export function Gap() {
 
   return <section className={`gap-section dark-section ${animate ? "gap-section--pinned" : ""}`} id="gap" aria-labelledby="gap-heading" ref={section}>
     <div className="gap-stage" ref={stage}>
+      <ThreadSegment id="gap" />
       <div className="page-shell gap-inner">
         <Trace state="missing" inverse />
         <h2 className="chapter-title chapter-title--light" id="gap-heading">{t.gap.title}</h2>

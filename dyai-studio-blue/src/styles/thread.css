@@ -1,0 +1,40 @@
+/* ───────────────────────────────────────────────────────────────────────────
+   Blue Thread — chapter-local segments of the active relationship between human intent and usable capability.
+   Two line forms only. potential: grey, dashed, 1px. active: cobalt, continuous, 2px.
+   Cobalt is consumed only under [data-bt-line="active"]. Static by design; no motion lives here.
+   Segments sit in the left page margin, absolutely positioned with zero width: no layout impact.
+   ─────────────────────────────────────────────────────────────────────────── */
+.bt-seg { display: none; }
+@supports selector(:has(> *)) {
+  :where(section, .gap-stage):has(> .bt-seg) { position: relative; }
+  .bt-seg {
+    --bt-active: var(--signal);
+    --bt-potential: var(--quiet);
+    --bt-at: calc(clamp(104px, 11vw, 176px) + 8px);
+    --bt-mark: 36px;
+    --bt-stub: 36px;
+    display: block; position: absolute; top: 0; bottom: 0; width: 0;
+    left: calc((100% - min(var(--shell), 100% - 2 * var(--gutter))) / 4);
+    pointer-events: none; user-select: none;
+  }
+  .dark-section .bt-seg { --bt-potential: var(--light-muted); }
+  .hero > .bt-seg { --bt-at: calc(100% - 32px); --bt-stub: 14px; }
+  .gap-stage > .bt-seg { --bt-at: calc(clamp(80px, 9vw, 120px) + 8px); }
+  .gap-section--pinned .gap-stage > .bt-seg { --bt-at: 56px; }
+  .final-section > .bt-seg { --bt-at: calc(clamp(96px, 11vw, 160px) + 8px); }
+  .bt-piece { position: absolute; left: -.5px; width: 1px; }
+  .bt-piece--entry { top: 0; height: max(0px, calc(var(--bt-at) - var(--bt-mark) / 2)); }
+  .bt-piece--mark { top: calc(var(--bt-at) - var(--bt-mark) / 2); left: 0; width: 0; height: var(--bt-mark); }
+  .bt-piece--body { top: calc(var(--bt-at) + var(--bt-mark) / 2); bottom: var(--bt-stub); }
+  .bt-piece--exit { bottom: 0; height: var(--bt-stub); }
+  .bt-piece[data-bt-line="potential"]:not(.bt-piece--mark) { background: repeating-linear-gradient(to bottom, var(--bt-potential) 0 3px, transparent 3px 9px); }
+  .bt-piece[data-bt-line="active"]:not(.bt-piece--mark) { left: -1px; width: 2px; background: var(--bt-active); }
+  .bt-piece--mark .trace-mark { position: absolute; top: 0; left: 0; width: var(--bt-mark); height: calc(var(--bt-mark) / 3); color: var(--bt-potential); transform-origin: 0 0; transform: rotate(90deg) translateY(-50%); }
+  .bt-piece--mark[data-bt-line="active"] .trace-mark { color: var(--bt-active); stroke-width: 2; }
+  @media (max-width: 680px) {
+    .bt-seg { --bt-at: 92px; --bt-mark: 30px; --bt-stub: 24px; }
+    .hero > .bt-seg { --bt-at: calc(100% - 68px); }
+  }
+}
+@media (forced-colors: active) { .bt-seg, .dark-section .bt-seg { forced-color-adjust: none; --bt-potential: GrayText; --bt-active: CanvasText; } }
+@media print { .bt-seg { display: none !important; } }

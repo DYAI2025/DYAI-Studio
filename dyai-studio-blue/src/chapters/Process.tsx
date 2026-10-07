@@ -3,6 +3,7 @@ import { STAGE_IDS } from "@/data/model";
 import { gsap, ScrollTrigger, useMediaQuery, useReducedMotion, DESKTOP_QUERY } from "@/lib/motion";
 import { useExperience } from "@/state/experience";
 import { Trace } from "@/components/ui";
+import { ThreadSegment } from "@/thread/ThreadSegment";
 
 /**
  * Chapter 5 — From capability gap to working practice.
@@ -44,6 +45,7 @@ export function Process() {
   const activeStage = t.process.stages[STAGE_IDS[active]];
 
   return <section className={`process-section chapter ${pin ? "process-section--pinned" : ""}`} id="approach" aria-labelledby="process-heading" ref={section}>
+    <ThreadSegment id="process" />
     <div className="page-shell process-layout">
       <div className="process-left" ref={left}>
         <Trace state="practice" />

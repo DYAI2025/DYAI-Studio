@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap, ScrollTrigger, useReducedMotion } from "@/lib/motion";
 import { useExperience } from "@/state/experience";
 import { ButtonLink, Trace } from "@/components/ui";
+import { ThreadSegment } from "@/thread/ThreadSegment";
 
 /**
  * Chapter 1 — Hero.
@@ -61,6 +62,7 @@ export function Hero({ scrollToGap }: { scrollToGap: () => void }) {
   };
 
   return <section className="hero" id="top" aria-labelledby="hero-heading" ref={section}>
+    <ThreadSegment id="hero" />
     <div className="hero-inner page-shell">
       <div className="hero-overline meta"><span>{t.hero.studio}</span><span>{t.hero.domain}</span></div>
       <div className="hero-intro">

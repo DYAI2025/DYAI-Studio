@@ -3,6 +3,7 @@ import type { AudienceId, Route } from "@/data/model";
 import { gsap, useMediaQuery, useReducedMotion, NARROW_QUERY } from "@/lib/motion";
 import { useExperience } from "@/state/experience";
 import { ButtonLink, Trace } from "@/components/ui";
+import { ThreadSegment } from "@/thread/ThreadSegment";
 
 const PATHS: AudienceId[] = ["org", "individual"];
 
@@ -38,6 +39,7 @@ export function Audiences({ navigate }: { navigate: (r: Route) => void }) {
   const toggle = (id: AudienceId) => dispatch({ type: "audience", audience: selected === id ? null : id });
 
   return <section className="audience-section chapter" id="audiences" aria-labelledby="audience-heading">
+    <ThreadSegment id="audiences" />
     <div className="page-shell">
       <Trace state="branch" />
       <div className="chapter-heading-row"><div><h2 className="chapter-title" id="audience-heading">{t.audiences.title}</h2><p className="chapter-intro">{t.audiences.intro}</p></div></div>

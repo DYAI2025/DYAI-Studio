@@ -3,6 +3,7 @@ import { EVIDENCE_TO_LAB, LAB_MATURITY } from "@/data/model";
 import { gsap, ScrollTrigger, useReducedMotion } from "@/lib/motion";
 import { useExperience } from "@/state/experience";
 import { ButtonLink, Trace } from "@/components/ui";
+import { ThreadSegment } from "@/thread/ThreadSegment";
 import { VisualCommandLab } from "./VisualCommandLab";
 
 /**
@@ -31,6 +32,7 @@ export function Lab() {
   }, [reduced]);
 
   return <section className="lab-section dark-section chapter" id="lab" aria-labelledby="lab-heading" ref={section}>
+    <ThreadSegment id="lab" />
     <div className="page-shell">
       <Trace state="reusable" inverse />
       <div className="chapter-heading-row"><div><h2 className="chapter-title chapter-title--light" id="lab-heading">{t.lab.title}</h2><p className="chapter-intro chapter-intro--light">{t.lab.intro}</p></div></div>
