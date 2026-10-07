@@ -1,0 +1,91 @@
+/* ── Chapter 1 — Hero: artistic asymmetry from the winner, wordmark −12%, H1 ≤ 3 lines ── */
+.hero { min-height: min(900px, calc(100svh - var(--header-h))); display: flex; flex-direction: column; overflow: hidden; }
+.hero-inner { padding-top: clamp(28px, 3.2vw, 46px); }
+.hero-overline { display: flex; justify-content: space-between; align-items: center; }
+.hero-overline span:first-child { color: var(--ink); }
+.hero-intro { display: grid; grid-template-columns: minmax(250px, .82fr) minmax(0, 1.5fr); gap: clamp(40px, 7vw, 120px); align-items: start; margin-block: clamp(40px, 5.5vw, 76px) 56px; }
+.hero-brand-word { font-size: clamp(72px, 10.5vw, 134px); line-height: .78; letter-spacing: -.1em; font-weight: 650; }
+.hero-brand-caption { max-width: 190px; margin-top: 22px; line-height: 1.55; }
+.hero-copy { max-width: 820px; }
+.hero-copy h1 { max-width: 20ch; font-size: clamp(3rem, 5.3vw, 5.3rem); line-height: .98; letter-spacing: -.045em; font-weight: 540; text-wrap: balance; }
+.hero-copy > p { max-width: 640px; margin-top: 24px; color: var(--ink-2); font-size: clamp(16px, 1.25vw, 18px); line-height: 1.6; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-top: 28px; }
+
+/* The system experience */
+.hero-system { position: relative; display: grid; grid-template-columns: minmax(0, .95fr) minmax(320px, 1.15fr) minmax(0, .95fr); gap: 32px; min-height: 260px; padding: 40px 0 56px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); isolation: isolate; }
+.hero-pole, .hero-middle { position: relative; z-index: 2; }
+.hero-pole--ai { text-align: right; }
+.pole-index { color: var(--ink-2); }
+.hero-pole h2 { max-width: 260px; margin-top: 22px; font-size: clamp(21px, 2vw, 27px); font-weight: 500; letter-spacing: -.03em; line-height: 1.12; }
+.hero-pole--ai h2 { margin-left: auto; }
+.micro-terms { display: flex; flex-wrap: wrap; gap: 4px 12px; max-width: 340px; margin-top: 16px; color: var(--quiet); font-size: 13px; line-height: 1.4; }
+.hero-pole--ai .micro-terms { justify-content: flex-end; margin-left: auto; }
+.hero-outcome { display: inline-flex; flex-direction: column; align-items: flex-end; gap: 4px; margin-top: 22px; padding-top: 12px; border-top: 1px solid var(--rule); }
+.hero-outcome strong { font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: 0; transition: color .3s ease; }
+.hero-system--assembled .hero-outcome strong { color: var(--signal-ink); font-family: var(--font-mono); font-size: var(--text-meta); letter-spacing: .06em; font-weight: 600; }
+.hero-middle { align-self: center; min-width: 0; text-align: center; }
+.gap-state { display: inline-flex; justify-content: center; align-items: center; gap: 10px; color: var(--muted); }
+.hero-system--assembled .gap-state { color: var(--signal-ink); }
+.hero-system--assembled .gap-state .mini-signal { background: var(--signal); }
+.hero-layer-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 18px; min-height: 60px; margin-top: 18px; padding-top: 14px; }
+.hero-layer-item { display: inline-flex; align-items: center; gap: 7px; color: var(--ink); font-size: 13px; font-weight: 500; }
+.hero-layer-dot { width: 7px; height: 7px; border: 1px solid var(--rule-strong); background: var(--paper); }
+.hero-system:not(.hero-system--assembled) .hero-layer-item { opacity: 0; } /* set visible by the timeline or the assembled class */
+.hero-system--assembled .hero-layer-item { opacity: 1; }
+.hero-system--assembled .hero-layer-dot { background: var(--signal); border-color: var(--signal); }
+.hero-system-note { max-width: 360px; margin: 16px auto 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.hero-system--assembled .hero-system-note { color: var(--ink); }
+
+.hero-connectors { position: absolute; z-index: 1; inset: 22% 0 auto; width: 100%; height: 120px; overflow: visible; }
+.hero-connectors line, .hero-connectors rect { vector-effect: non-scaling-stroke; }
+.hero-connector-base { stroke: var(--rule); stroke-width: 1.2; }
+.hero-connector-gap { stroke: var(--rule-strong); stroke-width: 1.4; stroke-dasharray: 3 7; transition: opacity .4s ease; }
+.hero-connector-active { stroke: var(--signal); stroke-width: 2; stroke-linecap: round; }
+.hero-junction { fill: var(--paper); stroke: var(--rule-strong); stroke-width: 1.5; transition: fill .4s ease, stroke .4s ease; }
+.hero-system--assembled .hero-connector-gap, .hero-system--closing .hero-connector-gap { opacity: 0; }
+.hero-system--assembled .hero-junction, .hero-system--closing .hero-junction { fill: var(--signal); stroke: var(--signal); }
+
+.hero-foot { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px; margin-top: auto; padding-block: 18px 22px; }
+.hero-foot-note { color: var(--muted); font-size: 14px; line-height: 1.45; }
+.hero-scroll { justify-self: end; color: var(--ink-2); }
+.hero-scroll i { margin-left: 8px; color: var(--signal); font-style: normal; }
+
+@media (max-width: 1120px) {
+  .hero-intro { gap: 48px; }
+  .hero-system { grid-template-columns: minmax(0, .9fr) minmax(280px, 1.15fr) minmax(0, .9fr); gap: 22px; }
+}
+@media (max-width: 820px) {
+  .hero { min-height: auto; }
+  .hero-intro { grid-template-columns: .66fr 1.34fr; gap: 28px; }
+  .hero-brand-word { font-size: clamp(66px, 10vw, 96px); }
+  .hero-system { grid-template-columns: minmax(0, .9fr) minmax(220px, 1.1fr) minmax(0, .9fr); gap: 14px; }
+  .hero-pole h2 { font-size: 20px; }
+}
+@media (max-width: 680px) {
+  .hero-inner { padding-top: 22px; }
+  .hero-overline { gap: 12px; font-size: var(--text-meta-sm); }
+  .hero-intro { display: flex; flex-direction: column; gap: 26px; margin-block: 40px 36px; }
+  .hero-brand-block { display: flex; align-items: flex-end; gap: 16px; }
+  .hero-brand-word { font-size: clamp(66px, 19vw, 96px); }
+  .hero-brand-caption { max-width: 130px; margin: 0 0 4px; font-size: var(--text-meta-sm); line-height: 1.4; }
+  .hero-copy h1 { max-width: none; font-size: clamp(2.6rem, 11vw, 3.4rem); line-height: .96; }
+  .hero-copy > p { margin-top: 18px; }
+  .hero-actions { align-items: flex-start; flex-direction: column; gap: 10px; margin-top: 22px; }
+  .hero-system { display: block; min-height: 0; padding: 0 0 24px 22px; }
+  .hero-system::before { position: absolute; top: 18px; bottom: 30px; left: 6px; width: 1px; background: repeating-linear-gradient(to bottom, var(--rule-strong) 0 3px, transparent 3px 9px); content: ""; }
+  .hero-system--assembled::before { background: var(--signal); }
+  .hero-connectors { display: none; }
+  .hero-pole { padding: 22px 0; border-bottom: 1px solid var(--rule); text-align: left; }
+  .hero-pole--ai { border-bottom: 0; }
+  .pole-index { display: flex; align-items: center; gap: 10px; }
+  .pole-index::before { position: absolute; left: -20px; width: 7px; height: 7px; border: 1px solid var(--rule-strong); border-radius: 50%; background: var(--paper); content: ""; }
+  .hero-system--assembled .pole-index::before { border-color: var(--signal); background: var(--signal); }
+  .hero-pole h2, .hero-pole--ai h2 { max-width: none; margin: 10px 0 0; font-size: 21px; }
+  .micro-terms, .hero-pole--ai .micro-terms { justify-content: flex-start; max-width: none; margin-top: 10px; }
+  .hero-outcome { align-items: flex-start; }
+  .hero-middle { padding: 22px 0 18px; border-bottom: 1px solid var(--rule); text-align: left; }
+  .hero-layer-list { justify-content: flex-start; min-height: 0; gap: 8px 14px; }
+  .hero-system-note { margin-inline: 0; }
+  .hero-foot { grid-template-columns: 1fr; gap: 10px; padding-block: 14px 20px; }
+  .hero-scroll { display: none; }
+}
