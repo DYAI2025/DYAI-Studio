@@ -21,6 +21,8 @@ export function Hero({ scrollToGap }: { scrollToGap: () => void }) {
 
   // Returning in the same session, or reduced motion: complete state, no animation.
   useEffect(() => { if (state.heroResolved || reduced) setAssembled(true); }, [state.heroResolved, reduced]);
+  // A complete hero is a resolved relationship in shared state too, however it got there (the Blue Thread reads it).
+  useEffect(() => { if (assembled && !state.heroResolved) dispatch({ type: "heroResolved" }); }, [assembled, state.heroResolved, dispatch]);
 
   useLayoutEffect(() => {
     if (reduced || assembled || !system.current) return;

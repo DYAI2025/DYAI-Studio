@@ -20,7 +20,8 @@
   .dark-section .bt-seg { --bt-potential: var(--light-muted); }
   .hero > .bt-seg { --bt-at: calc(100% - 32px); --bt-stub: 14px; }
   .gap-stage > .bt-seg { --bt-at: calc(clamp(80px, 9vw, 120px) + 8px); }
-  .gap-section--pinned .gap-stage > .bt-seg { --bt-at: 56px; }
+  /* Pinned Gap: content is centred in a full-height stage under the sticky header, so the interruption sits mid-stage. */
+  .gap-section--pinned .gap-stage > .bt-seg { --bt-at: 50%; }
   .final-section > .bt-seg { --bt-at: calc(clamp(96px, 11vw, 160px) + 8px); }
   .bt-piece { position: absolute; left: -.5px; width: 1px; }
   .bt-piece--entry { top: 0; height: max(0px, calc(var(--bt-at) - var(--bt-mark) / 2)); }

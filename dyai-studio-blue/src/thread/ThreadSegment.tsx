@@ -22,7 +22,8 @@ export function ThreadSegment({ id }: { id: HomeSegmentId }) {
   if (!THREAD_ON) return null;
   const s = resolveSegment(id, {
     scenario: state.scenario, audience: state.audience, composerProblem: state.composerProblem, evidence: state.evidence,
-    heroRevealed: state.heroResolved || reduced, // under reduced motion the hero renders its complete state from the start
+    // Shared state is authoritative (the hero records its resolution); `reduced` only covers the first paint before that effect runs.
+    heroRevealed: state.heroResolved || reduced,
   });
   return <div className="bt-seg" aria-hidden="true" data-bt-chapter={s.id} data-bt-entry={s.entryId} data-bt-exit={s.exitId}>
     <span className="bt-piece bt-piece--entry" data-bt-state={s.entry.state} data-bt-line={s.entry.line} />
