@@ -1,0 +1,526 @@
+{
+  "workItem": "DYAI-45",
+  "sourceCommit": "64ccf05c9fcea45ca7dacdd5ec7d47e12ad492e9",
+  "baseUrl": "http://localhost:4173/",
+  "tool": "Python Playwright (sync API) + Chromium headless shell; docs/evidence/DYAI-45/capture-evidence.py",
+  "chromium": "~/Library/Caches/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-mac-arm64/chrome-headless-shell",
+  "vectorLegend": "chapter:EntryMarkExit, A = active (cobalt, continuous, 2px), P = potential (grey, dashed, 1px)",
+  "consoleAndPageErrors": [],
+  "shots": [
+    {
+      "file": "01-1440-reduced-fresh-full.png",
+      "sha256": "aa5283b719e100483f30c93fc2a942baaa1045ed886c4e900a51fc99ac88f964",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "motion": "reduced (prefers-reduced-motion: reduce)",
+      "url": "/#/",
+      "capture": "full",
+      "decisions": [],
+      "purpose": "fresh session: every piece gated on a visitor decision is potential (grey, dashed, 1px); only the hero reveal is resolved, because reduced motion shows the hero's complete static state",
+      "experience": {
+        "scenario": null,
+        "audience": null,
+        "composerProblem": null,
+        "evidence": "prototype",
+        "heroResolved": true
+      },
+      "locale": "en",
+      "segments": 10,
+      "activePieces": 4,
+      "potentialPieces": 36,
+      "reducedMotionMatches": true,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": "hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP"
+    },
+    {
+      "file": "02-1440-reduced-selected-full.png",
+      "sha256": "a986b7749f28432defd832ec6228afa786529913548c327f69ac71d444796073",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "motion": "reduced (prefers-reduced-motion: reduce)",
+      "url": "/#/",
+      "capture": "full",
+      "decisions": [
+        "scenario",
+        "audience",
+        "repeated"
+      ],
+      "purpose": "selected state: scenario + audience + Repeated evidence turn every decision-gated piece cobalt, continuous, 2px; unresolved / diagnostic / returning pieces stay potential by meaning",
+      "experience": {
+        "scenario": "decision",
+        "audience": "org",
+        "composerProblem": null,
+        "evidence": "repeated",
+        "heroResolved": true
+      },
+      "locale": "en",
+      "segments": 10,
+      "activePieces": 32,
+      "potentialPieces": 8,
+      "reducedMotionMatches": true,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": "hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP"
+    },
+    {
+      "file": "03-1440-motion-hero-unrevealed.png",
+      "sha256": "63c0c6e645d704a86e529d637107b8d1bdad0497e4b8d163aaa0aef8865d4f50",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "motion": "full (no-preference)",
+      "url": "/#/",
+      "capture": "viewport@hero-exit",
+      "decisions": [],
+      "purpose": "motion mode, hero not yet resolved (its scroll reveal may be part-way): hero mark and exit unresolved (grey, dashed) at the hero to Gap boundary",
+      "experience": {
+        "scenario": null,
+        "audience": null,
+        "composerProblem": null,
+        "evidence": "prototype",
+        "heroResolved": false
+      },
+      "locale": "en",
+      "segments": 10,
+      "activePieces": 0,
+      "potentialPieces": 40,
+      "reducedMotionMatches": false,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": "hero:PPP gap:PPP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP"
+    },
+    {
+      "file": "04-1440-motion-hero-revealed.png",
+      "sha256": "76c2201e01215f860e825564c07a596d19a97842ce073d3762ce35982bf3c2fb",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "motion": "full (no-preference)",
+      "url": "/#/",
+      "capture": "viewport@hero-exit",
+      "decisions": [
+        "reveal"
+      ],
+      "purpose": "motion mode after 'See the augmentation layer': hero mark and exit resolved (cobalt, continuous) into the Gap",
+      "experience": {
+        "scenario": null,
+        "audience": null,
+        "composerProblem": null,
+        "evidence": "prototype",
+        "heroResolved": true
+      },
+      "locale": "en",
+      "segments": 10,
+      "activePieces": 4,
+      "potentialPieces": 36,
+      "reducedMotionMatches": false,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": "hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP"
+    },
+    {
+      "file": "05-1440-motion-map-fresh.png",
+      "sha256": "9d88baaa761a2b7e9c799f85901173bf4c23d230d3ea679b1c18ea38b29d6fd9",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "motion": "full (no-preference)",
+      "url": "/#/",
+      "capture": "viewport@augmentation-map",
+      "decisions": [
+        "reveal"
+      ],
+      "purpose": "motion mode, no situation chosen: Map segment potential",
+      "experience": {
+        "scenario": null,
+        "audience": null,
+        "composerProblem": null,
+        "evidence": "prototype",
+        "heroResolved": true
+      },
+      "locale": "en",
+      "segments": 10,
+      "activePieces": 4,
+      "potentialPieces": 36,
+      "reducedMotionMatches": false,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": "hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP"
+    },
+    {
+      "file": "06-1440-motion-map-selected.png",
+      "sha256": "436098521c9c67d53950d6ce163b7184e0f900188d8cd00ace4b22c440bdff42",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "motion": "full (no-preference)",
+      "url": "/#/",
+      "capture": "viewport@augmentation-map",
+      "decisions": [
+        "reveal",
+        "scenario",
+        "audience",
+        "repeated"
+      ],
+      "purpose": "motion mode, situation chosen: Map segment active",
+      "experience": {
+        "scenario": "decision",
+        "audience": "org",
+        "composerProblem": null,
+        "evidence": "repeated",
+        "heroResolved": true
+      },
+      "locale": "en",
+      "segments": 10,
+      "activePieces": 32,
+      "potentialPieces": 8,
+      "reducedMotionMatches": false,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": "hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP"
+    },
+    {
+      "file": "07-1440-reduced-map-closeup-fresh@2x.png",
+      "sha256": "a1c5f02281874288b6234e5fca1dc54688c4db4a8c77b5d7bcbd9469644d6343",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 2,
+      "motion": "reduced (prefers-reduced-motion: reduce)",
+      "url": "/#/",
+      "capture": "closeup@augmentation-map",
+      "decisions": [],
+      "purpose": "2x close-up of the left-margin thread, potential form",
+      "experience": {
+        "scenario": null,
+        "audience": null,
+        "composerProblem": null,
+        "evidence": "prototype",
+        "heroResolved": true
+      },
+      "locale": "en",
+      "segments": 10,
+      "activePieces": 4,
+      "potentialPieces": 36,
+      "reducedMotionMatches": true,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": "hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP"
+    },
+    {
+      "file": "08-1440-reduced-map-closeup-selected@2x.png",
+      "sha256": "983433b8a379a2aa04a7393839337645b321eb5e927d6592483210e2a265acb6",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 2,
+      "motion": "reduced (prefers-reduced-motion: reduce)",
+      "url": "/#/",
+      "capture": "closeup@augmentation-map",
+      "decisions": [
+        "scenario",
+        "audience",
+        "repeated"
+      ],
+      "purpose": "2x close-up of the left-margin thread, active form",
+      "experience": {
+        "scenario": "decision",
+        "audience": "org",
+        "composerProblem": null,
+        "evidence": "repeated",
+        "heroResolved": true
+      },
+      "locale": "en",
+      "segments": 10,
+      "activePieces": 32,
+      "potentialPieces": 8,
+      "reducedMotionMatches": true,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": "hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP"
+    },
+    {
+      "file": "09-1024-reduced-selected-full.png",
+      "sha256": "84b0fb1f1522607bacd6eae0bd5f96090e6c671526e35b28c3ab047e1ca12cf1",
+      "viewport": "1024x768",
+      "deviceScaleFactor": 1,
+      "motion": "reduced (prefers-reduced-motion: reduce)",
+      "url": "/#/",
+      "capture": "full",
+      "decisions": [
+        "scenario",
+        "audience",
+        "repeated"
+      ],
+      "purpose": "compact desktop / tablet, selected state",
+      "experience": {
+        "scenario": "decision",
+        "audience": "org",
+        "composerProblem": null,
+        "evidence": "repeated",
+        "heroResolved": true
+      },
+      "locale": "en",
+      "segments": 10,
+      "activePieces": 32,
+      "potentialPieces": 8,
+      "reducedMotionMatches": true,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": "hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP"
+    },
+    {
+      "file": "10-1024-motion-map-selected.png",
+      "sha256": "46492d69172de90d9da68a1472ebde7786f501e1766966d4de81874f86d83453",
+      "viewport": "1024x768",
+      "deviceScaleFactor": 1,
+      "motion": "full (no-preference)",
+      "url": "/#/",
+      "capture": "viewport@augmentation-map",
+      "decisions": [
+        "reveal",
+        "scenario",
+        "audience",
+        "repeated"
+      ],
+      "purpose": "compact desktop / tablet, motion mode, selected state",
+      "experience": {
+        "scenario": "decision",
+        "audience": "org",
+        "composerProblem": null,
+        "evidence": "repeated",
+        "heroResolved": true
+      },
+      "locale": "en",
+      "segments": 10,
+      "activePieces": 32,
+      "potentialPieces": 8,
+      "reducedMotionMatches": false,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": "hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP"
+    },
+    {
+      "file": "11-390-reduced-fresh-full.png",
+      "sha256": "55413fd8d64d75bf93ba7637f2c7064bd367b6c8dd1a9e2490e58816d66de249",
+      "viewport": "390x844",
+      "deviceScaleFactor": 1,
+      "motion": "reduced (prefers-reduced-motion: reduce)",
+      "url": "/#/",
+      "capture": "full",
+      "decisions": [],
+      "purpose": "mobile, fresh session: vertical trace with local markers, potential form",
+      "experience": {
+        "scenario": null,
+        "audience": null,
+        "composerProblem": null,
+        "evidence": "prototype",
+        "heroResolved": true
+      },
+      "locale": "en",
+      "segments": 10,
+      "activePieces": 4,
+      "potentialPieces": 36,
+      "reducedMotionMatches": true,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": "hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP"
+    },
+    {
+      "file": "12-390-reduced-selected-full.png",
+      "sha256": "c93ea48076d3ee2cf4012b4312a16cea6e6adecbdaf9dd175264cbf40bcdc9fa",
+      "viewport": "390x844",
+      "deviceScaleFactor": 1,
+      "motion": "reduced (prefers-reduced-motion: reduce)",
+      "url": "/#/",
+      "capture": "full",
+      "decisions": [
+        "scenario",
+        "audience",
+        "repeated"
+      ],
+      "purpose": "mobile, selected state: vertical trace, active form",
+      "experience": {
+        "scenario": "decision",
+        "audience": "org",
+        "composerProblem": null,
+        "evidence": "repeated",
+        "heroResolved": true
+      },
+      "locale": "en",
+      "segments": 10,
+      "activePieces": 32,
+      "potentialPieces": 8,
+      "reducedMotionMatches": true,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": "hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP"
+    },
+    {
+      "file": "13-390-motion-map-selected.png",
+      "sha256": "8b0befb68c4e4385fab95e165b10b9667d5e488f55b38c59bcf5e41f3d865ca6",
+      "viewport": "390x844",
+      "deviceScaleFactor": 1,
+      "motion": "full (no-preference)",
+      "url": "/#/",
+      "capture": "viewport@augmentation-map",
+      "decisions": [
+        "reveal",
+        "scenario",
+        "audience",
+        "repeated"
+      ],
+      "purpose": "mobile, motion mode, selected state",
+      "experience": {
+        "scenario": "decision",
+        "audience": "org",
+        "composerProblem": null,
+        "evidence": "repeated",
+        "heroResolved": true
+      },
+      "locale": "en",
+      "segments": 10,
+      "activePieces": 32,
+      "potentialPieces": 8,
+      "reducedMotionMatches": false,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": "hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP"
+    },
+    {
+      "file": "14-1440-reduced-selected-thread-off-full.png",
+      "sha256": "d672c75f6e3d0185fba114229032d80562783ca34fb2b9778c8edaae975d5b25",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "motion": "reduced (prefers-reduced-motion: reduce)",
+      "url": "/?thread=off#/",
+      "capture": "full+off",
+      "decisions": [
+        "scenario",
+        "audience",
+        "repeated"
+      ],
+      "purpose": "removal comparison: same decisions as 02 with ?thread=off",
+      "experience": {
+        "scenario": "decision",
+        "audience": "org",
+        "composerProblem": null,
+        "evidence": "repeated",
+        "heroResolved": true
+      },
+      "locale": "en",
+      "segments": 0,
+      "activePieces": 0,
+      "potentialPieces": 0,
+      "reducedMotionMatches": true,
+      "fonts": {
+        "status": "loaded",
+        "geistLoaded": true
+      },
+      "bundle": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap",
+        "/assets/index-2Leofm4E.js",
+        "/assets/index-CH6q8mpQ.css"
+      ],
+      "scrollWidthMinusClient": 0,
+      "vector": ""
+    }
+  ]
+}

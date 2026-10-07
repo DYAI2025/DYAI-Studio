@@ -1,0 +1,82 @@
+/* ── Chapter 4 — Two working systems (dual path) ── */
+.audience-section { border-top: 1px solid var(--rule); }
+.audience-grid { --split: 50; display: grid; grid-template-columns: calc(var(--split) * 1%) minmax(0, 1fr); gap: 0; margin-top: 64px; border-top: 1px solid var(--ink); }
+.audience-path { position: relative; min-width: 0; padding: 26px clamp(20px, 3vw, 44px) 36px 0; transition: background .3s ease; }
+.audience-path + .audience-path { padding-left: clamp(20px, 3vw, 44px); padding-right: 0; border-left: 1px solid var(--rule); }
+.audience-path.is-selected { background: linear-gradient(to bottom, var(--signal-tint), transparent 60%); }
+.path-toggle { display: flex; width: 100%; flex-direction: column; align-items: flex-start; gap: 0; padding: 0; border: 0; background: transparent; text-align: left; }
+.path-kicker { display: flex; align-items: center; gap: 12px; }
+.path-kicker em { font-style: normal; color: var(--signal-ink); }
+.path-kicker-dot { width: 8px; height: 8px; border: 1px solid var(--rule-strong); transition: background .2s ease, border-color .2s ease; }
+.audience-path.is-selected .path-kicker-dot, .path-toggle:hover .path-kicker-dot, .path-toggle:focus-visible .path-kicker-dot { border-color: var(--signal); background: var(--signal); }
+.path-toggle h3 { max-width: 560px; margin-top: 28px; font-size: clamp(1.6rem, 2.6vw, 2.6rem); line-height: 1.04; letter-spacing: -.035em; font-weight: 500; transition: color .2s ease; }
+.path-toggle:hover h3, .path-toggle:focus-visible h3 { color: var(--signal-ink); }
+.audience-path.is-other .path-toggle h3 { font-size: clamp(1.3rem, 1.9vw, 1.8rem); color: var(--ink-2); }
+.path-hint { margin-top: 14px; color: var(--quiet); text-transform: none; letter-spacing: .02em; }
+.path-body { max-width: 520px; margin-top: 18px; color: var(--muted); font-size: 15px; line-height: 1.65; }
+.audience-path.is-other .path-body { font-size: 14px; }
+.path-details { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--rule); }
+.path-details[hidden] { display: none; }
+.path-details > div { min-width: 0; }
+.path-details > div:last-child { grid-column: 1 / -1; }
+.path-details .meta { display: block; margin-bottom: 8px; }
+.path-details p { color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+.path-other { margin-top: 22px; text-transform: none; letter-spacing: .02em; }
+.audience-shared { display: flex; align-items: center; gap: 16px; margin-top: 38px; padding-top: 18px; border-top: 1px solid var(--rule); }
+.audience-grid--stacked { display: flex; flex-direction: column; }
+.audience-grid--stacked .audience-path + .audience-path { padding-left: 0; border-left: 0; border-top: 1px solid var(--ink); }
+
+/* ── Chapter 5 — Process (pinned left, nine consuming stages right) ── */
+.process-section { background: var(--paper-2); }
+.process-layout { display: grid; grid-template-columns: minmax(280px, .9fr) minmax(0, 1.3fr); gap: clamp(40px, 7vw, 120px); align-items: start; }
+.process-left { position: relative; }
+.process-section--pinned .process-left { padding-bottom: 20px; }
+.process-left .chapter-title { max-width: 520px; margin-top: 28px; font-size: clamp(2rem, 3.2vw, 3.2rem); }
+.process-active { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--rule-strong); min-height: 110px; }
+.process-active .meta { color: var(--signal-ink); }
+.process-active p { margin-top: 10px; color: var(--ink); font-size: 17px; line-height: 1.5; animation: soft-reveal .35s ease both; }
+@keyframes soft-reveal { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+.process-nav { margin-top: 28px; border-top: 1px solid var(--rule); }
+.process-nav button { display: grid; width: 100%; grid-template-columns: 30px 1fr; align-items: center; gap: 10px; min-height: 40px; padding: 8px 0; border: 0; border-bottom: 1px solid var(--rule); background: transparent; color: var(--muted); font-size: 14px; text-align: left; transition: color .18s ease, padding-left .18s ease; }
+.process-nav button:hover { color: var(--ink); padding-left: 4px; }
+.process-nav button.is-active { color: var(--ink); font-weight: 500; }
+.process-nav button.is-active .meta { color: var(--signal-ink); }
+.process-nav button.is-past .meta { color: var(--ink-2); }
+.process-right { position: relative; padding-left: 38px; }
+.process-trace { position: absolute; top: 24px; bottom: 24px; left: 9px; width: 1px; background: var(--rule-strong); }
+.process-trace-fill { position: absolute; inset: 0; background: var(--signal); transform-origin: top; transform: scaleY(0); }
+.process-section:not(.process-section--pinned) .process-trace-fill { transform: scaleY(1); }
+.stage { position: relative; min-height: 260px; padding: 28px 0 32px; border-bottom: 1px solid var(--rule-strong); }
+.stage::before { position: absolute; top: 44px; left: -34px; width: 9px; height: 9px; border: 1px solid var(--rule-strong); border-radius: 50%; background: var(--paper-2); content: ""; transition: background .3s ease, border-color .3s ease; }
+.stage.is-active::before, .stage.is-past::before { border-color: var(--signal); background: var(--signal); }
+.stage-consume, .stage-produce { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.stage-chip { display: inline-block; padding: 5px 10px; border: 1px solid var(--rule-strong); color: var(--ink-2); font-size: 13px; line-height: 1.3; background: var(--paper); }
+.stage-chip--out { border-color: var(--ink-2); color: var(--ink); }
+.stage.is-active .stage-chip--out { border-color: var(--signal); color: var(--signal-ink); }
+.stage-body { margin-block: 22px 24px; }
+.stage-head { display: flex; align-items: baseline; gap: 16px; }
+.stage-no { font-family: var(--font-mono); font-size: 14px; color: var(--quiet); }
+.stage.is-active .stage-no { color: var(--signal-ink); }
+.stage h3 { font-size: clamp(1.5rem, 2.2vw, 2rem); font-weight: 500; letter-spacing: -.03em; line-height: 1.1; }
+.stage-body p { max-width: 560px; margin-top: 14px; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.stage-loop { color: var(--signal-ink); }
+
+@media (max-width: 899px) {
+  .process-layout { grid-template-columns: 1fr; gap: 36px; }
+  .process-nav { display: none; }
+  .process-active { display: none; }
+  .process-left .chapter-title { max-width: 720px; }
+  .stage { min-height: 0; padding: 22px 0 26px; }
+  .stage-body { margin-block: 16px 18px; }
+}
+@media (max-width: 680px) {
+  .audience-grid { margin-top: 40px; }
+  .audience-path, .audience-path + .audience-path { padding: 22px 0 28px; }
+  .path-toggle h3, .audience-path.is-other .path-toggle h3 { margin-top: 20px; font-size: clamp(1.5rem, 7vw, 2rem); }
+  .path-details { grid-template-columns: 1fr; gap: 16px; }
+  .process-right { padding-left: 26px; }
+  .process-trace { left: 4px; }
+  .stage::before { left: -26px; top: 36px; }
+  .stage h3 { font-size: 1.35rem; }
+  .stage-body p { font-size: 15px; }
+}

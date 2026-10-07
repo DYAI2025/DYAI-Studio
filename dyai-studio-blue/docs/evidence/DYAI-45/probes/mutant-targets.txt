@@ -1,0 +1,6 @@
+B7.1024.DE.rect_diffs
+B7.1024.EN.rect_diffs
+B7.1440.DE.rect_diffs
+B7.1440.EN.rect_diffs
+B7.390.DE.rect_diffs
+B7.390.EN.rect_diffs

@@ -1,0 +1,8 @@
+# OS / local tooling
+.DS_Store
+**/.claude/scheduled_tasks.lock
+**/.claude/homunculus/
+
+# dyai-studio-blue dependencies and multi-file build output
+node_modules/
+dist/

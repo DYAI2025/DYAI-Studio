@@ -1,0 +1,5 @@
+loads 12 elements 836 elements_with_any_raw_variation 0
+max_raw_range 0
+elements_with_rounded_variation 0
+font_sets_distinct 1
+["Geist Mono|400 600|U+0-FF, U+131, U+152-153, U+2B", "Geist|300 800|U+0-FF, U+131, U+152-153, U+2B"]
