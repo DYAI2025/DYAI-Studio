@@ -1,0 +1,13 @@
+{
+ "http://localhost:4173": {
+  "GET document": 2,
+  "GET script": 2,
+  "GET stylesheet": 2
+ },
+ "https://fonts.googleapis.com": {
+  "GET stylesheet": 2
+ },
+ "https://fonts.gstatic.com": {
+  "GET font": 4
+ }
+}

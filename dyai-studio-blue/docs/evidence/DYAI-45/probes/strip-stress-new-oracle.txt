@@ -1,0 +1,1 @@
+SUMMARY same_doc_comparisons=144 same_doc_diffs=0 cross_load_pairs=72 cross_rounded_diffs=0 cross_raw_diffs=0

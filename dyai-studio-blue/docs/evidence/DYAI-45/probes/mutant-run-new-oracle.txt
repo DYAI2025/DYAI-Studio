@@ -1,0 +1,100 @@
+PASS B1.segments actual=10 expected=10
+PASS B1.pieces actual=40 expected=40
+PASS B1.order actual=["hero", "gap", "map", "audiences", "process", "composer", "evidence", "lab", "principles", "final"] expected=["hero", "gap", "map", "audiences", "process", "composer", "evidence", "lab", "principles", "final"]
+PASS B1.hosts actual=["top", "gap", "augmentation-map", "audiences", "approach", "composer", "evidence", "lab", "principles", "map-problem"] expected=["top", "gap", "augmentation-map", "audiences", "approach", "composer", "evidence", "lab", "principles", "map-problem"]
+PASS B2.continuity_pairs actual=9 expected=9
+PASS B2.loop actual=["cycle", "cycle"] expected=["cycle", "cycle"]
+PASS B2.canary_detects_broken_pair actual=1 expected=1
+PASS B3.glyph_agreement actual=10 expected=10
+PASS B10.a11y actual={"hidden": 10, "focusable": 0, "empty": 10, "noPointer": 10} expected={"hidden": 10, "focusable": 0, "empty": 10, "noPointer": 10}
+PASS B4.vector_fresh actual="hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP" expected="hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP"
+PASS B4.vector_scenario actual="hero:PAA gap:APP map:PAA audiences:APP process:PPP composer:PAA evidence:AAA lab:APP principles:PPP final:PPP" expected="hero:PAA gap:APP map:PAA audiences:APP process:PPP composer:PAA evidence:AAA lab:APP principles:PPP final:PPP"
+PASS B4.vector_audience actual="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:APP principles:PAA final:APP" expected="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:APP principles:PAA final:APP"
+PASS B4.vector_repeated actual="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP" expected="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP"
+PASS B4.vector_prototype actual="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:APP principles:PAA final:APP" expected="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:APP principles:PAA final:APP"
+PASS B4.vector_used actual="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:APP principles:PAA final:APP" expected="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:APP principles:PAA final:APP"
+PASS B4.vector_measured actual="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP" expected="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP"
+PASS B4.vector_after_reload actual="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP" expected="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP"
+PASS B4.vector_after_DE actual="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP" expected="hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:AAA principles:AAA final:APP"
+PASS B1.route_organisations_segments actual=0 expected=0
+PASS B1.route_individuals_segments actual=0 expected=0
+PASS B1.route_work_segments actual=0 expected=0
+PASS B1.route_lab_segments actual=0 expected=0
+PASS B1.route_approach_segments actual=0 expected=0
+PASS B1.back_home_segments actual=10 expected=10
+PASS B4.vector_audience_only actual="hero:PAA gap:APP map:PPP audiences:PAA process:APP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP" expected="hero:PAA gap:APP map:PPP audiences:PAA process:APP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP"
+PASS B4.vector_composer_only actual="hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PAA evidence:AAA lab:APP principles:PPP final:PPP" expected="hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PAA evidence:AAA lab:APP principles:PPP final:PPP"
+PASS B4.vector_evidence_only actual="hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PAA principles:APP final:PPP" expected="hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PAA principles:APP final:PPP"
+PASS B5.vector_before_reveal actual="hero:PPP gap:PPP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP" expected="hero:PPP gap:PPP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP"
+PASS B5.vector_after_reveal actual="hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP" expected="hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP"
+PASS B5.positive_control_stage_advanced actual=true expected=true
+PASS B5.snapshot_diff_after_full_scroll actual=0 expected=0
+PASS B5.evidence_unchanged_by_scroll actual="prototype" expected="prototype"
+PASS B12.pinned_gap actual={"pinned": true, "segWithStage": true, "markBelowHeader": true, "markInViewport": true} expected={"pinned": true, "segWithStage": true, "markBelowHeader": true, "markInViewport": true}
+PASS B5.hero_stays_resolved_after_rm_off actual="hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP" expected="hero:PAA gap:APP map:PPP audiences:PPP process:PPP composer:PPP evidence:PPP lab:PPP principles:PPP final:PPP"
+PASS B5.shared_state_records_resolution actual=true expected=true
+PASS B10.pieces_visible_in_margin_1440_rm actual=[] expected=[]
+PASS B10.pieces_visible_in_margin_1024_rm actual=[] expected=[]
+PASS B10.pieces_visible_in_margin_390_rm actual=[] expected=[]
+PASS B10.pieces_visible_in_margin_1440_motion actual=[] expected=[]
+PASS B10.pieces_visible_in_margin_1024_motion actual=[] expected=[]
+PASS B10.pieces_visible_in_margin_390_motion actual=[] expected=[]
+PASS B6.same_vector_all_modes actual=["hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:APP principles:PAA final:APP"] expected=["hero:PAA gap:APP map:PAA audiences:AAA process:AAA composer:AAA evidence:AAA lab:APP principles:PAA final:APP"]
+PASS B10.canary_hidden_markers_detected actual=true expected=true
+PASS B7.1440.EN.lang actual=["en", "en"] expected=["en", "en"]
+PASS B7.1440.EN.segments_on_off actual=[10, 0] expected=[10, 0]
+PASS B7.1440.EN.innerText_equal actual=true expected=true
+PASS B7.1440.EN.element_keys_equal actual=true expected=true
+FAIL B7.1440.EN.rect_diffs actual=[["SECTION.hero@top=0,56,1440,950.5", "SECTION.hero@top=0,56,1440,950.25"], ["DIV.hero-inner page-shell@top=56,56.25,1328,889.953125", "DIV.hero-inner page-shell@top=56,56,1328,889.953125"], ["DIV.hero-overline meta@top=56,102.25,1328,17.390625", "DIV.hero-overline meta@top=56,102,1328,17.390625"], ["SPAN.@top=56,102.25,229.6875,17.390625", "SPAN.@top=56,102,229.6875,17.390625"], ["SPAN.@top=1249.359375,102.25,134.640625,17.390625", "SPAN.@top=1249.359375,102,134.640625,17.390625"], ["DIV.hero-intro@top=56,195.640625,1328,364.75", "DIV.hero-intro@top=56,195.390625,1328,364.75"]] expected=[]
+PASS B7.1440.EN.overflowing_elements_on_minus_off actual=0 expected=0
+PASS B7.1440.EN.position_on_off actual=["relative", "static"] expected=["relative", "static"]
+PASS B7.1440.DE.lang actual=["de", "de"] expected=["de", "de"]
+PASS B7.1440.DE.segments_on_off actual=[10, 0] expected=[10, 0]
+PASS B7.1440.DE.innerText_equal actual=true expected=true
+PASS B7.1440.DE.element_keys_equal actual=true expected=true
+FAIL B7.1440.DE.rect_diffs actual=[["SECTION.hero@top=0,56,1440,1054.078125", "SECTION.hero@top=0,56,1440,1053.828125"], ["DIV.hero-inner page-shell@top=56,56.25,1328,993.53125", "DIV.hero-inner page-shell@top=56,56,1328,993.53125"], ["DIV.hero-overline meta@top=56,102.25,1328,17.390625", "DIV.hero-overline meta@top=56,102,1328,17.390625"], ["SPAN.@top=56,102.25,261.359375,17.390625", "SPAN.@top=56,102,261.359375,17.390625"], ["SPAN.@top=1249.359375,102.25,134.640625,17.390625", "SPAN.@top=1249.359375,102,134.640625,17.390625"], ["DIV.hero-intro@top=56,195.640625,1328,468.328125", "DIV.hero-intro@top=56,195.390625,1328,468.328125"]] expected=[]
+PASS B7.1440.DE.overflowing_elements_on_minus_off actual=0 expected=0
+PASS B7.1440.DE.position_on_off actual=["relative", "static"] expected=["relative", "static"]
+PASS B7.1024.EN.lang actual=["en", "en"] expected=["en", "en"]
+PASS B7.1024.EN.segments_on_off actual=[10, 0] expected=[10, 0]
+PASS B7.1024.EN.innerText_equal actual=true expected=true
+PASS B7.1024.EN.element_keys_equal actual=true expected=true
+FAIL B7.1024.EN.rect_diffs actual=[["SECTION.hero@top=0,56,1024,868.40625", "SECTION.hero@top=0,56,1024,868.15625"], ["DIV.hero-inner page-shell@top=40.953125,56.25,942.078125,787.5625", "DIV.hero-inner page-shell@top=40.953125,56,942.078125,787.5625"], ["DIV.hero-overline meta@top=40.953125,89.015625,942.078125,17.390625", "DIV.hero-overline meta@top=40.953125,88.765625,942.078125,17.390625"], ["SPAN.@top=40.953125,89.015625,229.6875,17.390625", "SPAN.@top=40.953125,88.765625,229.6875,17.390625"], ["SPAN.@top=848.390625,89.015625,134.640625,17.390625", "SPAN.@top=848.390625,88.765625,134.640625,17.390625"], ["DIV.hero-intro@top=40.953125,162.71875,942.078125,308.71875", "DIV.hero-intro@top=40.953125,162.46875,942.078125,308.71875"]] expected=[]
+PASS B7.1024.EN.overflowing_elements_on_minus_off actual=0 expected=0
+PASS B7.1024.EN.position_on_off actual=["relative", "static"] expected=["relative", "static"]
+PASS B7.1024.DE.lang actual=["de", "de"] expected=["de", "de"]
+PASS B7.1024.DE.segments_on_off actual=[10, 0] expected=[10, 0]
+PASS B7.1024.DE.innerText_equal actual=true expected=true
+PASS B7.1024.DE.element_keys_equal actual=true expected=true
+FAIL B7.1024.DE.rect_diffs actual=[["SECTION.hero@top=0,56,1024,921.578125", "SECTION.hero@top=0,56,1024,921.328125"], ["DIV.hero-inner page-shell@top=40.953125,56.25,942.078125,840.734375", "DIV.hero-inner page-shell@top=40.953125,56,942.078125,840.734375"], ["DIV.hero-overline meta@top=40.953125,89.015625,942.078125,17.390625", "DIV.hero-overline meta@top=40.953125,88.765625,942.078125,17.390625"], ["SPAN.@top=40.953125,89.015625,261.359375,17.390625", "SPAN.@top=40.953125,88.765625,261.359375,17.390625"], ["SPAN.@top=848.390625,89.015625,134.640625,17.390625", "SPAN.@top=848.390625,88.765625,134.640625,17.390625"], ["DIV.hero-intro@top=40.953125,162.71875,942.078125,361.890625", "DIV.hero-intro@top=40.953125,162.46875,942.078125,361.890625"]] expected=[]
+PASS B7.1024.DE.overflowing_elements_on_minus_off actual=0 expected=0
+PASS B7.1024.DE.position_on_off actual=["relative", "static"] expected=["relative", "static"]
+PASS B7.390.EN.lang actual=["en", "en"] expected=["en", "en"]
+PASS B7.390.EN.segments_on_off actual=[10, 0] expected=[10, 0]
+PASS B7.390.EN.innerText_equal actual=true expected=true
+PASS B7.390.EN.element_keys_equal actual=true expected=true
+FAIL B7.390.EN.rect_diffs actual=[["SECTION.hero@top=0,60,390,1314.796875", "SECTION.hero@top=0,60,390,1314.546875"], ["DIV.hero-inner page-shell@top=20,60.25,350,1199.171875", "DIV.hero-inner page-shell@top=20,60,350,1199.171875"], ["DIV.hero-overline meta@top=20,82.25,350,15.9375", "DIV.hero-overline meta@top=20,82,350,15.9375"], ["SPAN.@top=20,82.25,210.546875,15.9375", "SPAN.@top=20,82,210.546875,15.9375"], ["SPAN.@top=246.578125,82.25,123.421875,15.9375", "SPAN.@top=246.578125,82,123.421875,15.9375"], ["DIV.hero-intro@top=20,138.1875,350,506.90625", "DIV.hero-intro@top=20,137.9375,350,506.90625"]] expected=[]
+PASS B7.390.EN.overflowing_elements_on_minus_off actual=0 expected=0
+PASS B7.390.EN.position_on_off actual=["relative", "static"] expected=["relative", "static"]
+PASS B7.390.DE.lang actual=["de", "de"] expected=["de", "de"]
+PASS B7.390.DE.segments_on_off actual=[10, 0] expected=[10, 0]
+PASS B7.390.DE.innerText_equal actual=true expected=true
+PASS B7.390.DE.element_keys_equal actual=true expected=true
+FAIL B7.390.DE.rect_diffs actual=[["SECTION.hero@top=0,60,390,1406.125", "SECTION.hero@top=0,60,390,1405.875"], ["DIV.hero-inner page-shell@top=20,60.25,350,1290.5", "DIV.hero-inner page-shell@top=20,60,350,1290.5"], ["DIV.hero-overline meta@top=20,82.25,350,31.875", "DIV.hero-overline meta@top=20,82,350,31.875"], ["SPAN.@top=20,82.25,214.578125,31.875", "SPAN.@top=20,82,214.578125,31.875"], ["SPAN.@top=246.578125,90.21875,123.421875,15.9375", "SPAN.@top=246.578125,89.96875,123.421875,15.9375"], ["DIV.hero-intro@top=20,154.125,350,532.5", "DIV.hero-intro@top=20,153.875,350,532.5"]] expected=[]
+PASS B7.390.DE.overflowing_elements_on_minus_off actual=0 expected=0
+PASS B7.390.DE.position_on_off actual=["relative", "static"] expected=["relative", "static"]
+PASS B7.canary_1px_shift_detected actual=true expected=true
+PASS B7.canary_thread_layout_1px_detected actual=true expected=true
+PASS B7.canary_thread_layout_quarter_px_detected actual=true expected=true
+PASS B8.outside_cobalt_set_equal actual=true expected=true
+PASS B8.cobalt_in_nonactive_pieces actual=[] expected=[]
+PASS B8.canary_background_detected actual=true expected=true
+PASS B8.canary_box_shadow_detected actual=true expected=true
+PASS B8.canary_border_right_detected actual=true expected=true
+PASS B8.canary_color_mix_detected actual=true expected=true
+PASS B9.shape_encodes_state_forced=False actual=[30, 30] expected=[30, 30]
+PASS B9.shape_encodes_state_forced=True actual=[30, 30] expected=[30, 30]
+PASS B1.console_and_page_errors_all_contexts actual={} expected={}
+PASS B1.contexts_checked actual=true expected=true
+TOTAL_FAILS=6
+rc=1

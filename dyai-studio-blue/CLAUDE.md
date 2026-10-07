@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-DYAI Studio P3+ — "The Semantic Augmentation Experience": a high-fidelity, **local-only click-dummy** of the `studio.dyai.cloud` website (React 19 + TypeScript 5.9 + Vite 7 + GSAP ScrollTrigger). Hard constraints: no backend, no database, no analytics, no external AI API, no real auth, nothing sent or stored remotely. Every dynamic state is simulated in the browser. Don't add network calls.
+DYAI Studio P3+ — "The Semantic Augmentation Experience": a high-fidelity, **local-only click-dummy** of the `studio.dyai.cloud` website (React 19 + TypeScript 5.9 + Vite 7 + GSAP ScrollTrigger). Hard constraints: no backend, no database, no analytics, no external AI API, no real auth, no application/API data calls and no remote persistence. Every dynamic state is simulated in the browser. Don't add network calls. It is not network-silent: the frozen `index.html` loads Geist / Geist Mono from Google Fonts (`fonts.googleapis.com` / `fonts.gstatic.com`), so every page load requests those font files. Self-hosting the fonts is a separate decision, not part of the frozen baseline.
 
 Project context lives one level up in `../`: `../README.md` (product direction) and `../project-harness/` (operating contract, governance). Systems of record: Confluence space `DYAIStudio` (product truth; canonical design = page 04.3, decision D-015 on page 09), Jira project `DYAI` / board 733 (delivery), GitHub `DYAI2025/DYAI-Studio` (code). The git repo root is `../` (this app lives in its `dyai-studio-blue/` subdirectory).
 

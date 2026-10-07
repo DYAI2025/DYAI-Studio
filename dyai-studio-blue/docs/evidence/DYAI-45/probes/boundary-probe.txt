@@ -1,0 +1,3 @@
+flagged_rect_matches [["Kontextgestaltung", 515.203125, 7435.546875, 133.515625, 19]]
+values_within_1_64px_of_half_1024_DE [129, 3344]
+rc=0

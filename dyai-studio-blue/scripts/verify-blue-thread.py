@@ -69,6 +69,7 @@ GEOMETRY = """() => { const vw = innerWidth; const out = [];
   }); return out; }"""
 OVERFLOWERS = """() => [...document.querySelectorAll('body *')].filter(e => { const r = e.getBoundingClientRect(); return r.width > 0 && (r.right > innerWidth + 0.5 || r.left < -0.5); }).length"""
 ACTIVE = "() => document.querySelectorAll('.bt-piece[data-bt-line=active]').length"
+STRIP = "() => document.querySelectorAll('.bt-seg').forEach(s => s.remove())"
 # Every painted colour channel; colours normalised from rgb()/rgba()/color(srgb …) so color-mix results are caught too.
 COBALT = r"""() => { const props = ['color','backgroundColor','backgroundImage','borderTopColor','borderRightColor','borderBottomColor','borderLeftColor','outlineColor','boxShadow','textDecorationColor','fill','stroke'];
   const isCobalt = v => { const toks = v.match(/rgba?\([^)]*\)|color\(srgb[^)]*\)/g) || []; return toks.some(t => { let n = t.match(/[\d.]+/g).map(Number);
@@ -115,10 +116,14 @@ def reveal_hero(p):
 
 
 def text_and_rects(p):
-    """Geometry of every element in <main> outside the thread, sampled until two consecutive samples agree
-    (clicks scroll the page and the sticky header animates its height, which shifts in-flow content)."""
+    """Raw (unrounded) geometry of every element in <main> outside the thread, sampled until two consecutive samples
+    agree (clicks scroll the page and the sticky header animates its height, which shifts in-flow content).
+    Raw values are only compared within one document: separate page loads can lay out a text run differently by a
+    sub-pixel amount (cause not identified), and rounding turned that into intermittent 1 px diffs across .5 boundaries
+    (docs/evidence/DYAI-45/B7-geometry-oracle.md)."""
     js = """() => { const els = [...document.querySelectorAll('main *')].filter(e => !e.closest('.bt-seg'));
-      return { text: document.body.innerText, rects: els.map(e => { const r = e.getBoundingClientRect(); return (e.tagName + '.' + String(e.className.baseVal ?? e.className).slice(0, 40) + '@' + ((e.closest('section') || {}).id || '')) + '=' + [Math.round(r.x), Math.round(r.y + scrollY), Math.round(r.width), Math.round(r.height)].join(','); }) }; }"""
+      return { text: document.body.innerText, keys: els.map(e => e.tagName + '.' + String(e.className.baseVal ?? e.className).slice(0, 40) + '@' + ((e.closest('section') || {}).id || '')),
+        rects: els.map(e => { const r = e.getBoundingClientRect(); return (e.tagName + '.' + String(e.className.baseVal ?? e.className).slice(0, 40) + '@' + ((e.closest('section') || {}).id || '')) + '=' + [r.x, r.y + scrollY, r.width, r.height].join(','); }) }; }"""
     prev = p.evaluate(js)
     for _ in range(20):
         p.wait_for_timeout(150)
@@ -237,7 +242,13 @@ with sync_playwright() as pw:
     check("B10.canary_hidden_markers_detected", len(p.evaluate(GEOMETRY)) > 0, True)
     ctx.close()
 
-    # B7 removability: ?thread=off vs on — text, geometry of everything else, overflow, position
+    # B7 removability: ?thread=off vs on — text, structure, overflow, position across loads; geometry of everything else
+    # within one document: raw rects with the thread, then with its nodes removed (the DOM that ?thread=off renders).
+    # The in-document geometry check sees CSS and DOM-presence effects; it cannot see layout that JS fixes at first render
+    # because the thread was mounted (src/ currently reads no layout; GSAP pins run only in motion mode, not used here).
+    def rect_diffs(x, y):
+        return [[a, c] for a, c in zip(x["rects"], y["rects"]) if a != c][:6] + ([["count", len(x["rects"]), len(y["rects"])]] if len(x["rects"]) != len(y["rects"]) else [])
+
     for w, h in [(1440, 900), (1024, 768), (390, 844)]:
         for loc in ["EN", "DE"]:
             res = {}
@@ -248,17 +259,27 @@ with sync_playwright() as pw:
                 res[mode] = text_and_rects(p)
                 res[mode].update(segs=p.evaluate("() => document.querySelectorAll('.bt-seg').length"), lang=p.evaluate("() => document.documentElement.lang"),
                                  pos=p.evaluate("() => getComputedStyle(document.getElementById('augmentation-map')).position"), overflow=p.evaluate(OVERFLOWERS))
+                if mode == "on":
+                    p.evaluate(STRIP)
+                    res["stripped"] = text_and_rects(p)
                 ctx.close()
             n = f"B7.{w}.{loc}"
             check(f"{n}.lang", [res["on"]["lang"], res["off"]["lang"]], [loc.lower(), loc.lower()])
             check(f"{n}.segments_on_off", [res["on"]["segs"], res["off"]["segs"]], [10, 0])
             check(f"{n}.innerText_equal", res["on"]["text"] == res["off"]["text"], True)
-            check(f"{n}.rect_diffs", [[a, c] for a, c in zip(res["on"]["rects"], res["off"]["rects"]) if a != c][:6] + ([["count", len(res["on"]["rects"]), len(res["off"]["rects"])]] if len(res["on"]["rects"]) != len(res["off"]["rects"]) else []), [])
+            check(f"{n}.element_keys_equal", res["on"]["keys"] == res["off"]["keys"], True)
+            check(f"{n}.rect_diffs", rect_diffs(res["on"], res["stripped"]), [])
             check(f"{n}.overflowing_elements_on_minus_off", res["on"]["overflow"] - res["off"]["overflow"], 0)
             check(f"{n}.position_on_off", [res["on"]["pos"], res["off"]["pos"]], ["relative", "static"])
     ctx, p = page_for(b, label="B7-canary"); goto(p, BASE + "?thread=off#/"); r1 = text_and_rects(p)
     p.add_style_tag(content="section{padding-top:1px !important}"); p.wait_for_timeout(200); r2 = text_and_rects(p); ctx.close()
-    check("B7.canary_1px_shift_detected", sum(1 for a, c in zip(r1["rects"], r2["rects"]) if a != c) > 0, True)
+    check("B7.canary_1px_shift_detected", len(rect_diffs(r1, r2)) > 0, True)
+    # A thread that takes layout space (1 px, and a sub-pixel 0.25 px that integer rounding could not see) must be detected.
+    for tag, px in [("1px", "1px"), ("quarter_px", "0.25px")]:
+        ctx, p = page_for(b, label=f"B7-canary-thread-{tag}"); goto(p, BASE + "#/")
+        p.add_style_tag(content=".bt-seg{position:relative !important; height:" + px + " !important}"); p.wait_for_timeout(200)
+        r1 = text_and_rects(p); p.evaluate(STRIP); r2 = text_and_rects(p); ctx.close()
+        check(f"B7.canary_thread_layout_{tag}_detected", len(rect_diffs(r1, r2)) > 0, True)
 
     # B8 R-BT-04: cobalt outside the thread identical on/off; inside only under active pieces; one canary per channel
     res = {}
